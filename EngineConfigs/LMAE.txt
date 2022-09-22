@@ -1,0 +1,27 @@
+LMAE
+{
+	propellants = Hypergolics
+	type = OMS
+	pressureFed = true
+
+	minThrust = 15.57
+	maxThrust = 15.57
+
+	ispSL = 100
+	ispVac = 311
+
+	ignitions = 3
+	ullage = true
+	ratedBurnTime = 560
+	gimbalRange = 2
+
+	mass = 0.095
+	cost = 477
+	entryCost = 4770
+	upgradeCost = 0
+
+	siblings
+	{
+		RS-18 = 0.7
+	}
+}

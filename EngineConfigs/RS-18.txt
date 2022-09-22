@@ -1,0 +1,27 @@
+RS-18
+{
+	propellants = MethaLOX
+	type = OMS
+	pressureFed = true
+
+	minThrust = 24.5
+	maxThrust = 24.5
+
+	ispSL = 90
+	ispVac = 382
+
+	ignitions = 10
+	ullage = true
+	ratedBurnTime = 127
+	gimbalRange = 5
+
+	mass = 0.9
+	cost = 1368
+	entryCost = 13680
+	upgradeCost = 0
+
+	siblings
+	{
+		LMAE = 0.7
+	}
+}

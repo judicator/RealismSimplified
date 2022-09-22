@@ -1,0 +1,37 @@
+LR105-5
+{
+	propellants = KeroLOX
+	type = sustainer
+	pressureFed = false
+
+	minThrust = 366.1
+	maxThrust = 366.1
+
+	ispSL = 217
+	ispVac = 313
+
+	ignitions = 1
+	ullage = true
+	ratedBurnTime = 350
+	gimbalRange = 3
+
+	mass = 0.413
+	cost = 1530
+	entryCost = 15300
+	upgradeCost = 7650
+
+	isUpgrade = true
+
+	siblings
+	{
+		LR105-3   = 0.8
+		LR105-7   = 0.9
+		RS-56-OSA = 0.8
+	}
+
+	upgradeIcons
+	{
+		Bluedog_DB/Parts/Atlas, bluedog_Atlas_LR105
+		RS_Engine_LR105Family
+	}
+}

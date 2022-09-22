@@ -1,0 +1,37 @@
+RD-0109
+{
+	propellants = KeroLOX
+	type = upper_stage
+	pressureFed = false
+
+	minThrust = 54.5
+	maxThrust = 54.5
+
+	ispSL = 264
+	ispVac = 323.5
+
+	ignitions = 1
+	ullage = true
+	ratedBurnTime = 440
+	gimbalRange = 6
+
+	mass = 0.121
+	cost = 478
+	entryCost = 4780
+	upgradeCost = 2390
+
+	siblings
+	{
+		RD-0105 = 0.9
+		RD-0107 = 0.4
+		RD-0110 = 0.5
+	}
+
+	isUpgrade = true
+
+	upgradeIcons
+	{
+		KeR-7/Parts/Engines, nesdKeR7-rk109
+		RS_Engine_RD0105_Family
+	}
+}

@@ -1,0 +1,27 @@
+S1_5400
+{
+	propellants = KeroLOX
+	type = OMS
+	pressureFed = false
+
+	minThrust = 63.7
+	maxThrust = 63.7
+
+	ispSL = 100
+	ispVac = 338.6
+
+	ignitions = 5
+	ullage = true
+	ratedBurnTime = 250
+	gimbalRange = 7
+
+	mass = 0.153
+	cost = 2435
+	entryCost = 24350
+	upgradeCost = 0
+
+	siblings
+	{
+		RD-58 = 0.8
+	}
+}

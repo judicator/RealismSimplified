@@ -1,0 +1,22 @@
+AR-1
+{
+	propellants = KeroLOX
+	type = lower_stage
+	pressureFed = false
+
+	minThrust = 1250
+	maxThrust = 2500
+
+	ispSL = 285
+	ispVac = 315
+
+	ignitions = 4
+	ullage = true
+	ratedBurnTime = 400
+	gimbalRange = 8
+
+	mass = 2.4
+	cost = 21271
+	entryCost = 212710
+	upgradeCost = 0
+}

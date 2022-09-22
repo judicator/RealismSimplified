@@ -1,0 +1,189 @@
+// ==================================================================================
+// Tanks with various resources - gases, liquids, ores, manufacturing materials, etc.
+// Suitable for ISRU purposes
+// ==================================================================================
+
+@PART[*]:HAS[~RS_IgnorePart[],@RESOURCE[Ore],!RESOURCE[LiquidFuel],!RESOURCE[Oxidizer],!RESOURCE[LqdHydrogen],!RESOURCE[MonoPropellant],!MODULE[InterstellarFuelSwitch],!MODULE[FSfuelSwitch],!MODULE[ModuleEngines],!MODULE[ModuleEnginesFX],~RS_TankConfigured[]]:FOR[zzzzRealismSimplified]
+{
+	%RS_TankType = Resources
+
+	%totalCap = #$RESOURCE[Ore]/maxAmount$
+
+	%massOffset = #$mass$
+	@massOffset *= -1
+
+	%costOffset = #$cost$
+	@costOffset *= -1
+
+	!RESOURCE[Ore] {}
+	!MODULE[ModuleFuelJettison] {}
+}
+
+// Default mass offset = -mass
+@PART[*]:HAS[~RS_IgnorePart[],#RS_TankType[Resources],#totalCap[>0],~massOffset[],~RS_TankConfigured[]]:FOR[zzzzRealismSimplified]
+{
+	%massOffset = #$mass$
+	@massOffset *= -1
+}
+// Default cost offset = -cost
+@PART[*]:HAS[~RS_IgnorePart[],#RS_TankType[Resources],#totalCap[>0],~costOffset[],~RS_TankConfigured[]]:FOR[zzzzRealismSimplified]
+{
+	%costOffset = #$cost$
+	@costOffset *= -1
+}
+
+
+// ==================================================================================
+// Fuel tank types switcher
+// ==================================================================================
+@PART[*]:HAS[~RS_IgnorePart[],#RS_TankType[Resources],#totalCap[>0],~RS_TankConfigured[]]:NEEDS[CommunityResourcePack,B9PartSwitch]:FOR[zzzzRealismSimplified]
+{
+	%RS_TankConfigured = True
+
+	%RS_TankDryMass = #$@REALISM_SIMPLIFIED/resourcesTanks_BaseMass$
+	@RS_TankDryMass *= #$@REALISM_SIMPLIFIED/resourcesTanks_MassCoeff$
+	%RS_TankDryCost = #$@REALISM_SIMPLIFIED/resourcesTanks_BaseCost$
+	@RS_TankDryCost *= #$@REALISM_SIMPLIFIED/resourcesTanks_CostCoeff$
+
+	// Mass and cost of part are determined by tank tech level and volume
+	%massOffset1 = #$RS_TankDryMass$
+	@massOffset1 *= #$totalCap$
+	@massOffset += #$massOffset1$
+	%costOffset1 = #$RS_TankDryCost$
+	@costOffset1 *= #$totalCap$
+	@costOffset += #$costOffset1$
+
+	// Mass and cost of part are determined by tank type and volume
+	@mass += #$massOffset$
+	@cost += #$costOffset$
+	// but they should not be negative
+	@mass ^= :^-.*$:0: // If negative, set to zero
+	@cost ^= :^-.*$:0: // If negative, set to zero
+
+	@totalCap *= #$@REALISM_SIMPLIFIED/resourcesTanks_VolumeCoeff$
+
+	!MODULE[ModuleB9PartSwitch]:HAS[#moduleID[fuelSwitch]] {}
+
+	!RESOURCE[Ore] {}
+
+	MODULE
+	{
+		name = ModuleB9PartSwitch
+		moduleID = fuelSwitch
+		switcherDescription = #LOC_RS_TankContents_DisplayName
+		baseVolume = #$../totalCap$
+		affectDragCubes = false
+		uiGroupName = RS_Storage
+		uiGroupDisplayName = #LOC_RS_Resources_Tank_UIGroup_DisplayName
+
+		SUBTYPE
+		{
+			name = Regolith
+			title = #LOC_CRP_Regolith_DisplayName
+			tankType = RS_Regolith
+		}
+		SUBTYPE
+		{
+			name = Rock
+			title = #LOC_CRP_Rock_DisplayName
+			tankType = RS_Rock
+		}
+		SUBTYPE
+		{
+			name = Spodumene
+			title = #LOC_CRP_Spodumene_DisplayName
+			tankType = RS_Spodumene
+		}
+		SUBTYPE
+		{
+			name = Minerals
+			title = #LOC_CRP_Minerals_DisplayName
+			tankType = RS_Minerals
+		}
+		SUBTYPE
+		{
+			name = Fertilizer
+			title = #LOC_CRP_Fertilizer_DisplayName
+			tankType = RS_Fertilizer
+		}
+		SUBTYPE
+		{
+			name = Aluminium
+			title = #LOC_CRP_Aluminium_DisplayName
+			tankType = RS_Aluminium
+		}
+		SUBTYPE
+		{
+			name = RocketParts
+			title = #LOC_CRP_RocketParts_DisplayName
+			tankType = RS_RocketParts
+		}
+		SUBTYPE
+		{
+			name = Polymers
+			title = #LOC_CRP_Polymers_DisplayName
+			tankType = RS_Polymers
+		}
+		SUBTYPE
+		{
+			name = Chemicals
+			title = #LOC_CRP_Chemicals_DisplayName
+			tankType = RS_Chemicals
+		}
+		SUBTYPE
+		{
+			name = Water
+			title = #LOC_CRP_Water_DisplayName
+			tankType = RS_Water
+		}
+		SUBTYPE
+		{
+			name = HTP
+			title = #LOC_CRP_HTP_DisplayName
+			tankType = RS_HTP
+		}
+		SUBTYPE
+		{
+			name = Oxygen
+			title = #LOC_CRP_Oxygen_DisplayName
+			tankType = RS_Oxygen
+		}
+		SUBTYPE
+		{
+			name = Nitrogen
+			title = #LOC_CRP_Nitrogen_DisplayName
+			tankType = RS_Nitrogen
+		}
+		SUBTYPE
+		{
+			name = CarbonDioxide
+			title = #LOC_CRP_CarbonDioxide_DisplayName
+			tankType = RS_CarbonDioxide
+			percentFilled = 0
+		}
+		SUBTYPE
+		{
+			name = CarbonMonoxide
+			title = #LOC_CRP_CarbonMonoxide_DisplayName
+			tankType = RS_CarbonMonoxide
+		}
+		SUBTYPE
+		{
+			name = Hydrogen
+			title = #LOC_CRP_Hydrogen_DisplayName
+			tankType = RS_Hydrogen
+		}
+		SUBTYPE
+		{
+			name = Methane
+			title = #LOC_CRP_Methane_DisplayName
+			tankType = RS_Methane
+		}
+		SUBTYPE
+		{
+			name = Ammonia
+			title = #LOC_CRP_Ammonia_DisplayName
+			tankType = RS_Ammonia
+		}
+	}
+}

@@ -1,0 +1,41 @@
+LR87-7
+{
+	propellants = Hypergolics
+	type = lower_stage
+	pressureFed = false
+
+	minThrust = 1097
+	maxThrust = 1097
+
+	ispSL = 262
+	ispVac = 298
+
+	ignitions = 1
+	ullage = true
+	ratedBurnTime = 156
+	gimbalRange = 6
+
+	mass = 0.713
+	cost = 5211
+	entryCost = 52110
+	upgradeCost = 26055
+
+	isUpgrade = true
+
+	siblings
+	{
+		LR87-3                  = 0.8
+		LR87-5                  = 0.8
+		LR87-5K                 = 0.8
+		LR87-9                  = 0.8
+		LR87-11                 = 0.8
+		LR87-11A                = 0.8
+		LR87-11K                = 0.7
+		LR87-11-Vacuum          = 0.7
+		LR87-11K-Vacuum         = 0.7
+		LR87-LH2                = 0.7
+		LR87-LH2-Upgrade        = 0.7
+		LR87-LH2-Vacuum         = 0.6
+		LR87-LH2-Vacuum-Upgrade = 0.6
+	}
+}

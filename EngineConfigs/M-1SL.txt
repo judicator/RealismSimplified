@@ -1,0 +1,29 @@
+M-1SL
+{
+	propellants = HydroLOX
+	type = sustainer
+	pressureFed = false
+
+	minThrust = 6928
+	maxThrust = 6928
+
+	ispSL = 344.5
+	ispVac = 414
+
+	ignitions = 2
+	ullage = true
+	ratedBurnTime = 500
+	gimbalRange = 7.5
+
+	mass = 9.162
+	cost = 74009
+	entryCost = 740090
+	upgradeCost = 0
+
+	siblings
+	{
+		M-1     = 0.9
+		M-1U    = 0.8
+		M-1U-SL = 0.8
+	}
+}

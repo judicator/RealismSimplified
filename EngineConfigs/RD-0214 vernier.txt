@@ -1,0 +1,22 @@
+RD-0214-vernier
+{
+	propellants = Hypergolics
+	type = sustainer
+	pressureFed = false
+
+	minThrust = 7.8
+	maxThrust = 7.8
+
+	ispSL = 215
+	ispVac = 293
+
+	ignitions = 1
+	ullage = true
+	ratedBurnTime = 300
+	gimbalRange = 15
+
+	mass = 0.225
+	cost = 224
+	entryCost = 2240
+	upgradeCost = 0
+}

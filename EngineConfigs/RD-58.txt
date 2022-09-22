@@ -1,0 +1,29 @@
+RD-58
+{
+	propellants = KeroLOX
+	type = OMS
+	pressureFed = false
+
+	minThrust = 83.36
+	maxThrust = 83.36
+
+	ispSL = 105
+	ispVac = 349
+
+	ignitions = 7
+	ullage = true
+	ratedBurnTime = 600
+	gimbalRange = 7
+
+	mass = 0.23
+	cost = 3544
+	entryCost = 35440
+	upgradeCost = 17720
+
+	isUpgrade = true
+
+	siblings
+	{
+		S1_5400 = 0.8
+	}
+}

@@ -1,0 +1,27 @@
+LMDE
+{
+	propellants = Hypergolics
+	type = OMS
+	pressureFed = true
+
+	minThrust = 4.67
+	maxThrust = 45.04
+
+	ispSL = 116
+	ispVac = 313.5
+
+	ignitions = 3
+	ullage = true
+	ratedBurnTime = 960
+	gimbalRange = 6
+
+	mass = 0.158
+	cost = 1360
+	entryCost = 13600
+	upgradeCost = 0
+
+	siblings
+	{
+		TR-201 = 0.8
+	}
+}

@@ -1,0 +1,37 @@
+AJ10-190
+{
+	propellants = Hypergolics
+	type = OMS
+	pressureFed = true
+
+	minThrust = 33.4
+	maxThrust = 33.4
+
+	ispSL = 100
+	ispVac = 316
+
+	ignitions = -1
+	ullage = true
+	ratedBurnTime = 3600
+	gimbalRange = 6.0
+
+	mass = 0.125
+	cost = 1460
+	entryCost = 14600
+	upgradeCost = 7300
+
+	isUpgrade = true
+
+	siblings
+	{
+		AJ10-37   = 0.5
+		AJ10-104  = 0.6
+		AJ10-118D = 0.6
+		AJ10-118E = 0.6
+		AJ10-118F = 0.6
+		AJ10-118K = 0.7
+		AJ10-118X = 0.7
+		AJ10-137  = 0.7
+		AJ10-138  = 0.7
+	}
+}

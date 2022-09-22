@@ -1,0 +1,27 @@
+RD-120
+{
+	propellants = KeroLOX
+	type = upper_stage
+	pressureFed = false
+
+	minThrust = 583.49
+	maxThrust = 833.56
+
+	ispSL = 175
+	ispVac = 350
+
+	ignitions = 10
+	ullage = true
+	ratedBurnTime = 290
+	gimbalRange = 6
+
+	mass = 1.125
+	cost = 8429
+	entryCost = 84290
+	upgradeCost = 0
+
+	siblings
+	{
+		RD-170 = 0.25
+	}
+}

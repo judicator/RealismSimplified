@@ -1,0 +1,34 @@
+RD-103M
+{
+	propellants = AlcoLOX
+	type = lower_stage
+	pressureFed = false
+
+	minThrust = 500
+	maxThrust = 500
+
+	ispSL = 220
+	ispVac = 248
+
+	ignitions = 1
+	ullage = true
+	ratedBurnTime = 140
+	gimbalRange = 2.0
+
+	mass = 0.867
+	cost = 1533
+	entryCost = 15330
+	upgradeCost = 7665
+
+	isUpgrade = true
+
+	siblings
+	{
+		RD-102 = 0.8
+	}
+	upgradeIcons
+	{
+		RealEnginesPack/PostSovietPack, rd100
+		RS_Engine_RD100_Family
+	}
+}

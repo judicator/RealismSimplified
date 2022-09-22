@@ -1,0 +1,28 @@
+A-6
+{
+	propellants = AlcoLOX
+	type = lower_stage
+	pressureFed = false
+
+	minThrust = 396
+	maxThrust = 396
+
+	ispSL = 218
+	ispVac = 249
+
+	ignitions = 1
+	ullage = true
+	ratedBurnTime = 145
+	gimbalRange = 2.0
+
+	mass = 0.67
+	cost = 1249
+	entryCost = 12490
+	upgradeCost = 0
+
+	siblings
+	{
+		A-4 = 0.5
+		A-7 = 0.8
+	}
+}

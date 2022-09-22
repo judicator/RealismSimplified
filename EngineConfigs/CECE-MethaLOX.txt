@@ -1,0 +1,46 @@
+CECE-MethaLOX
+{
+	propellants = MethaLOX
+	type = OMS
+	pressureFed = false
+
+	minThrust = 17
+	maxThrust = 67
+
+	ispSL = 100
+	ispVac = 360
+
+	ignitions = 50
+	ullage = true
+	ratedBurnTime = 10000
+	gimbalRange = 4.0
+
+	mass = 0.21
+	cost = 3745
+	entryCost = 37450
+	upgradeCost = 18725
+
+	siblings
+	{
+		RL-10A-1      = 0.6
+		RL-10A-3      = 0.6
+		RL-10A-4      = 0.6
+		RL-10A-4-1N   = 0.6
+		RL-10A-4-2N   = 0.6
+		RL-10A-5      = 0.4
+		RL-10B-2      = 0.8
+		RL-10C-1      = 0.7
+		RL-10C-2      = 0.7
+		RL-10C-3      = 0.7
+		CECE          = 0.8
+		RL-60         = 0.2
+	}
+
+	isUpgrade = true
+
+	upgradeIcons
+	{
+		Bluedog_DB/Parts/Centaur, bluedog_CentaurD_RL10B2
+		CryoEngines/Parts/HydroloxEngines/125, cryoengine-hecate-1
+	}
+}

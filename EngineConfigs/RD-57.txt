@@ -1,0 +1,22 @@
+RD-57
+{
+	propellants = HydroLOX
+	type = upper_stage
+	pressureFed = false
+
+	minThrust = 78.46
+	maxThrust = 392.3
+
+	ispSL = 273
+	ispVac = 456.6
+
+	ignitions = 11
+	ullage = true
+	ratedBurnTime = 800
+	gimbalRange = 2.5
+
+	mass = 0.84
+	cost = 12129
+	entryCost = 121290
+	upgradeCost = 0
+}

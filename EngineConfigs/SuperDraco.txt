@@ -1,0 +1,22 @@
+SuperDraco
+{
+	propellants = Hypergolics
+	type = OMS
+	pressureFed = true
+
+	minThrust = 17.0
+	maxThrust = 85.0
+
+	ispSL = 240
+	ispVac = 280
+
+	ignitions = -1
+	ullage = false
+	ratedBurnTime = 350
+	gimbalRange = 0
+
+	mass = 0.065
+	cost = 2724
+	entryCost = 27240
+	upgradeCost = 0
+}

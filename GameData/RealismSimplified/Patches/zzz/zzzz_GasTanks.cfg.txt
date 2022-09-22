@@ -1,0 +1,180 @@
+// ==================================================================================
+// Tanks for various gases, including noble gases for ion engines (Xenon, Argon)
+// ==================================================================================
+
+// Command module with built-in xenon tank
+@PART[*]:HAS[~RS_IgnorePart[],~RS_IgnoreFuelTank[],~RS_IgnoreProbe[],@RESOURCE[XenonGas],~RS_TankType,~RS_TankConfigured[],#totalCap[>0],@MODULE[ModuleCommand],~CrewCapacity[],!MODULE[ModuelRCS*]]:FOR[zzzzRealismSimplified]
+{
+	%RS_TankType = GasTank
+	%RS_TankMetatype = Xenon
+	!RESOURCE[XenonGas] {}
+
+	// Command modules, containing Xenon, retain their original mass (minus the mass of Xenon tank)
+	%massOffset = #$totalCap$
+	@massOffset *= 0.000025 // standard dry mass per unit of Xenon
+	@massOffset *= -1
+	// Cost excluding Xenon
+	%costOffset = #$totalCap$
+	@costOffset *= 4        // standard cost per one unit of Xenon
+	@costOffset *= -1
+}
+@PART[*]:HAS[~RS_IgnorePart[],~RS_IgnoreFuelTank[],~RS_IgnoreProbe[],@RESOURCE[XenonGas],~RS_TankType,~RS_TankConfigured[],#totalCap[>0],@MODULE[ModuleCommand],#CrewCapacity[0],!MODULE[ModuelRCS*]]:FOR[zzzzRealismSimplified]
+{
+	%RS_TankType = GasTank
+	%RS_TankMetatype = Xenon
+	!RESOURCE[XenonGas] {}
+
+	// Command modules, containing Xenon, retain their original mass (minus the mass of Xenon tank)
+	%massOffset = #$totalCap$
+	@massOffset *= 0.000025 // standard dry mass per unit of Xenon
+	@massOffset *= -1
+	// Cost excluding Xenon
+	%costOffset = #$totalCap$
+	@costOffset *= 4        // standard cost per one unit of Xenon
+	@costOffset *= -1
+}
+@PART[*]:HAS[~RS_IgnorePart[],~RS_IgnoreFuelTank[],~RS_IgnoreCrewedParts[],@RESOURCE[XenonGas],~RS_TankType,~RS_TankConfigured[],#totalCap[>0],@MODULE[ModuleCommand],#CrewCapacity[>0],!MODULE[ModuelRCS*]]:FOR[zzzzRealismSimplified]
+{
+	%RS_TankType = GasTank
+	%RS_TankMetatype = Xenon
+	!RESOURCE[XenonGas] {}
+
+	// Command modules, containing Xenon, retain their original mass (minus the mass of Xenon tank)
+	%massOffset = #$totalCap$
+	@massOffset *= 0.000025 // standard dry mass per unit of Xenon
+	@massOffset *= -1
+	// Cost excluding Xenon
+	%costOffset = #$totalCap$
+	@costOffset *= -4        // standard cost per one unit of Xenon
+}
+
+// Xenon and Argon fuel tanks
+@PART[*]:HAS[~RS_IgnorePart[],~RS_IgnoreFuelTank[],@RESOURCE[XenonGas],#totalCap[>0],!MODULE[InterstellarFuelSwitch],!MODULE[FSfuelSwitch],!MODULE[ModuleEngines*],~RS_TankType[],~RS_TankConfigured[]]:NEEDS[CommunityResourcePack]:FOR[zzzzRealismSimplified]
+{
+	%RS_TankType = GasTank
+	%RS_TankMetatype = Xenon
+	!RESOURCE[XenonGas] {}
+}
+@PART[*]:HAS[~RS_IgnorePart[],~RS_IgnoreFuelTank[],@RESOURCE[ArgonGas],#totalCap[>0],!MODULE[InterstellarFuelSwitch],!MODULE[FSfuelSwitch],!MODULE[ModuleEngines*],~RS_TankType[],~RS_TankConfigured[]]:NEEDS[CommunityResourcePack]:FOR[zzzzRealismSimplified]
+{
+	%RS_TankType = GasTank
+	%RS_TankMetatype = Argon
+	!RESOURCE[ArgonGas] {}
+}
+
+// Default mass offset = -mass
+@PART[*]:HAS[~RS_IgnorePart[],~RS_IgnoreFuelTank[],#RS_TankType[GasTank],#totalCap[>0],~massOffset[],~RS_TankConfigured[]]:FOR[zzzzRealismSimplified]
+{
+	%massOffset = #$mass$
+	@massOffset *= -1
+}
+// Default cost offset = -cost
+@PART[*]:HAS[~RS_IgnorePart[],~RS_IgnoreFuelTank[],#RS_TankType[GasTank],#totalCap[>0],~costOffset[],~RS_TankConfigured[]]:FOR[zzzzRealismSimplified]
+{
+	%costOffset = #$cost$
+	@costOffset *= -1
+}
+
+// ==================================================================================
+// Gas tank contents switcher
+// ==================================================================================
+@PART[*]:HAS[~RS_IgnorePart[],~RS_IgnoreFuelTank[],#RS_TankType[GasTank],#totalCap[>0],#massOffset[*],#costOffset[*],~RS_TankConfigured[]]:NEEDS[CommunityResourcePack,B9PartSwitch]:FOR[zzzzRealismSimplified]
+{
+	%RS_TankConfigured = True
+
+	%RS_TankDryMass = #$@REALISM_SIMPLIFIED/gasTanks_BaseMass$
+	@RS_TankDryMass *= #$@REALISM_SIMPLIFIED/gasTanks_MassCoeff$
+	@RS_TankDryMass *= #$totalCap$
+
+	%RS_TankDryCost = #$@REALISM_SIMPLIFIED/gasTanks_BaseCost$
+	@RS_TankDryCost *= #$@REALISM_SIMPLIFIED/gasTanks_CostCoeff$
+	@RS_TankDryCost *= #$totalCap$
+
+	@totalCap *= #$@REALISM_SIMPLIFIED/gasTanks_VolumeCoeff$
+
+	@massOffset += #$RS_TankDryMass$
+	@costOffset += #$RS_TankDryCost$
+
+	@mass += #$massOffset$
+	@cost += #$costOffset$
+	// Mass and cost should not be negative
+	@mass ^= :^-.*$:0: // If negative, set to zero
+	@cost ^= :^-.*$:0: // If negative, set to zero
+
+	!MODULE[ModuleB9PartSwitch]:HAS[#moduleID[fuelSwitch]] {}
+	!MODULE[ModuleB9PartSwitch]:HAS[#moduleID[RS_FuelSwitch]] {}
+	!RESOURCE[XenonGas] {}
+	!RESOURCE[ArgonGas] {}
+	!RESOURCE[Nitrogen] {}
+	!RESOURCE[Hydrogen] {}
+	!RESOURCE[Methane] {}
+
+	MODULE
+	{
+		name = ModuleB9PartSwitch
+		moduleID = RS_FuelSwitch
+		switcherDescription = #LOC_RS_TankContents_DisplayName
+		baseVolume = #$../totalCap$
+		affectDragCubes = false
+		uiGroupName = RealismSimplified
+		uiGroupDisplayName = #LOC_RealismSimplified_UIGroup_DisplayName
+
+		SUBTYPE
+		{
+			name = Xenon
+			title = #LOC_RS_Xenon_DisplayName
+			tankType = RS_Xenon
+			upgradeRequired = RS_NobleGasesFuelTanks_Upgrade
+			defaultSubtypePriority = 5
+		}
+		SUBTYPE
+		{
+			name = Argon
+			title = #LOC_RS_Argon_DisplayName
+			tankType = RS_Argon
+			upgradeRequired = RS_NobleGasesFuelTanks_Upgrade
+			defaultSubtypePriority = 4
+		}
+		SUBTYPE
+		{
+			name = Nitrogen
+			title = #LOC_RS_Nitrogen_DisplayName
+			tankType = RS_Nitrogen
+			defaultSubtypePriority = 3
+		}
+		SUBTYPE
+		{
+			name = Hydrogen
+			title = #LOC_RS_Hydrogen_DisplayName
+			tankType = RS_Hydrogen
+			defaultSubtypePriority = 2
+		}
+		SUBTYPE
+		{
+			name = Methane
+			title = #LOC_RS_Methane_DisplayName
+			tankType = RS_Methane
+			defaultSubtypePriority = 1
+		}
+	}
+}
+@PART[*]:HAS[~RS_IgnorePart[],~RS_IgnoreFuelTank[],#RS_TankType[GasTank],#RS_TankMetatype[Xenon],#RS_TankConfigured[true]]:FOR[zzzzRealismSimplified]
+{
+	@MODULE[ModuleB9PartSwitch]:HAS[#moduleID[RS_FuelSwitch]]
+	{
+		@SUBTYPE[Xenon]
+		{
+			%defaultSubtypePriority = 100
+		}
+	}
+}
+@PART[*]:HAS[~RS_IgnorePart[],~RS_IgnoreFuelTank[],#RS_TankType[GasTank],#RS_TankMetatype[Argon],#RS_TankConfigured[true]]:FOR[zzzzRealismSimplified]
+{
+	@MODULE[ModuleB9PartSwitch]:HAS[#moduleID[RS_FuelSwitch]]
+	{
+		@SUBTYPE[Argon]
+		{
+			%defaultSubtypePriority = 100
+		}
+	}
+}

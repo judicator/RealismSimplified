@@ -1,0 +1,28 @@
+RD-102
+{
+	propellants = AlcoLOX
+	type = lower_stage
+	pressureFed = false
+
+	minThrust = 428
+	maxThrust = 428
+
+	ispSL = 214
+	ispVac = 235
+
+	ignitions = 1
+	ullage = true
+	ratedBurnTime = 83
+	gimbalRange = 2.0
+
+	mass = 0.885
+	cost = 1207
+	entryCost = 12070
+	upgradeCost = 0
+
+	siblings
+	{
+		A-4     = 0.3
+		RD-103M = 0.8
+	}
+}

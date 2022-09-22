@@ -1,0 +1,22 @@
+RD-0146
+{
+	propellants = HydroLOX
+	type = OMS
+	pressureFed = false
+
+	minThrust = 98.1
+	maxThrust = 98.1
+
+	ispSL = 200
+	ispVac = 463
+
+	ignitions = 5
+	ullage = true
+	ratedBurnTime = 1100
+	gimbalRange = 4.0
+
+	mass = 0.242
+	cost = 8142
+	entryCost = 81420
+	upgradeCost = 0
+}

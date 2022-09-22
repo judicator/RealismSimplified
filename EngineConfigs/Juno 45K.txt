@@ -1,0 +1,27 @@
+Juno-45K
+{
+	propellants = Hypergolics
+	type = upper_stage
+	pressureFed = true
+
+	minThrust = 200.17
+	maxThrust = 200.17
+
+	ispSL = 260
+	ispVac = 304
+
+	ignitions = 1
+	ullage = true
+	ratedBurnTime = 135
+	gimbalRange = 4.25
+
+	mass = 0.113
+	cost = 1152
+	entryCost = 11520
+	upgradeCost = 0
+
+	siblings
+	{
+		Juno-45K-BlockII = 0.9
+	}
+}

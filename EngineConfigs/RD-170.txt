@@ -1,0 +1,30 @@
+RD-170
+{
+	propellants = KeroLOX
+	type = lower_stage
+	pressureFed = false
+
+	minThrust = 3953
+	maxThrust = 7904
+
+	ispSL = 309.3
+	ispVac = 337.1
+
+	ignitions = 1
+	ullage = true
+	ratedBurnTime = 150
+	gimbalRange = 6
+
+	mass = 9.75
+	cost = 83495
+	entryCost = 834950
+	upgradeCost = 0
+
+	siblings
+	{
+		RD-120 = 0.25
+		RD-172 = 0.9
+		RD-180 = 0.8
+		RD-191 = 0.7
+	}
+}

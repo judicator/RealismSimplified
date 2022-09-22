@@ -1,0 +1,550 @@
+// ===================================================================================================================
+// FIXME
+// ===================================================================================================================
+
+@PART[*]:HAS[~RS_IgnorePart[],~RS_IgnoreFuelTank[],~RS_TankType[],#category[Aero],@MODULE[ModuleLiftingSurface],@RESOURCE[LiquidFuel]]:BEFORE[zzzzRealismSimplified]
+{
+	%RS_TankType = FueledWing
+}
+
+@PART[*]:HAS[~RS_IgnorePart[],~RS_IgnoreFuelTank[],#RS_TankType[FueledWing],#RS_TotalCap[>0],#RS_MassOffset[*],#RS_CostOffset[*],~RS_AvGas_Engines[],~RS_TankConfigured[]]:FOR[zzzzRealismSimplified]
+{
+	RS_AvGas_Engines = #$@REALISM_SIMPLIFIED/AvGas_Engines$
+}
+@PART[*]:HAS[~RS_IgnorePart[],~RS_IgnoreFuelTank[],#RS_TankType[FueledWing],#RS_TotalCap[>0],#RS_MassOffset[*],#RS_CostOffset[*],~RS_FuelTanks_HPVariantsEnabled[],~RS_TankConfigured[]]:FOR[zzzzRealismSimplified]
+{
+	RS_FuelTanks_HPVariantsEnabled = #$@REALISM_SIMPLIFIED/fuelTanks_HPVariantsEnabled$
+}
+@PART[*]:HAS[~RS_IgnorePart[],~RS_IgnoreFuelTank[],#RS_TankType[FueledWing],#RS_TotalCap[>0],#RS_MassOffset[*],#RS_CostOffset[*],~RS_TankHasVolumeVariants[*rue],~RS_TankConfigured[]]:FOR[zzzzRealismSimplified]
+{
+	%RS_TankDryMass = #$@REALISM_SIMPLIFIED/fuelTanks_BaseMass$
+	@RS_TankDryMass *= #$@REALISM_SIMPLIFIED/fuelTanks_MassCoeff$
+	@RS_TankDryMass *= #$@REALISM_SIMPLIFIED/fueledWings_fuelTank_MassCoeff$
+	@RS_TankDryMass *= #$RS_TotalCap$
+
+	%RS_TankDryCost = #$@REALISM_SIMPLIFIED/fuelTanks_BaseCost$
+	@RS_TankDryCost *= #$@REALISM_SIMPLIFIED/fuelTanks_CostCoeff$
+	@RS_TankDryCost *= #$@REALISM_SIMPLIFIED/fueledWings_fuelTank_CostCoeff$
+	@RS_TankDryCost *= #$RS_TotalCap$
+
+	@RS_TotalCap *= #$@REALISM_SIMPLIFIED/fuelTanks_VolumeCoeff$
+
+	@RS_MassOffset += #$RS_TankDryMass$
+	@RS_CostOffset += #$RS_TankDryCost$
+
+	@mass = #$RS_MassOffset$
+	@cost = #$RS_CostOffset$
+	// Mass and cost should not be negative
+	@mass ^= :^-.*$:0: // If negative, set to zero
+	@cost ^= :^-.*$:0: // If negative, set to zero
+
+	// High-pressurized tank
+	%RS_Temp = #$RS_TankDryMass$
+	@RS_Temp *= #$@REALISM_SIMPLIFIED/fuelTank_HP_MassCoeff$
+	@RS_Temp -= #$RS_TankDryMass$
+	%RS_fuelTank_HP_AddedMass = #$RS_Temp$
+
+	@RS_Temp = #$RS_TankDryCost$
+	@RS_Temp *= #$@REALISM_SIMPLIFIED/fuelTank_HP_CostCoeff$
+	@RS_Temp -= #$RS_TankDryCost$
+	%RS_fuelTank_HP_AddedCost = #$RS_Temp$
+
+	// Boiloff insulation level 1
+	@RS_Temp = #$RS_TankDryMass$
+	@RS_Temp *= #$@REALISM_SIMPLIFIED/fuelTanks_Insulation1_MassCoeff$
+	@RS_Temp -= #$RS_TankDryMass$
+	%RS_fuelTank_Insulation1_AddedMass = #$RS_Temp$
+
+	@RS_Temp = #$RS_TankDryCost$
+	@RS_Temp *= #$@REALISM_SIMPLIFIED/fuelTanks_Insulation1_CostCoeff$
+	@RS_Temp -= #$RS_TankDryCost$
+	%RS_fuelTank_Insulation1_AddedCost = #$RS_Temp$
+
+	// Boiloff insulation level 2
+	@RS_Temp = #$RS_TankDryMass$
+	@RS_Temp *= #$@REALISM_SIMPLIFIED/fuelTanks_Insulation2_MassCoeff$
+	@RS_Temp -= #$RS_TankDryMass$
+	%RS_fuelTank_Insulation2_AddedMass = #$RS_Temp$
+
+	@RS_Temp = #$RS_TankDryCost$
+	@RS_Temp *= #$@REALISM_SIMPLIFIED/fuelTanks_Insulation2_CostCoeff$
+	@RS_Temp -= #$RS_TankDryCost$
+	%RS_fuelTank_Insulation2_AddedCost = #$RS_Temp$
+
+	// Boiloff insulation level 3
+	@RS_Temp = #$RS_TankDryMass$
+	@RS_Temp *= #$@REALISM_SIMPLIFIED/fuelTanks_Insulation3_MassCoeff$
+	@RS_Temp -= #$RS_TankDryMass$
+	%RS_fuelTank_Insulation3_AddedMass = #$RS_Temp$
+
+	@RS_Temp = #$RS_TankDryCost$
+	@RS_Temp *= #$@REALISM_SIMPLIFIED/fuelTanks_Insulation3_CostCoeff$
+	@RS_Temp -= #$RS_TankDryCost$
+	%RS_fuelTank_Insulation3_AddedCost = #$RS_Temp$
+
+	// ZBO subtype
+	@RS_Temp = #$RS_TankDryMass$
+	@RS_Temp *= #$@REALISM_SIMPLIFIED/fuelTanks_ZBO_MassCoeff$
+	@RS_Temp -= #$RS_TankDryMass$
+	%RS_fuelTank_ZBO_AddedMass = #$RS_Temp$
+
+	@RS_Temp = #$RS_TankDryCost$
+	@RS_Temp *= #$@REALISM_SIMPLIFIED/fuelTanks_ZBO_CostCoeff$
+	@RS_Temp -= #$RS_TankDryCost$
+	%RS_fuelTank_ZBO_AddedCost = #$RS_Temp$
+
+	%RS_TankConfigured = true
+
+	!MODULE[ModuleB9PartSwitch]:HAS[#moduleID[fuelSwitch]] {}
+	!MODULE[ModuleB9PartSwitch]:HAS[#moduleID[RS_TankContentsSwitch]] {}
+	!RESOURCE[LiquidFuel] {}
+	!RESOURCE[Oxidizer] {}
+	!RESOURCE[MonoPropellant] {}
+	!RESOURCE[LqdHydrogen] {}
+	!RESOURCE[LqdMethane] {}
+
+	MODULE
+	{
+		name = ModuleB9PartSwitch
+		moduleID = RS_TankContentsSwitch
+		switcherDescription = #LOC_RS_TankContents_DisplayName
+		baseVolume = #$../RS_TotalCap$
+		affectDragCubes = false
+		uiGroupName = RealismSimplified
+		uiGroupDisplayName = #LOC_RealismSimplified_UIGroup_DisplayName
+
+		SUBTYPE
+		{
+			name = NoTank
+			title = #LOC_RS_NoTank_DisplayName
+			defaultSubtypePriority = 200
+			primaryColor = grey
+			secondaryColor = grey
+		}
+		SUBTYPE
+		{
+			name = Kerosene
+			title = #LOC_RS_Kerosene_DisplayName
+			tankType = RS_Kerosene
+		}
+		SUBTYPE
+		{
+			name = AvGas
+			title = #LOC_RS_AvGas_DisplayName
+			tankType = RS_AvGas
+		}
+		SUBTYPE
+		{
+			name = LqdMethane
+			title = #LOC_RS_LqdMethane_DisplayName
+			tankType = RS_LqdMethane
+		}
+		SUBTYPE
+		{
+			name = LH2
+			title = #LOC_RS_LH2_DisplayName
+			tankType = RS_LH2
+		}
+		SUBTYPE
+		{
+			name = MethaLOX
+			title = #LOC_RS_MethaLOX_DisplayName
+			tankType = RS_MethaLOX
+		}
+		SUBTYPE
+		{
+			name = HydroLOX
+			title = #LOC_RS_HydroLOX_DisplayName
+			tankType = RS_HydroLOX
+		}
+		SUBTYPE
+		{
+			name = KeroLOX
+			title = #LOC_RS_KeroLOX_DisplayName
+			tankType = RS_KeroLOX
+		}
+		SUBTYPE
+		{
+			name = Hypergolics
+			title = #LOC_RS_Hypergolics_DisplayName
+			tankType = RS_Hypergolics
+		}
+		SUBTYPE
+		{
+			name = Monopropellant
+			title = #LOC_RS_Monopropellant_DisplayName
+			tankType = RS_Monopropellant
+		}
+		SUBTYPE
+		{
+			name = Nitrogen
+			title = #LOC_RS_Nitrogen_DisplayName
+			tankType = RS_Nitrogen
+		}
+		SUBTYPE
+		{
+			name = Hydrogen
+			title = #LOC_RS_Hydrogen_DisplayName
+			tankType = RS_Hydrogen
+		}
+		SUBTYPE
+		{
+			name = Methane
+			title = #LOC_RS_Methane_DisplayName
+			tankType = RS_Methane
+		}
+		SUBTYPE
+		{
+			name = LOX
+			title = #LOC_RS_LOX_DisplayName
+			tankType = RS_LOX
+		}
+	}
+
+	MODULE
+	{
+		name = ModuleB9PartSwitch
+		moduleID = RS_TankTypeSwitch
+		switcherDescription = #LOC_RS_TankType_DisplayName
+		baseVolume = #$../RS_TotalCap$
+		affectDragCubes = false
+		uiGroupName = RealismSimplified
+		uiGroupDisplayName = #LOC_RealismSimplified_UIGroup_DisplayName
+
+		SUBTYPE
+		{
+			name = Default
+			title = #LOC_RS_TankType_Default
+			defaultSubtypePriority = 2
+			primaryColor = ResourceColorLiquidFuel
+			secondaryColor = ResourceColorLiquidFuel
+		}
+		SUBTYPE
+		{
+			name = HP
+			title = #LOC_RS_TankType_HP
+			addedMass = #$../../RS_fuelTank_HP_AddedMass$
+			addedCost = #$../../RS_fuelTank_HP_AddedCost$
+			defaultSubtypePriority = 1
+			primaryColor = ResourceColorMonoPropellant
+			secondaryColor = ResourceColorMonoPropellant
+			RESOURCE
+			{
+				name = #$@REALISM_SIMPLIFIED/pressurizationGas$
+				unitsPerVolume = #$@REALISM_SIMPLIFIED/pressurizationGas_Ratio$
+			}
+		}
+	}
+
+	MODULE:NEEDS[CryoTanks]
+	{
+		name = ModuleB9PartSwitch
+		moduleID = RS_TankBoiloffInsulationSwitch
+		switcherDescription = #LOC_RS_TankBoiloffInsulation_DisplayName
+		affectDragCubes = false
+		uiGroupName = RealismSimplified
+		uiGroupDisplayName = #LOC_RealismSimplified_UIGroup_DisplayName
+
+		SUBTYPE
+		{
+			name = NoInsulation
+			title = #LOC_RS_Tank_Insulation_NoInsulation
+			defaultSubtypePriority = 5
+			primaryColor = DarkRose
+			secondaryColor = DarkRose
+		}
+		SUBTYPE
+		{
+			name = ZBO
+			title = #LOC_RS_Tank_Insulation_ZBO
+			addedMass = #$../../RS_fuelTank_ZBO_AddedMass$
+			addedCost = #$../../RS_fuelTank_ZBO_AddedCost$
+			defaultSubtypePriority = 4
+			primaryColor = ResourceColorLqdHydrogen
+			secondaryColor = ResourceColorLqdHydrogen
+			upgradeRequired = RS_FuelTanks_ZBO_Upgrade
+			MODULE
+			{
+				IDENTIFIER
+				{
+					name = ModuleCryoTank
+					moduleID = RS_CryoTank
+				}
+				DATA
+				{
+					CoolingAllowed = true
+					CoolingEnabled = true
+					BOILOFFCONFIG
+					{
+						FuelName = LqdHydrogen
+						BoiloffRate = #$@REALISM_SIMPLIFIED/boiloffRate_LH2$
+					}
+					BOILOFFCONFIG
+					{
+						FuelName = LqdOxygen
+						BoiloffRate = #$@REALISM_SIMPLIFIED/boiloffRate_LOX$
+					}
+					BOILOFFCONFIG
+					{
+						FuelName = LqdMethane
+						BoiloffRate = #$@REALISM_SIMPLIFIED/boiloffRate_LqdMethane$
+					}
+				}
+			}
+		}
+		SUBTYPE
+		{
+			name = Insulation1
+			title = #LOC_RS_Tank_Insulation_1
+			addedMass = #$../../RS_fuelTank_Insulation1_AddedMass$
+			addedCost = #$../../RS_fuelTank_Insulation1_AddedCost$
+			defaultSubtypePriority = 3
+			primaryColor = Blue
+			secondaryColor = Blue
+			upgradeRequired = RS_FuelTanks_Insulation1_Upgrade
+			MODULE
+			{
+				IDENTIFIER
+				{
+					name = ModuleCryoTank
+					moduleID = RS_CryoTank
+				}
+				DATA
+				{
+					CoolingAllowed = false
+					CoolingEnabled = false
+					BOILOFFCONFIG
+					{
+						FuelName = LqdHydrogen
+						BoiloffRate = #$@REALISM_SIMPLIFIED/boiloffRate_LH2$
+					}
+					BOILOFFCONFIG
+					{
+						FuelName = LqdOxygen
+						BoiloffRate = #$@REALISM_SIMPLIFIED/boiloffRate_LOX$
+					}
+					BOILOFFCONFIG
+					{
+						FuelName = LqdMethane
+						BoiloffRate = #$@REALISM_SIMPLIFIED/boiloffRate_LqdMethane$
+					}
+				}
+			}
+		}
+		SUBTYPE
+		{
+			name = Insulation2
+			title = #LOC_RS_Tank_Insulation_2
+			addedMass = #$../../RS_fuelTank_Insulation2_AddedMass$
+			addedCost = #$../../RS_fuelTank_Insulation2_AddedCost$
+			defaultSubtypePriority = 2
+			primaryColor = Bluish
+			secondaryColor = Bluish
+			upgradeRequired = RS_FuelTanks_Insulation2_Upgrade
+			MODULE
+			{
+				IDENTIFIER
+				{
+					name = ModuleCryoTank
+					moduleID = RS_CryoTank
+				}
+				DATA
+				{
+					CoolingAllowed = false
+					CoolingEnabled = false
+					BOILOFFCONFIG
+					{
+						FuelName = LqdHydrogen
+						BoiloffRate = #$@REALISM_SIMPLIFIED/boiloffRate_LH2$
+					}
+					BOILOFFCONFIG
+					{
+						FuelName = LqdOxygen
+						BoiloffRate = #$@REALISM_SIMPLIFIED/boiloffRate_LOX$
+					}
+					BOILOFFCONFIG
+					{
+						FuelName = LqdMethane
+						BoiloffRate = #$@REALISM_SIMPLIFIED/boiloffRate_LqdMethane$
+					}
+				}
+			}
+		}
+		SUBTYPE
+		{
+			name = Insulation3
+			title = #LOC_RS_Tank_Insulation_3
+			addedMass = #$../../RS_fuelTank_Insulation3_AddedMass$
+			addedCost = #$../../RS_fuelTank_Insulation3_AddedCost$
+			defaultSubtypePriority = 1
+			primaryColor = Blueberry
+			secondaryColor = Blueberry
+			upgradeRequired = RS_FuelTanks_Insulation3_Upgrade
+			MODULE
+			{
+				IDENTIFIER
+				{
+					name = ModuleCryoTank
+					moduleID = RS_CryoTank
+				}
+				DATA
+				{
+					CoolingAllowed = false
+					CoolingEnabled = false
+					BOILOFFCONFIG
+					{
+						FuelName = LqdHydrogen
+						BoiloffRate = #$@REALISM_SIMPLIFIED/boiloffRate_LH2$
+					}
+					BOILOFFCONFIG
+					{
+						FuelName = LqdOxygen
+						BoiloffRate = #$@REALISM_SIMPLIFIED/boiloffRate_LOX$
+					}
+					BOILOFFCONFIG
+					{
+						FuelName = LqdMethane
+						BoiloffRate = #$@REALISM_SIMPLIFIED/boiloffRate_LqdMethane$
+					}
+				}
+			}
+		}
+	}
+
+	!MODULE[ModuleCryoTank],* {}
+	MODULE:NEEDS[CryoTanks]
+	{
+		name = ModuleCryoTank
+		CoolingCost = #$@REALISM_SIMPLIFIED/fuelTanks_ZBO_CoolingCost$
+		CoolingAllowed = false
+		CoolingEnabled = false
+		moduleID = RS_CryoTank
+		BOILOFFCONFIG
+		{
+			FuelName = LqdHydrogen
+			BoiloffRate = #$@REALISM_SIMPLIFIED/boiloffRate_LH2$
+			OUTPUT_RESOURCE
+			{
+				ResourceName = Hydrogen
+				Ratio = 394 // we assume that half of gas is lost
+				FlowMode = STAGE_STACK_FLOW_BALANCE
+			}
+		}
+		BOILOFFCONFIG
+		{
+			FuelName = LqdOxygen
+			BoiloffRate = #$@REALISM_SIMPLIFIED/boiloffRate_LOX$
+			OUTPUT_RESOURCE
+			{
+				ResourceName = Oxygen
+				Ratio = 404.5 // we assume that half of gas is lost
+				FlowMode = STAGE_STACK_FLOW_BALANCE
+			}
+		}
+		BOILOFFCONFIG
+		{
+			FuelName = LqdMethane
+			BoiloffRate = #$@REALISM_SIMPLIFIED/boiloffRate_LqdMethane$
+			OUTPUT_RESOURCE
+			{
+				ResourceName = Methane
+				Ratio = 297 // we assume that half of gas is lost
+				FlowMode = STAGE_STACK_FLOW_BALANCE
+			}
+		}
+	}
+}
+
+// ===================================================================================================================
+// Set ModuleCryoTank boiloff ratios
+// ===================================================================================================================
+
+@PART[*]:HAS[~RS_IgnorePart[],~RS_IgnoreFuelTank[],#RS_TankType[FueledWing],@MODULE[ModuleCryoTank]:HAS[#moduleID[RS_CryoTank]]]:NEEDS[B9PartSwitch,CryoTanks]:FOR[zzzzRealismSimplified]
+{
+	@MODULE[ModuleCryoTank]:HAS[#moduleID[RS_CryoTank]]
+	{
+		@BOILOFFCONFIG,*
+		{
+			@BoiloffRate *= #$@REALISM_SIMPLIFIED/boiloffRate_NoInsulation$
+		}
+	}
+}
+@PART[*]:HAS[~RS_IgnorePart[],~RS_IgnoreFuelTank[],#RS_TankType[FueledWing],@MODULE[ModuleB9PartSwitch]:HAS[#moduleID[RS_TankBoiloffInsulationSwitch]]]:NEEDS[B9PartSwitch,CryoTanks]:FOR[zzzzRealismSimplified]
+{
+	@MODULE[ModuleB9PartSwitch]:HAS[#moduleID[RS_TankBoiloffInsulationSwitch]]
+	{
+		@SUBTYPE[ZBO]
+		{
+			@MODULE:HAS[@IDENTIFIER[ModuleCryoTank]]
+			{
+				@DATA
+				{
+					@BOILOFFCONFIG,*
+					{
+						@BoiloffRate *= #$@REALISM_SIMPLIFIED/boiloffRate_ZBO_Coeff$
+					}
+				}
+			}
+		}
+		@SUBTYPE[Insulation1]
+		{
+			@MODULE:HAS[@IDENTIFIER[ModuleCryoTank]]
+			{
+				@DATA
+				{
+					@BOILOFFCONFIG,*
+					{
+						@BoiloffRate *= #$@REALISM_SIMPLIFIED/boiloffRate_Insulation1_Coeff$
+					}
+				}
+			}
+		}
+		@SUBTYPE[Insulation2]
+		{
+			@MODULE:HAS[@IDENTIFIER[ModuleCryoTank]]
+			{
+				@DATA
+				{
+					@BOILOFFCONFIG,*
+					{
+						@BoiloffRate *= #$@REALISM_SIMPLIFIED/boiloffRate_Insulation2_Coeff$
+					}
+				}
+			}
+		}
+		@SUBTYPE[Insulation3]
+		{
+			@MODULE:HAS[@IDENTIFIER[ModuleCryoTank]]
+			{
+				@DATA
+				{
+					@BOILOFFCONFIG,*
+					{
+						@BoiloffRate *= #$@REALISM_SIMPLIFIED/boiloffRate_Insulation3_Coeff$
+					}
+				}
+			}
+		}
+	}
+}
+
+
+// ===================================================================================================================
+// Remove AvGas tanks variant, if appropriate setting is false
+// ===================================================================================================================
+@PART[*]:HAS[~RS_IgnorePart[],~RS_IgnoreFuelTank[],#RS_TankType[FueledWing],~RS_AvGas_Engines[*rue]]:FOR[zzzzRealismSimplified]
+{
+	@MODULE[ModuleB9PartSwitch]:HAS[#moduleID[RS_TankContentsSwitch]]
+	{
+		!SUBTYPE[AvGas] {}
+	}
+}
+
+
+// ===================================================================================================================
+// Remove high-pressurized tanks variant, if appropriate setting is false
+// ===================================================================================================================
+@PART[*]:HAS[~RS_IgnorePart[],~RS_IgnoreFuelTank[],#RS_TankType[FueledWing],~RS_FuelTanks_HPVariantsEnabled[*rue]]:FOR[zzzzRealismSimplified]
+{
+	!MODULE[ModuleB9PartSwitch]:HAS[#moduleID[RS_TankTypeSwitch]] {}
+}

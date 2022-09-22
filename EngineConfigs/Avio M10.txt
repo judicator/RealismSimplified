@@ -1,0 +1,22 @@
+Avio-M10
+{
+	propellants = MethaLOX
+	type = upper_stage
+	pressureFed = false
+
+	minThrust = 49
+	maxThrust = 98
+
+	ispSL = 200
+	ispVac = 362
+
+	ignitions = 20
+	ullage = true
+	ratedBurnTime = 450
+	gimbalRange = 5
+
+	mass = 0.2
+	cost = 1392
+	entryCost = 13920
+	upgradeCost = 0
+}

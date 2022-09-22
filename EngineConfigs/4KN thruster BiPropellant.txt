@@ -1,0 +1,29 @@
+4KN-thruster-BiPropellant
+{
+	propellants = Hypergolics
+	type = OMS
+	pressureFed = true
+
+	minThrust = 4.0
+	maxThrust = 4.0
+
+	ispSL = 100
+	ispVac = 300
+
+	ignitions = -1
+	ullage = false
+	ratedBurnTime = 6000
+	gimbalRange = 3
+
+	mass = 0.01
+	cost = 175
+	entryCost = 1750
+	upgradeCost = 0
+
+	siblings
+	{
+		2KN-thruster-BiPropellant = 0.5
+		2KN-thruster-Monopropellant = 0.3
+		4KN-thruster-Monopropellant = 0.7
+	}
+}

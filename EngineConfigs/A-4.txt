@@ -1,0 +1,30 @@
+A-4
+{
+	propellants = AlcoLOX
+	type = lower_stage
+	pressureFed = false
+
+	minThrust = 312
+	maxThrust = 312
+
+	ispSL = 203
+	ispVac = 239
+
+	ignitions = 1
+	ullage = true
+	ratedBurnTime = 70
+	gimbalRange = 2.0
+
+	mass = 0.931
+	cost = 900
+	entryCost = 9000
+	upgradeCost = 0
+
+	siblings
+	{
+		A-6     = 0.6
+		A-7     = 0.5
+		RD-102  = 0.5
+		RD-103M = 0.5
+	}
+}

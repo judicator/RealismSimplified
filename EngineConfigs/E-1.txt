@@ -1,0 +1,27 @@
+E-1
+{
+	propellants = KeroLOX
+	type = lower_stage
+	pressureFed = false
+
+	minThrust = 1884.59
+	maxThrust = 1884.59
+
+	ispSL = 260
+	ispVac = 290
+
+	ignitions = 1
+	ullage = true
+	ratedBurnTime = 165
+	gimbalRange = 8.0
+
+	mass = 1.264
+	cost = 8356
+	entryCost = 83560
+	upgradeCost = 0
+
+	siblings
+	{
+		E-1-Upgrade = 0.9
+	}
+}

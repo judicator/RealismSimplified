@@ -1,0 +1,22 @@
+Generic-AlcoLOX-vernier
+{
+	propellants = AlcoLOX
+	type = sustainer
+	pressureFed = false
+
+	minThrust = 3
+	maxThrust = 3
+
+	ispSL = 190
+	ispVac = 212
+
+	ignitions = 1
+	ullage = true
+	ratedBurnTime = 200
+	gimbalRange = 6
+
+	mass = 0.02
+	cost = 204
+	entryCost = 2040
+	upgradeCost = 0
+}

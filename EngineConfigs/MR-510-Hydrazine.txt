@@ -1,0 +1,22 @@
+MR-510-Hydrazine
+{
+	propellants = MonoPropellant
+	type = electric
+	pressureFed = false
+
+	minThrust = 1.5
+	maxThrust = 1.5
+
+	ispSL = 1
+	ispVac = 585
+
+	ignitions = -1
+	ullage = false
+	ratedBurnTime = 86400
+	gimbalRange = 0
+
+	mass = 0.0016
+	cost = 1000
+	entryCost = 10000
+	upgradeCost = 0
+}

@@ -1,0 +1,42 @@
+AJ10-104
+{
+	propellants = Hypergolics
+	type = OMS
+	pressureFed = true
+
+	minThrust = 35.1
+	maxThrust = 35.1
+
+	ispSL = 215
+	ispVac = 278
+
+	ignitions = -1
+	ullage = true
+	ratedBurnTime = 300
+	gimbalRange = 4.25
+
+	mass = 0.09
+	cost = 1119
+	entryCost = 11190
+	upgradeCost = 5595
+
+	isUpgrade = true
+
+	siblings
+	{
+		AJ10-37   = 0.7
+		AJ10-118D = 0.8
+		AJ10-118E = 0.8
+		AJ10-118F = 0.7
+		AJ10-118K = 0.6
+		AJ10-118X = 0.6
+		AJ10-137  = 0.6
+		AJ10-138  = 0.6
+		AJ10-190  = 0.5
+	}
+	upgradeIcons
+	{
+		Bluedog_DB/Parts/Able, bluedog_Ablestar_Engine
+		RealEnginesPack/USPack, AJ10_104
+	}
+}

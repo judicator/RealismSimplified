@@ -1,0 +1,35 @@
+RD-0120M
+{
+	propellants = HydroLOX
+	type = sustainer
+	pressureFed = false
+
+	minThrust = 745.44 // 38%
+	maxThrust = 1961.7
+
+	ispSL = 359.1
+	ispVac = 455.6
+
+	ignitions = 1
+	ullage = true
+	ratedBurnTime = 600
+	gimbalRange = 11
+
+	mass = 3.45
+	cost = 42154
+	entryCost = 421540
+	upgradeCost = 210770
+
+	siblings
+	{
+		RD-0120 = 0.9
+	}
+
+	isUpgrade = true
+
+	upgradeIcons
+	{
+		RealEnginesPack/PostSovietPack, rd0120
+		CryoEngines/Parts/HydroloxEngines/1875, cryoengine-erebus-1
+	}
+}

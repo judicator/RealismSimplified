@@ -1,0 +1,44 @@
+RL-10C-2
+{
+	propellants = HydroLOX
+	type = OMS
+	pressureFed = false
+
+	minThrust = 111.2
+	maxThrust = 111.2
+
+	ispSL = 235
+	ispVac = 465.5
+
+	ignitions = 15
+	ullage = true
+	ratedBurnTime = 1130
+	gimbalRange = 4.0
+
+	mass = 0.277
+	cost = 10434
+	entryCost = 104340
+	upgradeCost = 52170
+
+	isUpgrade = true
+
+	siblings
+	{
+		RL-10A-1      = 0.8
+		RL-10A-3      = 0.8
+		RL-10A-4      = 0.8
+		RL-10A-4-1N   = 0.8
+		RL-10A-4-2N   = 0.8
+		RL-10A-5      = 0.6
+		RL-10B-2      = 0.8
+		RL-10C-1      = 0.9
+		RL-10C-3      = 0.9
+		CECE          = 0.8
+		CECE-MethaLOX = 0.7
+	}
+	upgradeIcons
+	{
+		Bluedog_DB/Parts/Centaur, bluedog_CentaurD_RL10B2
+		CryoEngines/Parts/HydroloxEngines/125, cryoengine-hecate-1
+	}
+}

@@ -1,0 +1,22 @@
+S5_92-vernier
+{
+	propellants = Hypergolics
+	type = OMS
+	pressureFed = false
+
+	minThrust = 2.0
+	maxThrust = 2.0
+
+	ispSL = 158
+	ispVac = 327
+
+	ignitions = 50
+	ullage = true
+	ratedBurnTime = 2000
+	gimbalRange = 5.0
+
+	mass = 0.001
+	cost = 112
+	entryCost = 1120
+	upgradeCost = 0
+}

@@ -1,0 +1,29 @@
+NK-9V
+{
+	propellants = KeroLOX
+	type = upper_stage
+	pressureFed = false
+
+	minThrust = 451.1
+	maxThrust = 451.1
+
+	ispSL = 240
+	ispVac = 345
+
+	ignitions = 1
+	ullage = true
+	ratedBurnTime = 240
+	gimbalRange = 5
+
+	mass = 0.64
+	cost = 3451
+	entryCost = 34510
+	upgradeCost = 0
+
+	siblings
+	{
+		NK-9  = 0.9
+		NK-19 = 0.8
+		NK-31 = 0.8
+	}
+}

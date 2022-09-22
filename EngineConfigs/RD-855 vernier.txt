@@ -1,0 +1,22 @@
+RD-855-vernier
+{
+	propellants = Hypergolics
+	type = lower_stage
+	pressureFed = false
+
+	minThrust = 83
+	maxThrust = 83
+
+	ispSL = 254
+	ispVac = 292
+
+	ignitions = 1
+	ullage = true
+	ratedBurnTime = 127
+	gimbalRange = 10
+
+	mass = 0.12
+	cost = 551
+	entryCost = 5510
+	upgradeCost = 0
+}

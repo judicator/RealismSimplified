@@ -1,0 +1,31 @@
+STME
+{
+	propellants = HydroLOX
+	type = lower_stage
+	pressureFed = false
+
+	minThrust = 2023.9 // 70%
+	maxThrust = 2891.3
+
+	ispSL = 364.5
+	ispVac = 428.5
+
+	ignitions = 1
+	ullage = true
+	ratedBurnTime = 480
+	gimbalRange = 9.7
+
+	mass = 4.15
+	cost = 48961
+	entryCost = 489610
+	upgradeCost = 0
+
+	siblings
+	{
+		RS-25  = 0.5
+		RS-68  = 0.25
+		RS-68A = 0.2
+		RS-68B = 0.2
+		RS-68K = 0.15
+	}
+}

@@ -1,0 +1,22 @@
+RD-119
+{
+	propellants = Hypergolics // actually UDMH+LOX, but let's assume it's just very effective UDMH+NTO engine
+	type = upper_stage
+	pressureFed = false
+
+	minThrust = 95.5          // without 4 verniers
+	maxThrust = 95.5          // without 4 verniers
+
+	ispSL = 220
+	ispVac = 352
+
+	ignitions = 2
+	ullage = true
+	ratedBurnTime = 260
+	gimbalRange = 0
+
+	mass = 0.168
+	cost = 892
+	entryCost = 8920
+	upgradeCost = 0
+}

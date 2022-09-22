@@ -1,0 +1,29 @@
+RD-0105
+{
+	propellants = KeroLOX
+	type = upper_stage
+	pressureFed = false
+
+	minThrust = 49.4
+	maxThrust = 49.4
+
+	ispSL = 257
+	ispVac = 316
+
+	ignitions = 1
+	ullage = true
+	ratedBurnTime = 440
+	gimbalRange = 6
+
+	mass = 0.125
+	cost = 427
+	entryCost = 4270
+	upgradeCost = 0
+
+	siblings
+	{
+		RD-0109 = 0.9
+		RD-0107 = 0.4
+		RD-0110 = 0.5
+	}
+}

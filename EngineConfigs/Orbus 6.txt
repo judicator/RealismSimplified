@@ -1,0 +1,23 @@
+Orbus-6
+{
+	propellants = SolidFuel
+	type = SRB
+	solidFuelMass = 2.301
+	pressureFed = false
+
+	minThrust = 40.5
+	maxThrust = 81
+
+	ispSL = 100
+	ispVac = 303.5
+
+	ignitions = 1
+	ullage = false
+	ratedBurnTime = 60
+	gimbalRange = 0
+
+	mass = 0.3
+	cost = 389
+	entryCost = 3890
+	upgradeCost = 0
+}

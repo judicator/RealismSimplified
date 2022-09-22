@@ -1,0 +1,22 @@
+S1_35800-vernier
+{
+	propellants = KeroLOX
+	type = sustainer
+	pressureFed = false
+
+	minThrust = 35
+	maxThrust = 35
+
+	ispSL = 262
+	ispVac = 319
+
+	ignitions = 1
+	ullage = true
+	ratedBurnTime = 340
+	gimbalRange = 10
+
+	mass = 0.01
+	cost = 367
+	entryCost = 3670
+	upgradeCost = 0
+}

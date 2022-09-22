@@ -1,0 +1,22 @@
+RD-56
+{
+	propellants = HydroLOX
+	type = OMS
+	pressureFed = false
+
+	minThrust = 69.6
+	maxThrust = 69.6
+
+	ispSL = 235
+	ispVac = 447.5
+
+	ignitions = 5
+	ullage = true
+	ratedBurnTime = 800
+	gimbalRange = 4
+
+	mass = 0.282
+	cost = 5314
+	entryCost = 53140
+	upgradeCost = 0
+}

@@ -1,0 +1,22 @@
+RD-215M
+{
+	propellants = Hypergolics
+	type = lower_stage
+	pressureFed = false
+
+	minThrust = 887.5
+	maxThrust = 887.5
+
+	ispSL = 251
+	ispVac = 294
+
+	ignitions = 1
+	ullage = true
+	ratedBurnTime = 120
+	gimbalRange = 10
+
+	mass = 0.653
+	cost = 3937
+	entryCost = 39370
+	upgradeCost = 0
+}

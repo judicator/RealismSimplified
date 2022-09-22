@@ -1,0 +1,38 @@
+NK-33
+{
+	propellants = KeroLOX
+	type = lower_stage
+	pressureFed = false
+
+	minThrust = 841
+	maxThrust = 1766  // 105%
+
+	ispSL = 297
+	ispVac = 331
+
+	ignitions = 2
+	ullage = true
+	ratedBurnTime = 240
+	gimbalRange = 6
+
+	mass = 1.222
+	cost = 17538
+	entryCost = 175380
+	upgradeCost = 87690
+
+	siblings
+	{
+		NK-9   = 0.3
+		NK-15  = 0.7
+		NK-15V = 0.6
+		NK-43  = 0.9
+	}
+
+	isUpgrade = true
+
+	upgradeIcons
+	{
+		RealEnginesPack/PostSovietPack, NK33engine
+		RS_Engine_NK33_Family
+	}
+}

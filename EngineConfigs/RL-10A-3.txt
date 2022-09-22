@@ -1,0 +1,46 @@
+RL-10A-3
+{
+	propellants = HydroLOX
+	type = OMS
+	pressureFed = false
+
+	minThrust = 70.05
+	maxThrust = 70.05
+
+	ispSL = 255
+	ispVac = 433
+
+	ignitions = 10
+	ullage = true
+	ratedBurnTime = 470
+	gimbalRange = 4.0
+
+	mass = 0.1311
+	cost = 5279
+	entryCost = 52790
+	upgradeCost = 26395
+
+	isUpgrade = true
+
+	siblings
+	{
+		RL-10A-1      = 0.9
+		RL-10A-4      = 0.9
+		RL-10A-4-1N   = 0.8
+		RL-10A-4-2N   = 0.8
+		RL-10A-5      = 0.7
+		RL-10B-2      = 0.7
+		RL-10C-1      = 0.8
+		RL-10C-2      = 0.8
+		RL-10C-3      = 0.8
+		CECE          = 0.6
+		CECE-MethaLOX = 0.5
+	}
+	upgradeIcons
+	{
+		Bluedog_DB/Parts/Centaur, bluedog_CentaurD_RL10
+		Hephaistos/Parts/Engine, bluedog_Centaur_RL10_LV2
+		RealScaleBoosters/Parts/Engines, RSBengineRL10A3
+		RS_Engine_RL10_Family
+	}
+}

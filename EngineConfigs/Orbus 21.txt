@@ -1,0 +1,23 @@
+Orbus-21
+{
+	propellants = SolidFuel
+	type = SRB
+	solidFuelMass = 8.673
+	pressureFed = false
+
+	minThrust = 98
+	maxThrust = 196
+
+	ispSL = 100
+	ispVac = 295.5
+
+	ignitions = 1
+	ullage = false
+	ratedBurnTime = 60
+	gimbalRange = 0
+
+	mass = 0.64
+	cost = 1107
+	entryCost = 11070
+	upgradeCost = 0
+}

@@ -1,0 +1,27 @@
+STBE-MethaLOX
+{
+	propellants = MethaLOX
+	type = lower_stage
+	pressureFed = false
+
+	minThrust = 3855.6 // 45%
+	maxThrust = 8564.4
+
+	ispSL = 302.6
+	ispVac = 341.5
+
+	ignitions = 4
+	ullage = true
+	ratedBurnTime = 300
+	gimbalRange = 8
+
+	mass = 8.144
+	cost = 92468
+	entryCost = 924680
+	upgradeCost = 0
+
+	siblings
+	{
+		STBE = 0.8
+	}
+}

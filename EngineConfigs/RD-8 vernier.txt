@@ -1,0 +1,22 @@
+RD-8-vernier
+{
+	propellants = KeroLOX
+	type = upper_stage
+	pressureFed = false
+
+	minThrust = 19.61
+	maxThrust = 19.61
+
+	ispSL = 170
+	ispVac = 342
+
+	ignitions = 2
+	ullage = true
+	ratedBurnTime = 1100
+	gimbalRange = 16.0
+
+	mass = 0.095
+	cost = 289
+	entryCost = 2890
+	upgradeCost = 0
+}

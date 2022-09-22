@@ -1,0 +1,27 @@
+RS-30
+{
+	propellants = HydroLOX
+	type = OMS
+	pressureFed = false
+
+	minThrust = 53.4
+	maxThrust = 88.96
+
+	ispSL = 100
+	ispVac = 474.5
+
+	ignitions = 60
+	ullage = true
+	ratedBurnTime = 800
+	gimbalRange = 7
+
+	mass = 0.174
+	cost = 10059
+	entryCost = 100590
+	upgradeCost = 0
+
+	siblings
+	{
+		RS-25 = 0.3
+	}
+}

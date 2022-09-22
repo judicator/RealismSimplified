@@ -1,0 +1,22 @@
+X-405
+{
+	propellants = KeroLOX
+	type = lower_stage
+	pressureFed = false
+
+	minThrust = 135.5
+	maxThrust = 135.5
+
+	ispSL = 254
+	ispVac = 278
+
+	ignitions = 1
+	ullage = true
+	ratedBurnTime = 145
+	gimbalRange = 5.0
+
+	mass = 0.192
+	cost = 730
+	entryCost = 7300
+	upgradeCost = 0
+}

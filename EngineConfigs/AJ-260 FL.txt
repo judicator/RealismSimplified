@@ -1,0 +1,34 @@
+AJ-260-FL
+{
+	propellants = SolidFuel
+	type = SRB
+	solidFuelMass = 1492.229
+	pressureFed = false
+
+	minThrust = 17695
+	maxThrust = 35391
+
+	ispSL = 238
+	ispVac = 263
+
+	ignitions = 1
+	ullage = false
+	ratedBurnTime = 130
+	gimbalRange = 3
+
+	mass = 156.126
+	cost = 119032
+	entryCost = 1190320
+	upgradeCost = 0
+
+	thrustCurve
+	{
+		key = 1 0.70755 1.248271 1.248271
+		key = 0.7 1 -0.1455717 -0.1455717
+		key = 0.55 0.83019 -0.02537621 -0.02537621
+		key = 0.26 0.83019 -0.008940977 -0.008940977
+		key = 0.2 0.75472 -3.520613 -3.520613
+		key = 0.15 0.4717 -4.373701 -4.373701
+		key = 0 0.3 -0.8487133 -0.8487133
+	}
+}

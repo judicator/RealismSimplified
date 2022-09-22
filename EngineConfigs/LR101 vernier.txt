@@ -1,0 +1,22 @@
+LR101-vernier
+{
+	propellants = KeroLOX
+	type = sustainer
+	pressureFed = false
+
+	minThrust = 5
+	maxThrust = 5
+
+	ispSL = 207
+	ispVac = 238
+
+	ignitions = 1
+	ullage = true
+	ratedBurnTime = 360
+	gimbalRange = 10
+
+	mass = 0.024
+	cost = 210
+	entryCost = 2100
+	upgradeCost = 0
+}

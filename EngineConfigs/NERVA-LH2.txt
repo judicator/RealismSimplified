@@ -1,0 +1,22 @@
+NERVA-LH2
+{
+	propellants = LqdHydrogen
+	type = nuclear
+	pressureFed = false
+
+	minThrust = 0
+	maxThrust = 334
+
+	ispSL = 380
+	ispVac = 825
+
+	ignitions = 60
+	ullage = true
+	ratedBurnTime = 36000
+	gimbalRange = 4
+
+	mass = 10.117
+	cost = 101392
+	entryCost = 1013920
+	upgradeCost = 0
+}

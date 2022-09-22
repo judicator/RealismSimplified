@@ -1,0 +1,26 @@
+Raptor-Vacuum
+{
+	propellants = MethaLOX
+	type = upper_stage
+	pressureFed = false
+
+	maxThrust = 2210
+	minThrust = 884
+	ispVac = 380
+	ispSL = 280
+
+	ignitions = -1
+	ullage = true
+	ratedBurnTime = 600
+	gimbalRange = 8
+
+	mass = 1.6
+	cost = 34728
+	entryCost = 347280
+	upgradeCost = 0
+
+	siblings
+	{
+		Raptor = 0.9
+	}
+}

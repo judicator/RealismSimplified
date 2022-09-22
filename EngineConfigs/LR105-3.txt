@@ -1,0 +1,29 @@
+LR105-3
+{
+	propellants = KeroLOX
+	type = sustainer
+	pressureFed = false
+
+	minThrust = 352
+	maxThrust = 352
+
+	ispSL = 215
+	ispVac = 309
+
+	ignitions = 1
+	ullage = true
+	ratedBurnTime = 330
+	gimbalRange = 3
+
+	mass = 0.46
+	cost = 1436
+	entryCost = 14360
+	upgradeCost = 0
+
+	siblings
+	{
+		LR105-5   = 0.8
+		LR105-7   = 0.7
+		RS-56-OSA = 0.7
+	}
+}

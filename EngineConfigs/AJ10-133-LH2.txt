@@ -1,0 +1,46 @@
+AJ10-133-LH2
+{
+	propellants = HydroLOX
+	type = OMS
+	pressureFed = true
+
+	minThrust = 26.67
+	maxThrust = 26.67
+
+	ispSL = 285
+	ispVac = 430
+
+	ignitions = 18
+	ullage = true
+	ratedBurnTime = 546
+	gimbalRange = 4.25
+
+	mass = 0.081
+	cost = 2110
+	entryCost = 21100
+	upgradeCost = 10550
+
+	isUpgrade = true
+
+	siblings
+	{
+		AJ10-37   = 0.6
+		AJ10-104  = 0.7
+		AJ10-118D = 0.7
+		AJ10-118E = 0.7
+		AJ10-118F = 0.7
+		AJ10-118K = 0.8
+		AJ10-118X = 0.8
+		AJ10-137  = 0.8
+		AJ10-138  = 0.7
+		AJ10-190  = 0.5
+	}
+	upgradeIcons
+	{
+		Bluedog_DB/Parts/Delta/DeltaK, bluedog_AJ10_118K
+		RealScaleBoosters/Parts/Engines, RSBengineAJ10-118K
+		KWRocketry/Parts/Engines/1mVestaVR1, KW1mengineVestaVR1
+		Benjee10_sharedAssets, DIRECT_KJ10
+		RS_Engine_AJ10_Family
+	}
+}

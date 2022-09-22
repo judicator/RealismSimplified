@@ -1,0 +1,35 @@
+AJ10-37
+{
+	propellants = Hypergolics
+	type = OMS
+	pressureFed = true
+
+	minThrust = 33.8
+	maxThrust = 33.8
+
+	ispSL = 240
+	ispVac = 271
+
+	ignitions = 1
+	ullage = true
+	ratedBurnTime = 115
+	gimbalRange = 4.25
+
+	mass = 0.084
+	cost = 649
+	entryCost = 6490
+	upgradeCost = 0
+
+	siblings
+	{
+		AJ10-104  = 0.6
+		AJ10-118D = 0.6
+		AJ10-118E = 0.6
+		AJ10-118F = 0.6
+		AJ10-118K = 0.6
+		AJ10-118X = 0.6
+		AJ10-137  = 0.6
+		AJ10-138  = 0.6
+		AJ10-190  = 0.5
+	}
+}

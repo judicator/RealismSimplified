@@ -1,0 +1,231 @@
+// ==============================================================================================================
+// Supplies tanks for Food, Water, Oxygen, waste products and some special life-support-related stuff (like LiOH)
+// ==============================================================================================================
+
+// Default mass offset = -mass
+@PART[*]:HAS[~RS_IgnorePart[],#RS_TankType[Supplies],#totalCap[>0],~massOffset[],~RS_TankConfigured[]]:FOR[zzzzRealismSimplified]
+{
+	%massOffset = #$mass$
+	@massOffset *= -1
+}
+// Default cost offset = -cost
+@PART[*]:HAS[~RS_IgnorePart[],#RS_TankType[Supplies],#totalCap[>0],~costOffset[],~RS_TankConfigured[]]:FOR[zzzzRealismSimplified]
+{
+	%costOffset = #$cost$
+	@costOffset *= -1
+}
+
+
+// ==============================================================================================================
+// If part has some modules - correct tank mass and cost
+// ==============================================================================================================
+@PART[*]:HAS[~RS_IgnorePart[],#RS_TankType[Supplies],~RS_TankConfigured[],#RS_totalCap[>0],@MODULE[ModuleCargoBay]]:FOR[zzzzRealismSimplified]
+{
+	// Cargo bays, containing some fuel, retain their original mass (minus the mass of fuel tank)
+	%massOffset = #$totalCap$
+	@massOffset *= 0.000625 // standard dry mass per units of LF/OX
+	@massOffset *= -1
+	// Cost exluding LF/OX cost
+	%costOffset = #$totalCap$
+	@costOffset *= 0.459 // cost per one unit of LF/OX mixture
+	@costOffset *= -1
+}
+@PART[*]:HAS[~RS_IgnorePart[],#RS_TankType[Supplies],~RS_TankConfigured[],#totalCap[>0],@MODULE[ModuleCommand]]:FOR[zzzzRealismSimplified]
+{
+	// Command modules, containing some fuel, retain their original mass (minus the mass of fuel tank)
+	%massOffset = #$totalCap$
+	@massOffset *= 0.000625 // standard dry mass per units of LF/OX
+	@massOffset *= -1
+	// Cost exluding LF/OX cost
+	%costOffset = #$totalCap$
+	@costOffset *= 0.459 // cost per one unit of LF/OX mixture
+	@costOffset *= -1
+}
+@PART[*]:HAS[~RS_IgnorePart[],#RS_TankType[Supplies],~RS_TankConfigured[],#totalCap[>0],@MODULE[ModuleDockingNode]]:FOR[zzzzRealismSimplified]
+{
+	// Docking ports, containing some fuel, retain their original mass (minus the mass of fuel tank)
+	%massOffset = #$totalCap$
+	@massOffset *= 0.000625 // standard dry mass per units of LF/OX
+	@massOffset *= -1
+	// Cost exluding LF/OX cost
+	%costOffset = #$totalCap$
+	@costOffset *= 0.459 // cost per one unit of LF/OX mixture
+	@costOffset *= -1
+}
+@PART[*]:HAS[~RS_IgnorePart[],#RS_TankType[Supplies],~RS_TankConfigured[],#totalCap[>0],@MODULE[ModuleParachute]]:FOR[zzzzRealismSimplified]
+{
+	// Parachutes, containing some fuel, retain their original mass (minus the mass of fuel tank)
+	%massOffset = #$totalCap$
+	@massOffset *= 0.000625 // standard dry mass per units of LF/OX
+	@massOffset *= -1
+	// Cost exluding LF/OX cost
+	%costOffset = #$totalCap$
+	@costOffset *= 0.459 // cost per one unit of LF/OX mixture
+	@costOffset *= -1
+}
+@PART[*]:HAS[~RS_IgnorePart[],#RS_TankType[Supplies],~RS_TankConfigured[],#totalCap[>0],@MODULE[ModuleActiveRadiator]]:FOR[zzzzRealismSimplified]
+{
+	// Radiators, containing some fuel, retain their original mass (minus the mass of fuel tank)
+	%massOffset = #$totalCap$
+	@massOffset *= 0.000625 // standard dry mass per units of LF/OX
+	@massOffset *= -1
+	// Cost exluding LF/OX cost
+	%costOffset = #$totalCap$
+	@costOffset *= 0.459 // cost per one unit of LF/OX mixture
+	@costOffset *= -1
+}
+@PART[*]:HAS[~RS_IgnorePart[],#RS_TankType[Supplies],~RS_TankConfigured[],#totalCap[>0],!MODULE[ModuleCommand],#CrewCapacity[>0]]:FOR[zzzzRealismSimplified]
+{
+	// Crewed modules, containing some fuel, retain their original mass (minus the mass of fuel tank)
+	%massOffset = #$totalCap$
+	@massOffset *= 0.000625 // standard dry mass per units of LF/OX
+	@massOffset *= -1
+	// Cost exluding LF/OX cost
+	%costOffset = #$totalCap$
+	@costOffset *= 0.459 // cost per one unit of LF/OX mixture
+	@costOffset *= -1
+}
+
+
+// ==============================================================================================================
+// Fuel tank types switcher
+// ==============================================================================================================
+@PART[*]:HAS[~RS_IgnorePart[],#RS_TankType[Supplies],#RS_TotalCap[>0],#RS_MassOffset[*],#RS_CostOffset[*],~RS_TankConfigured[]]:NEEDS[CommunityResourcePack,B9PartSwitch]:FOR[zzzzRealismSimplified]
+{
+	%RS_TankConfigured = True
+
+	%RS_TankDryMass = #$@REALISM_SIMPLIFIED/suppliesTanks_BaseMass$
+	@RS_TankDryMass *= #$@REALISM_SIMPLIFIED/suppliesTanks_MassCoeff$
+	%RS_TankDryCost = #$@REALISM_SIMPLIFIED/suppliesTanks_BaseCost$
+	@RS_TankDryCost *= #$@REALISM_SIMPLIFIED/suppliesTanks_CostCoeff$
+
+	// Mass and cost of part are determined by tank tech level and volume
+	%massOffset1 = #$RS_TankDryMass$
+	@massOffset1 *= #$totalCap$
+	@massOffset += #$massOffset1$
+	%costOffset1 = #$RS_TankDryCost$
+	@costOffset1 *= #$totalCap$
+	@costOffset += #$costOffset1$
+
+	// Mass and cost of part are determined by tank type and volume
+	@mass += #$massOffset$
+	@cost += #$costOffset$
+	// but they should not be negative
+	@mass ^= :^-.*$:0: // If negative, set to zero
+	@cost ^= :^-.*$:0: // If negative, set to zero
+
+	@RS_TotalCap *= #$@REALISM_SIMPLIFIED/suppliesTanks_VolumeCoeff$
+
+	!MODULE[ModuleB9PartSwitch]:HAS[#moduleID[RS_ContentsSwitch]] {}
+
+		name = ModuleB9PartSwitch
+		moduleID = RS_FuelSwitch
+		switcherDescription = #LOC_RS_TankContents_DisplayName
+		baseVolume = #$../RS_TotalCap$
+		affectDragCubes = false
+		uiGroupName = RealismSimplified
+		uiGroupDisplayName = #LOC_RealismSimplified_UIGroup_DisplayName
+
+
+
+	MODULE
+	{
+		name = ModuleB9PartSwitch
+		moduleID = suppliesSwitch
+		switcherDescription = #LOC_RS_TankContents_DisplayName
+		baseVolume = #$../totalCap$
+		affectDragCubes = false
+		uiGroupName = RS_Storage
+		uiGroupDisplayName = #LOC_RS_Supplies_Tank_UIGroup_DisplayName
+		switchInFlight = true
+
+		SUBTYPE
+		{
+			name = Supplies
+			title = #LOC_RS_Supplies_DisplayName
+			tankType = RS_Supplies
+			allowSwitchInFlight = false
+		}
+		SUBTYPE
+		{
+			name = SuppliesWithOxygen
+			title = #LOC_RS_SuppliesWithOxygen_DisplayName
+			tankType = RS_SuppliesWithOxygen
+			allowSwitchInFlight = false
+		}
+		SUBTYPE
+		{
+			name = SuppliesWaterRegen
+			title = #LOC_RS_SuppliesWaterRegen_DisplayName
+			tankType = RS_SuppliesWaterRegen
+			allowSwitchInFlight = false
+		}
+		SUBTYPE
+		{
+			name = SuppliesWithOxygenWaterRegen
+			title = #LOC_RS_SuppliesWithOxygenWaterRegen_DisplayName
+			tankType = RS_SuppliesWithOxygenWaterRegen
+			allowSwitchInFlight = false
+		}
+		SUBTYPE
+		{
+			name = SuppliesGreenhouse
+			title = #LOC_RS_SuppliesGreenhouse_DisplayName
+			tankType = RS_SuppliesGreenhouse
+			allowSwitchInFlight = false
+		}
+		SUBTYPE
+		{
+			name = Food
+			title = #LOC_CRP_Food_DisplayName
+			tankType = RS_Food
+			allowSwitchInFlight = false
+		}
+		SUBTYPE
+		{
+			name = Water
+			title = #LOC_CRP_Water_DisplayName
+			tankType = RS_Water
+			allowSwitchInFlight = false
+		}
+		SUBTYPE
+		{
+			name = Oxygen
+			title = #LOC_CRP_Oxygen_DisplayName
+			tankType = RS_Oxygen
+			allowSwitchInFlight = false
+		}
+		SUBTYPE
+		{
+			name = Waste
+			title = #LOC_CRP_Waste_DisplayName
+			tankType = RS_Waste
+			allowSwitchInFlight = true
+			percentFilled = 0
+		}
+		SUBTYPE
+		{
+			name = WasteWater
+			title = #LOC_CRP_WasteWater_DisplayName
+			tankType = RS_WasteWater
+			allowSwitchInFlight = false
+			percentFilled = 0
+		}
+		SUBTYPE
+		{
+			name = Sewage
+			title = #LOC_RS_Sewage_DisplayName
+			tankType = RS_Sewage
+			allowSwitchInFlight = false
+			percentFilled = 0
+		}
+		SUBTYPE:NEEDS[DeepFreeze]
+		{
+			name = Glykerol
+			title = #LOC_CRP_Glykerol_DisplayName
+			tankType = RS_Glykerol
+			upgradeRequired = RS_GlykerolTanks_Upgrade
+			allowSwitchInFlight = false
+		}
+	}
+}

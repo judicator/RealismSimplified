@@ -1,0 +1,35 @@
+RD-0110
+{
+	propellants = KeroLOX
+	type = upper_stage
+	pressureFed = false
+
+	minThrust = 269.69 // 90.5%
+	maxThrust = 298.2
+
+	ispSL = 141
+	ispVac = 330.4
+
+	ignitions = 1
+	ullage = true
+	ratedBurnTime = 250
+	gimbalRange = 7
+
+	mass = 0.451
+	cost = 2250
+	entryCost = 22500
+	upgradeCost = 11250
+
+	isUpgrade = true
+
+	upgradeIcons
+	{
+		RealEnginesPack/PostSovietPack, RD0110engine
+		CryoEngines/Parts/HydroloxEngines/1875, cryoengine-erebus-1
+	}
+
+	siblings
+	{
+		RD-0107 = 0.9
+	}
+}

@@ -1,0 +1,37 @@
+M-1U
+{
+	propellants = HydroLOX
+	type = upper_stage
+	pressureFed = false
+
+	minThrust = 8007
+	maxThrust = 8007
+
+	ispSL = 300
+	ispVac = 430
+
+	ignitions = 2
+	ullage = true
+	ratedBurnTime = 500
+	gimbalRange = 7.5
+
+	mass = 9.071
+	cost = 113602
+	entryCost = 1136020
+	upgradeCost = 568010
+
+	isUpgrade = true
+
+	siblings
+	{
+		M-1     = 0.8
+		M-1SL   = 0.8
+		M-1U-SL = 0.9
+	}
+
+	upgradeIcons
+	{
+		Bluedog_DB/Parts/Engines, bluedog_M1
+		Size3AdvancedEngine
+	}
+}

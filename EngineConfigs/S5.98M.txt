@@ -1,0 +1,22 @@
+S5_98M
+{
+	propellants = Hypergolics
+	type = OMS
+	pressureFed = false
+
+	minThrust = 19.61
+	maxThrust = 19.61
+
+	ispSL = 150
+	ispVac = 328
+
+	ignitions = 8
+	ullage = true
+	ratedBurnTime = 3200
+	gimbalRange = 5.0
+
+	mass = 0.095
+	cost = 743
+	entryCost = 7430
+	upgradeCost = 0
+}

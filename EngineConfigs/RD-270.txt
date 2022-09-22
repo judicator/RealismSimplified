@@ -1,0 +1,22 @@
+RD-270
+{
+	propellants = Hypergolics
+	type = lower_stage
+	pressureFed = false
+
+	minThrust = 5644.8
+	maxThrust = 6272
+
+	ispSL = 301
+	ispVac = 322
+
+	ignitions = 1
+	ullage = true
+	ratedBurnTime = 148
+	gimbalRange = 8
+
+	mass = 4.47
+	cost = 43598
+	entryCost = 435980
+	upgradeCost = 0
+}

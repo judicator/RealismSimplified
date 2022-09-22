@@ -1,0 +1,22 @@
+J-2T
+{
+	propellants = HydroLOX
+	type = sustainer
+	pressureFed = false
+
+	minThrust = 222.32
+	maxThrust = 1111.6
+
+	ispSL = 290
+	ispVac = 441
+
+	ignitions = 3
+	ullage = true
+	ratedBurnTime = 500
+	gimbalRange = 7
+
+	mass = 1.4
+	cost = 19281
+	entryCost = 192810
+	upgradeCost = 0
+}

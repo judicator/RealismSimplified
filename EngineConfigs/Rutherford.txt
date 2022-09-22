@@ -1,0 +1,27 @@
+Rutherford
+{
+	propellants = KeroLOX
+	type = lower_stage
+	pressureFed = false
+
+	minThrust = 17.05
+	maxThrust = 24.91
+
+	ispSL = 311
+	ispVac = 317
+
+	ignitions = 5
+	ullage = true
+	ratedBurnTime = 150
+	gimbalRange = 3.8
+
+	mass = 0.035
+	cost = 411
+	entryCost = 4110
+	upgradeCost = 0
+
+	siblings
+	{
+		Rutherford-Vacuum = 0.9
+	}
+}

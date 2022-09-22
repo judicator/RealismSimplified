@@ -1,0 +1,36 @@
+H-1-188K
+{
+	propellants = KeroLOX
+	type = lower_stage
+	pressureFed = false
+
+	minThrust = 920
+	maxThrust = 920
+
+	ispSL = 262.6
+	ispVac = 292
+
+	ignitions = 1
+	ullage = true
+	ratedBurnTime = 155
+	gimbalRange = 8
+
+	mass = 0.972
+	cost = 4282
+	entryCost = 42820
+	upgradeCost = 0
+
+	siblings
+	{
+		S-3D      = 0.6
+		LR79-11   = 0.8
+		LR79-13   = 0.8
+		LR89-5    = 0.7
+		LR89-7    = 0.7
+		H-1-200K  = 0.9
+		H-1-205K  = 0.9
+		RS-56-OBA = 0.7
+		RS-27     = 0.8
+		RS-27A    = 0.8
+	}
+}

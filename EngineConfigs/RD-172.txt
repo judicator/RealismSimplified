@@ -1,0 +1,37 @@
+RD-172
+{
+	propellants = KeroLOX
+	type = lower_stage
+	pressureFed = false
+
+	minThrust = 3953
+	maxThrust = 8316
+
+	ispSL = 310.9
+	ispVac = 337.4
+
+	ignitions = 1
+	ullage = true
+	ratedBurnTime = 150
+	gimbalRange = 6
+
+	mass = 10.255
+	cost = 90073
+	entryCost = 900730
+	upgradeCost = 450365
+
+	siblings
+	{
+		RD-170 = 0.9
+		RD-180 = 0.8
+		RD-191 = 0.7
+	}
+
+	isUpgrade = true
+
+	upgradeIcons
+	{
+		RealEnginesPack/PostSovietPack, RD170engine
+		TantaresLV/Parts/ZENIT, HLV_1_Engine_1
+	}
+}

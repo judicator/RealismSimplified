@@ -1,0 +1,22 @@
+WAC-Corporal
+{
+	propellants = Hypergolics
+	type = sustainer
+	pressureFed = true
+
+	minThrust = 7.733
+	maxThrust = 7.733
+
+	ispSL = 195
+	ispVac = 226
+
+	ignitions = 1
+	ullage = true
+	ratedBurnTime = 47
+	gimbalRange = 0
+
+	mass = 0.016
+	cost = 214
+	entryCost = 2140
+	upgradeCost = 0
+}

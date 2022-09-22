@@ -1,0 +1,41 @@
+LR87-11
+{
+	propellants = Hypergolics
+	type = sustainer
+	pressureFed = false
+
+	minThrust = 1170
+	maxThrust = 1170
+
+	ispSL = 254
+	ispVac = 302
+
+	ignitions = 1
+	ullage = true
+	ratedBurnTime = 190
+	gimbalRange = 6
+
+	mass = 0.758
+	cost = 5109
+	entryCost = 51090
+	upgradeCost = 25545
+
+	isUpgrade = true
+
+	siblings
+	{
+		LR87-3                  = 0.8
+		LR87-5                  = 0.8
+		LR87-5K                 = 0.8
+		LR87-7                  = 0.8
+		LR87-9                  = 0.8
+		LR87-11A                = 0.9
+		LR87-11K                = 0.8
+		LR87-11-Vacuum          = 0.8
+		LR87-11K-Vacuum         = 0.8
+		LR87-LH2                = 0.7
+		LR87-LH2-Upgrade        = 0.7
+		LR87-LH2-Vacuum         = 0.6
+		LR87-LH2-Vacuum-Upgrade = 0.6
+	}
+}

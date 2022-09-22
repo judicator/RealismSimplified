@@ -1,0 +1,22 @@
+KRD-61
+{
+	propellants = Hypergolics
+	type = OMS
+	pressureFed = false
+
+	minThrust = 18.8
+	maxThrust = 18.8
+
+	ispSL = 210
+	ispVac = 313
+
+	ignitions = 1
+	ullage = true
+	ratedBurnTime = 120
+	gimbalRange = 0
+
+	mass = 0.042
+	cost = 522
+	entryCost = 5220
+	upgradeCost = 0
+}

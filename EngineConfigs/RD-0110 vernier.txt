@@ -1,0 +1,22 @@
+RD-0110-vernier
+{
+	propellants = KeroLOX
+	type = upper_stage
+	pressureFed = false
+
+	minThrust = 6.0
+	maxThrust = 6.0
+
+	ispSL = 165
+	ispVac = 330
+
+	ignitions = 1
+	ullage = true
+	ratedBurnTime = 250
+	gimbalRange = 16
+
+	mass = 0.01
+	cost = 188
+	entryCost = 1880
+	upgradeCost = 0
+}

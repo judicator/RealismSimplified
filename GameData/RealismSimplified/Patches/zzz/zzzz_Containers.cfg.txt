@@ -1,0 +1,139 @@
+// ==============================================================================================================
+// Containers for bulk or solid materials, like Food, RocketParts, ores, etc.
+// ==============================================================================================================
+
+// Default mass offset = -mass
+@PART[*]:HAS[~RS_IgnorePart[],#RS_TankType[Container],#RS_TotalCap[>0],~RS_MassOffset[],~RS_TankConfigured[]]:FOR[zzzzRealismSimplified]
+{
+	%RS_MassOffset = #$mass$
+	@RS_MassOffset *= -1
+}
+// Default cost offset = -cost
+@PART[*]:HAS[~RS_IgnorePart[],#RS_TankType[Container],#RS_TotalCap[>0],~RS_CostOffset[],~RS_TankConfigured[]]:FOR[zzzzRealismSimplified]
+{
+	%RS_CostOffset = #$cost$
+	@RS_CostOffset *= -1
+}
+
+
+// ==============================================================================================================
+// Fuel tank types switcher
+// ==============================================================================================================
+@PART[*]:HAS[~RS_IgnorePart[],#RS_TankType[Container],#RS_TotalCap[>0],#RS_MassOffset[*],#RS_CostOffset[*],~RS_TankConfigured[]]:NEEDS[CommunityResourcePack,B9PartSwitch]:FOR[zzzzRealismSimplified]
+{
+	%RS_TankConfigured = True
+
+	%RS_TankDryMass = #$@REALISM_SIMPLIFIED/resourcesTanks_BaseMass$
+	@RS_TankDryMass *= #$@REALISM_SIMPLIFIED/resourcesTanks_MassCoeff$
+	%RS_TankDryCost = #$@REALISM_SIMPLIFIED/resourcesTanks_BaseCost$
+	@RS_TankDryCost *= #$@REALISM_SIMPLIFIED/resourcesTanks_CostCoeff$
+
+	// Mass and cost of part are determined by tank tech level and volume
+	%RS_MassOffset1 = #$RS_TankDryMass$
+	@RS_MassOffset1 *= #$RS_TotalCap$
+	@RS_MassOffset += #$RS_MassOffset1$
+	%RS_CostOffset1 = #$RS_TankDryCost$
+	@RS_CostOffset1 *= #$RS_TotalCap$
+	@RS_CostOffset += #$RS_CostOffset1$
+
+	// Mass and cost of part are determined by tank type and volume
+	@mass += #$RS_MassOffset$
+	@cost += #$RS_CostOffset$
+	// but they should not be negative
+	@mass ^= :^-.*$:0: // If negative, set to zero
+	@cost ^= :^-.*$:0: // If negative, set to zero
+
+	@RS_TotalCap *= #$@REALISM_SIMPLIFIED/resourcesTanks_VolumeCoeff$
+
+	!MODULE[ModuleB9PartSwitch]:HAS[#moduleID[fuelSwitch]] {}
+
+	MODULE
+	{
+		name = ModuleB9PartSwitch
+		moduleID = fuelSwitch
+		switcherDescription = #LOC_RS_ContainerContents_DisplayName
+		baseVolume = #$../RS_TotalCap$
+		affectDragCubes = false
+		uiGroupName = RS_Storage
+		uiGroupDisplayName = #LOC_RS_Container_UIGroup_DisplayName
+		switchInFlight = true
+
+		SUBTYPE
+		{
+			name = Food
+			title = #LOC_CRP_Food_DisplayName
+			tankType = RS_Food
+			allowSwitchInFlight = false
+		}
+		SUBTYPE
+		{
+			name = Regolith
+			title = #LOC_CRP_Regolith_DisplayName
+			tankType = RS_Regolith
+			allowSwitchInFlight = true
+		}
+		SUBTYPE
+		{
+			name = Spodumene
+			title = #LOC_CRP_Spodumene_DisplayName
+			tankType = RS_Spodumene
+			allowSwitchInFlight = true
+		}
+		SUBTYPE
+		{
+			name = Minerals
+			title = #LOC_CRP_Minerals_DisplayName
+			tankType = RS_Minerals
+			allowSwitchInFlight = true
+		}
+		SUBTYPE
+		{
+			name = Aluminium
+			title = #LOC_CRP_Aluminium_DisplayName
+			tankType = RS_Aluminium
+			allowSwitchInFlight = true
+		}
+		SUBTYPE
+		{
+			name = RocketParts
+			title = #LOC_CRP_RocketParts_DisplayName
+			tankType = RS_RocketParts
+			allowSwitchInFlight = true
+		}
+		SUBTYPE
+		{
+			name = Polymers
+			title = #LOC_CRP_Polymers_DisplayName
+			tankType = RS_Polymers
+			allowSwitchInFlight = true
+		}
+		SUBTYPE
+		{
+			name = Chemicals
+			title = #LOC_CRP_Chemicals_DisplayName
+			tankType = RS_Chemicals
+			allowSwitchInFlight = true
+		}
+		SUBTYPE
+		{
+			name = Rock
+			title = #LOC_CRP_Rock_DisplayName
+			tankType = RS_Rock
+			allowSwitchInFlight = true
+		}
+		SUBTYPE
+		{
+			name = MetallicOre
+			title = #LOC_CRP_MetallicOre_DisplayName
+			tankType = RS_MetallicOre
+			allowSwitchInFlight = true
+		}
+		SUBTYPE
+		{
+			name = Uraninite
+			title = #LOC_CRP_Uraninite_DisplayName
+			tankType = RS_Uraninite
+			allowSwitchInFlight = true
+		}
+	}
+}

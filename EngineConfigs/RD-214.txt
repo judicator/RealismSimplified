@@ -1,0 +1,28 @@
+RD-214
+{
+	propellants = Hypergolics
+	type = lower_stage
+	pressureFed = false
+
+	minThrust = 730.6
+	maxThrust = 730.6
+
+	ispSL = 230
+	ispVac = 264
+
+	ignitions = 1
+	ullage = true
+	ratedBurnTime = 140
+	gimbalRange = 10.0
+
+	mass = 0.625
+	cost = 2491
+	entryCost = 24910
+	upgradeCost = 0
+
+	siblings
+	{
+		RD-107 = 0.3
+		RD-108 = 0.3
+	}
+}

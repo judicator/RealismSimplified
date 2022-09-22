@@ -1,0 +1,22 @@
+TQ11-12
+{
+	propellants = MethaLOX
+	type = upper_stage
+	pressureFed = false
+
+	minThrust = 672
+	maxThrust = 960
+
+	ispSL = 110
+	ispVac = 376
+
+	ignitions = 1
+	ullage = true
+	ratedBurnTime = 400
+	gimbalRange = 5
+
+	mass = 1.12
+	cost = 11972
+	entryCost = 119720
+	upgradeCost = 0
+}

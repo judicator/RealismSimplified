@@ -1,0 +1,22 @@
+RD-856-vernier
+{
+	propellants = Hypergolics
+	type = upper_stage
+	pressureFed = false
+
+	minThrust = 13.55
+	maxThrust = 13.55
+
+	ispSL = 84
+	ispVac = 280
+
+	ignitions = 1
+	ullage = true
+	ratedBurnTime = 163
+	gimbalRange = 10
+
+	mass = 0.028
+	cost = 203
+	entryCost = 2030
+	upgradeCost = 0
+}

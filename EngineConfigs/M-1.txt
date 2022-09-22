@@ -1,0 +1,29 @@
+M-1
+{
+	propellants = HydroLOX
+	type = upper_stage
+	pressureFed = false
+
+	minThrust = 6672.332
+	maxThrust = 6672.332
+
+	ispSL = 300
+	ispVac = 430
+
+	ignitions = 2
+	ullage = true
+	ratedBurnTime = 500
+	gimbalRange = 7.5
+
+	mass = 9.071
+	cost = 94691
+	entryCost = 946910
+	upgradeCost = 0
+
+	siblings
+	{
+		M-1SL   = 0.9
+		M-1U    = 0.8
+		M-1U-SL = 0.8
+	}
+}

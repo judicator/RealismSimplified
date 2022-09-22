@@ -1,0 +1,27 @@
+STBE
+{
+	propellants = KeroLOX
+	type = lower_stage
+	pressureFed = false
+
+	minThrust = 3982.5 // 45%
+	maxThrust = 8837.1
+
+	ispSL = 273.5
+	ispVac = 318.4
+
+	ignitions = 4
+	ullage = true
+	ratedBurnTime = 300
+	gimbalRange = 8
+
+	mass = 8.27
+	cost = 74061
+	entryCost = 740610
+	upgradeCost = 0
+
+	siblings
+	{
+		STBE-MethaLOX = 0.8
+	}
+}

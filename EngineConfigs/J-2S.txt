@@ -1,0 +1,29 @@
+J-2S
+{
+	propellants = HydroLOX
+	type = upper_stage
+	pressureFed = false
+
+	minThrust = 200.4  // 17%
+	maxThrust = 1178.78
+
+	ispSL = 320
+	ispVac = 436
+
+	ignitions = 3
+	ullage = true
+	ratedBurnTime = 580
+	gimbalRange = 7.5
+
+	mass = 1.724
+	cost = 32012
+	entryCost = 32012
+	upgradeCost = 160060
+
+	isUpgrade = true
+
+	siblings
+	{
+		J-2T = 
+	}
+}

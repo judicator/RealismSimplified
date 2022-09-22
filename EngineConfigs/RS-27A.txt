@@ -1,0 +1,45 @@
+RS-27A
+{
+	propellants = KeroLOX
+	type = sustainer
+	pressureFed = false
+
+	minThrust = 1054
+	maxThrust = 1054
+
+	ispSL = 255
+	ispVac = 302
+
+	ignitions = 1
+	ullage = true
+	ratedBurnTime = 285
+	gimbalRange = 8
+
+	mass = 1.147
+	cost = 4646
+	entryCost = 46460
+	upgradeCost = 23230
+
+	siblings
+	{
+		S-3D      = 0.6
+		LR79-11   = 0.8
+		LR79-13   = 0.8
+		LR89-5    = 0.7
+		LR89-7    = 0.7
+		H-1-188K  = 0.8
+		H-1-200K  = 0.8
+		H-1-205K  = 0.8
+		RS-56-OBA = 0.8
+		RS-27     = 0.9
+	}
+
+	isUpgrade = true
+
+	upgradeIcons
+	{
+		Bluedog_DB/Parts/Delta, bluedog_Delta2_RS27
+		KWRocketry/Parts/Engines/2mMaverickV, KW2mengineMaverickV
+		RS_Engine_LR79_Family
+	}
+}

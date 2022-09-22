@@ -1,0 +1,38 @@
+XLR-81-8081
+{
+	propellants = Hypergolics
+	type = OMS
+	pressureFed = false
+
+	minThrust = 70.7
+	maxThrust = 70.7
+
+	ispSL = 100
+	ispVac = 285
+
+	ignitions = 2
+	ullage = true
+	ratedBurnTime = 120
+	gimbalRange = 5
+
+	mass = 0.13
+	cost = 1611
+	entryCost = 16110
+	upgradeCost = 8055
+
+	isUpgrade = true
+
+	siblings
+	{
+		XLR-81-8048        = 0.6
+		XLR-81-8096        = 0.9
+		XLR-81-8096-39-HDA = 0.7
+		XLR-81-8096B       = 0.7
+		XLR-81-8096C       = 0.6
+	}
+	upgradeIcons
+	{
+		Bluedog_DB/Parts/Agena, bluedog_Agena_Engine_XLR81
+		RS_Engine_XLR81
+	}
+}

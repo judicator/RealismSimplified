@@ -1,0 +1,118 @@
+// ============================================================================
+// Define part tech level (in range from 1 to 8) by it's tech tree node
+// UnKerballed Start
+// ============================================================================
+
+// 1
+@PART[*]:HAS[~RS_IgnorePart[],#TechRequired[structures0],~RS_PartTechLevel[]]:AFTER[zzzUnKerballedStart]
+{
+	RS_PartTechLevel = 1
+}
+
+// 2
+@PART[*]:HAS[~RS_IgnorePart[],#TechRequired[structures1],~RS_PartTechLevel[]]:AFTER[zzzUnKerballedStart]
+{
+	RS_PartTechLevel = 2
+}
+@PART[*]:HAS[~RS_IgnorePart[],#TechRequired[fabrication],~RS_PartTechLevel[]]:AFTER[zzzUnKerballedStart]
+{
+	RS_PartTechLevel = 2
+}
+@PART[*]:HAS[~RS_IgnorePart[],#TechRequired[flight1],~RS_PartTechLevel[]]:AFTER[zzzUnKerballedStart]
+{
+	RS_PartTechLevel = 2
+}
+@PART[*]:HAS[~RS_IgnorePart[],#TechRequired[aeronautics],~RS_PartTechLevel[]]:AFTER[zzzUnKerballedStart]
+{
+	RS_PartTechLevel = 2
+}
+
+// 3
+@PART[*]:HAS[~RS_IgnorePart[],#TechRequired[structures1p5],~RS_PartTechLevel[]]:AFTER[zzzUnKerballedStart]
+{
+	RS_PartTechLevel = 3
+}
+@PART[*]:HAS[~RS_IgnorePart[],#TechRequired[basicConstruction],~RS_PartTechLevel[]]:AFTER[zzzUnKerballedStart]
+{
+	RS_PartTechLevel = 3
+}
+@PART[*]:HAS[~RS_IgnorePart[],#TechRequired[flight2],~RS_PartTechLevel[]]:AFTER[zzzUnKerballedStart]
+{
+	RS_PartTechLevel = 3
+}
+@PART[*]:HAS[~RS_IgnorePart[],#TechRequired[earlyAviation],~RS_PartTechLevel[]]:AFTER[zzzUnKerballedStart]
+{
+	RS_PartTechLevel = 3
+}
+@PART[*]:HAS[~RS_IgnorePart[],#TechRequired[gadgets],~RS_PartTechLevel[]]:AFTER[zzzUnKerballedStart]
+{
+	RS_PartTechLevel = 3
+}
+
+// 4
+@PART[*]:HAS[~RS_IgnorePart[],#TechRequired[customFuelTanks],~RS_PartTechLevel[]]:AFTER[zzzUnKerballedStart]
+{
+	RS_PartTechLevel = 4
+}
+@PART[*]:HAS[~RS_IgnorePart[],#TechRequired[flight3],~RS_PartTechLevel[]]:AFTER[zzzUnKerballedStart]
+{
+	RS_PartTechLevel = 4
+}
+@PART[*]:HAS[~RS_IgnorePart[],#TechRequired[reentryPods1],~RS_PartTechLevel[]]:AFTER[zzzUnKerballedStart]
+{
+	RS_PartTechLevel = 4
+}
+@PART[*]:HAS[~RS_IgnorePart[],#TechRequired[gizmos],~RS_PartTechLevel[]]:AFTER[zzzUnKerballedStart]
+{
+	RS_PartTechLevel = 4
+}
+
+// 5
+@PART[*]:HAS[~RS_IgnorePart[],#TechRequired[structures2],~RS_PartTechLevel[]]:AFTER[zzzUnKerballedStart]
+{
+	RS_PartTechLevel = 5
+}
+@PART[*]:HAS[~RS_IgnorePart[],#TechRequired[flight4],~RS_PartTechLevel[]]:AFTER[zzzUnKerballedStart]
+{
+	RS_PartTechLevel = 5
+}
+@PART[*]:HAS[~RS_IgnorePart[],#TechRequired[reentryPods2],~RS_PartTechLevel[]]:AFTER[zzzUnKerballedStart]
+{
+	RS_PartTechLevel = 5
+}
+@PART[*]:HAS[~RS_IgnorePart[],#TechRequired[earlyHeatManagement],~RS_PartTechLevel[]]:AFTER[zzzUnKerballedStart]
+{
+	RS_PartTechLevel = 5
+}
+
+// 6
+@PART[*]:HAS[~RS_IgnorePart[],#TechRequired[structures3],~RS_PartTechLevel[]]:AFTER[zzzUnKerballedStart]
+{
+	RS_PartTechLevel = 6
+}
+@PART[*]:HAS[~RS_IgnorePart[],#TechRequired[reentryPods3],~RS_PartTechLevel[]]:AFTER[zzzUnKerballedStart]
+{
+	RS_PartTechLevel = 6
+}
+
+// 7
+@PART[*]:HAS[~RS_IgnorePart[],#TechRequired[specializedRocketry7],~RS_PartTechLevel[]]:AFTER[zzzUnKerballedStart]
+{
+	RS_PartTechLevel = 7
+}
+@PART[*]:HAS[~RS_IgnorePart[],#TechRequired[rocketry7],~RS_PartTechLevel[]]:AFTER[zzzUnKerballedStart]
+{
+	RS_PartTechLevel = 7
+}
+@PART[*]:HAS[~RS_IgnorePart[],#TechRequired[structures4],~RS_PartTechLevel[]]:AFTER[zzzUnKerballedStart]
+{
+	RS_PartTechLevel = 7
+}
+@PART[*]:HAS[~RS_IgnorePart[],#TechRequired[],~RS_PartTechLevel[]]:AFTER[zzzUnKerballedStart]
+{
+	RS_PartTechLevel = 7
+}
+@PART[*]:HAS[~RS_IgnorePart[],#TechRequired[],~RS_PartTechLevel[]]:AFTER[zzzUnKerballedStart]
+{
+	RS_PartTechLevel = 7
+}

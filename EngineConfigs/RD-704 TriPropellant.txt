@@ -1,0 +1,22 @@
+RD-704-TriPropellant
+{
+	propellants = KeroLOX+LH2
+	type = lower_stage
+	pressureFed = false
+
+	minThrust = 785
+	maxThrust = 2002
+
+	ispSL = 356
+	ispVac = 407
+
+	ignitions = 3
+	ullage = true
+	ratedBurnTime = 440
+	gimbalRange = 5
+
+	mass = 2.42
+	cost = 37397
+	entryCost = 373970
+	upgradeCost = 0
+}

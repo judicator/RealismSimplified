@@ -1,0 +1,22 @@
+11D23
+{
+	propellants = Hypergolics
+	type = OMS
+	pressureFed = false
+
+	minThrust = 10.8
+	maxThrust = 65
+
+	ispSL = 200
+	ispVac = 315
+
+	ignitions = 5
+	ullage = true
+	ratedBurnTime = 1000
+	gimbalRange = 0
+
+	mass = 0.35
+	cost = 2078
+	entryCost = 20780
+	upgradeCost = 0
+}

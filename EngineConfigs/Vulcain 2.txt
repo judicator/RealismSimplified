@@ -1,0 +1,37 @@
+Vulcain-2
+{
+	propellants = HydroLOX
+	type = sustainer
+	pressureFed = false
+
+	minThrust = 1359
+	maxThrust = 1359
+
+	ispSL = 320
+	ispVac = 429
+
+	ignitions = 1
+	ullage = true
+	ratedBurnTime = 580
+	gimbalRange = 6
+
+	mass = 1.8
+	cost = 14141
+	entryCost = 141410
+	upgradeCost = 70705
+
+	siblings
+	{
+		Vulcain = 0.8
+	}
+
+	isUpgrade = true
+
+	upgradeIcons
+	{
+		CryoEngines/Parts/HydroloxEngines/125, cryoengine-vesuvius-1
+		RealScaleBoosters, RSBengineVulcain2
+		KWRocketry/Parts/Engines/3mTitanI, KW3mengineTitanT1
+		Squad/Parts/Engine/liquidEngineMainsail_v2, liquidEngineMainsail_v2
+	}
+}

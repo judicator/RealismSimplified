@@ -1,0 +1,27 @@
+RL-20P-3
+{
+	propellants = HydroLOX
+	type = lower_stage
+	pressureFed = false
+
+	minThrust = 592
+	maxThrust = 1184
+
+	ispSL = 376
+	ispVac = 401
+
+	ignitions = 5
+	ullage = true
+	ratedBurnTime = 300
+	gimbalRange = 7
+
+	mass = 1.0
+	cost = 21873
+	entryCost = 218730
+	upgradeCost = 0
+
+	siblings
+	{
+		RL-20P-3-Vacuum = 0.9
+	}
+}

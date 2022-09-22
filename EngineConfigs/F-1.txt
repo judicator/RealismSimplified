@@ -1,0 +1,28 @@
+F-1
+{
+	propellants = KeroLOX
+	type = lower_stage
+	pressureFed = false
+
+	minThrust = 7740.5
+	maxThrust = 7740.5
+
+	ispSL = 263
+	ispVac = 304
+
+	ignitions = 1
+	ullage = true
+	ratedBurnTime = 165
+	gimbalRange = 6
+
+	mass = 8.391
+	cost = 36905
+	entryCost = 369050
+	upgradeCost = 0
+
+	siblings
+	{
+		F-1A = 0.9
+		F-1B = 0.8
+	}
+}

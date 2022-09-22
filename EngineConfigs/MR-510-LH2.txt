@@ -1,0 +1,22 @@
+MR-510-LH2
+{
+	propellants = LqdHydrogen
+	type = electric
+	pressureFed = false
+
+	minThrust = 0.42
+	maxThrust = 0.42
+
+	ispSL = 1
+	ispVac = 2000
+
+	ignitions = -1
+	ullage = false
+	ratedBurnTime = 86400
+	gimbalRange = 0
+
+	mass = 0.0016
+	cost = 1000
+	entryCost = 10000
+	upgradeCost = 0
+}

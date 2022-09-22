@@ -1,0 +1,37 @@
+NK-19
+{
+	propellants = KeroLOX
+	type = upper_stage
+	pressureFed = false
+
+	minThrust = 240
+	maxThrust = 400
+
+	ispSL = 240
+	ispVac = 353
+
+	ignitions = 1
+	ullage = true
+	ratedBurnTime = 450
+	gimbalRange = 5
+
+	mass = 0.64
+	cost = 4539
+	entryCost = 45390
+	upgradeCost = 22695
+
+	siblings
+	{
+		NK-9  = 0.7
+		NK-9V = 0.8
+		NK-31 = 0.8
+	}
+
+	isUpgrade = true
+
+	upgradeIcons
+	{
+		RealEnginesPack/PostSovietPack, NK43engine
+		RS_Engine_NK9V_Family
+	}
+}

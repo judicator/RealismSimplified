@@ -1,0 +1,22 @@
+RD-704-HydroLOX
+{
+	propellants = HydroLOX
+	type = sustainer
+	pressureFed = false
+
+	minThrust = 314
+	maxThrust = 785
+
+	ispSL = 250
+	ispVac = 460
+
+	ignitions = 3
+	ullage = true
+	ratedBurnTime = 440
+	gimbalRange = 5
+
+	mass = 2.42
+	cost = 11175
+	entryCost = 111750
+	upgradeCost = 0
+}

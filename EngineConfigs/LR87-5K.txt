@@ -1,0 +1,41 @@
+LR87-5K
+{
+	propellants = KeroLOX
+	type = lower_stage
+	pressureFed = false
+
+	minThrust = 1003
+	maxThrust = 1003
+
+	ispSL = 265
+	ispVac = 290
+
+	ignitions = 1
+	ullage = true
+	ratedBurnTime = 149
+	gimbalRange = 6
+
+	mass = 0.739
+	cost = 4660
+	entryCost = 46600
+	upgradeCost = 23300
+
+	isUpgrade = true
+
+	siblings
+	{
+		LR87-3                  = 0.8
+		LR87-5                  = 0.9
+		LR87-7                  = 0.8
+		LR87-9                  = 0.8
+		LR87-11                 = 0.8
+		LR87-11A                = 0.8
+		LR87-11K                = 0.7
+		LR87-11-Vacuum          = 0.7
+		LR87-11K-Vacuum         = 0.7
+		LR87-LH2                = 0.6
+		LR87-LH2-Upgrade        = 0.6
+		LR87-LH2-Vacuum         = 0.5
+		LR87-LH2-Vacuum-Upgrade = 0.5
+	}
+}

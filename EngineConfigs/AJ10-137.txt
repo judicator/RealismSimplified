@@ -1,0 +1,45 @@
+AJ10-137
+{
+	propellants = Hypergolics
+	type = OMS
+	pressureFed = true
+
+	minThrust = 90
+	maxThrust = 90
+
+	ispSL = 150
+	ispVac = 314
+
+	ignitions = 50
+	ullage = true
+	ratedBurnTime = 750
+	gimbalRange = 4.5
+
+	mass = 0.295
+	cost = 3576
+	entryCost = 35760
+	upgradeCost = 17880
+
+	isUpgrade = true
+
+	siblings
+	{
+		AJ10-37   = 0.6
+		AJ10-104  = 0.7
+		AJ10-118D = 0.7
+		AJ10-118E = 0.7
+		AJ10-118F = 0.7
+		AJ10-118K = 0.8
+		AJ10-118X = 0.8
+		AJ10-138  = 0.8
+		AJ10-190  = 0.5
+	}
+	upgradeIcons
+	{
+		Bluedog_DB/Parts/Apollo, bluedog_Apollo_Block2_ServiceEngine
+		RealEnginesPack/USPack, AJ10_137
+		KWRocketry/Parts/Engines/2mSPS, KW2mengineSPS
+		ReStockPlus, restock-engine-schnauzer-1
+		SquadExpansion/MakingHistory, LiquidEngineRE-J10
+	}
+}

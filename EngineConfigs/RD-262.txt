@@ -1,0 +1,22 @@
+RD-262
+{
+	propellants = Hypergolics
+	type = upper_stage
+	pressureFed = false
+
+	minThrust = 941.4
+	maxThrust = 941.4
+
+	ispSL = 200
+	ispVac = 318
+
+	ignitions = 1
+	ullage = true
+	ratedBurnTime = 160
+	gimbalRange = 5
+
+	mass = 0.728
+	cost = 5545
+	entryCost = 55450
+	upgradeCost = 0
+}

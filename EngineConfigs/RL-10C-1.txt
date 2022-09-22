@@ -1,0 +1,39 @@
+RL-10C-1
+{
+	propellants = HydroLOX
+	type = OMS
+	pressureFed = false
+
+	minThrust = 101.85
+	maxThrust = 101.85
+
+	ispSL = 255
+	ispVac = 449.7
+
+	ignitions = 10
+	ullage = true
+	ratedBurnTime = 1130
+	gimbalRange = 4.0
+
+	mass = 0.191
+	cost = 8422
+	entryCost = 84220
+	upgradeCost = 42110
+
+	isUpgrade = true
+
+	siblings
+	{
+		RL-10A-1      = 0.8
+		RL-10A-3      = 0.8
+		RL-10A-4      = 0.8
+		RL-10A-4-1N   = 0.8
+		RL-10A-4-2N   = 0.8
+		RL-10A-5      = 0.6
+		RL-10B-2      = 0.8
+		RL-10C-2      = 0.9
+		RL-10C-3      = 0.9
+		CECE          = 0.8
+		CECE-MethaLOX = 0.7
+	}
+}

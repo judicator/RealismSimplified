@@ -1,0 +1,22 @@
+RD-0410-LH2
+{
+	propellants = LqdHydrogen
+	type = nuclear
+	pressureFed = false
+
+	minThrust = 0
+	maxThrust = 35.3
+
+	ispSL = 902
+	ispVac = 910
+
+	ignitions = 10
+	ullage = true
+	ratedBurnTime = 36000
+	gimbalRange = 4
+
+	mass = 2.0
+	cost = 32097
+	entryCost = 481455
+	upgradeCost = 0
+}

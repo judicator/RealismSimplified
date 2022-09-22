@@ -1,0 +1,22 @@
+Prometheus
+{
+	propellants = MethaLOX
+	type = lower_stage
+	pressureFed = false
+
+	minThrust = 294
+	maxThrust = 980
+
+	ispSL = 312
+	ispVac = 360
+
+	ignitions = 1
+	ullage = true
+	ratedBurnTime = 400
+	gimbalRange = 5
+
+	mass = 0.6
+	cost = 13352
+	entryCost = 133520
+	upgradeCost = 0
+}

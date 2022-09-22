@@ -1,0 +1,29 @@
+RL-60
+{
+	propellants = HydroLOX
+	type = OMS
+	pressureFed = false
+
+	minThrust = 289.1
+	maxThrust = 289.1
+
+	ispSL = 230
+	ispVac = 470
+
+	ignitions = 45
+	ullage = true
+	ratedBurnTime = 800
+	gimbalRange = 4.25
+
+	mass = 0.499
+	cost = 30964
+	entryCost = 309640
+	upgradeCost = 0
+
+	siblings
+	{
+		RL-10B-2      = 0.25
+		CECE          = 0.2
+		CECE-MethaLOX = 0.15
+	}
+}

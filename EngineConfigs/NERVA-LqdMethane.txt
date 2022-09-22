@@ -1,0 +1,22 @@
+NERVA-LqdMethane
+{
+	propellants = LqdMethane
+	type = nuclear
+	pressureFed = false
+
+	minThrust = 0
+	maxThrust = 670
+
+	ispSL = 190
+	ispVac = 410
+
+	ignitions = 60
+	ullage = true
+	ratedBurnTime = 7200
+	gimbalRange = 4
+
+	mass = 10.117
+	cost = 167716
+	entryCost = 1677160
+	upgradeCost = 0
+}

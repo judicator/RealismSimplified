@@ -1,0 +1,22 @@
+XLR11
+{
+	propellants = AlcoLOX
+	type = sustainer
+	pressureFed = false
+
+	minThrust = 7.2
+	maxThrust = 28.80
+
+	ispSL = 208
+	ispVac = 225
+
+	ignitions = 4
+	ullage = true
+	ratedBurnTime = 360
+	gimbalRange = 0
+
+	mass = 0.157
+	cost = 299
+	entryCost = 2990
+	upgradeCost = 0
+}

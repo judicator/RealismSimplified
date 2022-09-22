@@ -1,0 +1,31 @@
+XLR-129-250K-SL
+{
+	propellants = HydroLOX
+	type = lower_stage
+	pressureFed = false
+
+	minThrust = 1358.5 // 60%
+	maxThrust = 2278.1
+
+	ispSL = 363
+	ispVac = 453
+
+	ignitions = 1
+	ullage = true
+	ratedBurnTime = 480
+	gimbalRange = 8.5
+
+	mass = 3.527
+	cost = 42617
+	entryCost = 426170
+	upgradeCost = 0
+
+	siblings
+	{
+		XLR-129-350K-SL = 0.9
+		XLR-129-250K-Vac = 0.9
+		XLR-129-350K-Vac = 0.9
+		RL-20P-3 = 0.6
+		RL-20P-3-Vacuum = 0.6
+	}
+}

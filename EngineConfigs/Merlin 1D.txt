@@ -1,0 +1,30 @@
+Merlin-1D
+{
+	propellants = KeroLOX
+	type = lower_stage
+	pressureFed = false
+
+	minThrust = 289.536
+	maxThrust = 742.4
+
+	ispSL = 282
+	ispVac = 311
+
+	ignitions = 4
+	ullage = true
+	ratedBurnTime = 240
+	gimbalRange = 5
+
+	mass = 0.47
+	cost = 6684
+	entryCost = 66840
+	upgradeCost = 0
+
+	siblings
+	{
+		Merlin-1D-Plus        = 0.8
+		Merlin-1D-PlusPlus    = 0.7
+		Merlin-1D-Vacuum      = 0.9
+		Merlin-1D-Vacuum-Plus = 0.7
+	}
+}

@@ -1,0 +1,22 @@
+Small-Hypergolic-UpperStage-vernier
+{
+	propellants = Hypergolics
+	type = upper_stage
+	pressureFed = false
+
+	minThrust = 2.5
+	maxThrust = 2.5
+
+	ispSL = 220
+	ispVac = 303
+
+	ignitions = 2
+	ullage = true
+	ratedBurnTime = 260
+	gimbalRange = 8
+
+	mass = 0.0042
+	cost = 162
+	entryCost = 1620
+	upgradeCost = 0
+}

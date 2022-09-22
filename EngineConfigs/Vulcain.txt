@@ -1,0 +1,27 @@
+Vulcain
+{
+	propellants = HydroLOX
+	type = sustainer
+	pressureFed = false
+
+	minThrust = 1113
+	maxThrust = 1113
+
+	ispSL = 315
+	ispVac = 439
+
+	ignitions = 1
+	ullage = true
+	ratedBurnTime = 580
+	gimbalRange = 6
+
+	mass = 1.296
+	cost = 11847
+	entryCost = 118470
+	upgradeCost = 0
+
+	siblings
+	{
+		Vulcain-2 = 0.8
+	}
+}

@@ -1,0 +1,30 @@
+NK-15
+{
+	propellants = KeroLOX
+	type = lower_stage
+	pressureFed = false
+
+	minThrust = 841
+	maxThrust = 1681
+
+	ispSL = 284
+	ispVac = 318
+
+	ignitions = 1
+	ullage = true
+	ratedBurnTime = 180
+	gimbalRange = 6
+
+	mass = 1.247
+	cost = 14508
+	entryCost = 145080
+	upgradeCost = 0
+
+	siblings
+	{
+		NK-9   = 0.3
+		NK-33  = 0.7
+		NK-15V = 0.9
+		NK-43  = 0.6
+	}
+}

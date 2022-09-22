@@ -1,0 +1,38 @@
+NK-43
+{
+	propellants = KeroLOX
+	type = upper_stage
+	pressureFed = false
+
+	minThrust = 877.5
+	maxThrust = 1755
+
+	ispSL = 260
+	ispVac = 346
+
+	ignitions = 3
+	ullage = true
+	ratedBurnTime = 360
+	gimbalRange = 6
+
+	mass = 1.396
+	cost = 19582
+	entryCost = 195820
+	upgradeCost = 97910
+
+	siblings
+	{
+		NK-9   = 0.3
+		NK-33  = 0.9
+		NK-15  = 0.6
+		NK-15V = 0.7
+	}
+
+	isUpgrade = true
+
+	upgradeIcons
+	{
+		RealEnginesPack/PostSovietPack, NK43engine
+		RS_Engine_NK43_Family
+	}
+}

@@ -1,0 +1,29 @@
+2KN-thruster-Monopropellant
+{
+	propellants = MonoPropellant
+	type = OMS
+	pressureFed = true
+
+	minThrust = 2.0
+	maxThrust = 2.0
+
+	ispSL = 78
+	ispVac = 240
+
+	ignitions = -1
+	ullage = false
+	ratedBurnTime = 6000
+	gimbalRange = 3
+
+	mass = 0.005
+	cost = 68
+	entryCost = 680
+	upgradeCost = 0
+
+	siblings
+	{
+		2KN-thruster-BiPropellant = 0.7
+		4KN-thruster-Monopropellant = 0.5
+		4KN-thruster-BiPropellant = 0.3
+	}
+}

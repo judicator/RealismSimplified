@@ -1,0 +1,34 @@
+E-1-Upgrade
+{
+	propellants = KeroLOX
+	type = lower_stage
+	pressureFed = false
+
+	minThrust = 2335.3
+	maxThrust = 2335.3
+
+	ispSL = 256
+	ispVac = 291
+
+	ignitions = 1
+	ullage = true
+	ratedBurnTime = 210
+	gimbalRange = 8.0
+
+	mass = 1.814
+	cost = 10143
+	entryCost = 101430
+	upgradeCost = 50715
+
+	siblings
+	{
+		E-1 = 0.9
+	}
+
+	isUpgrade = true
+
+	upgradeIcons
+	{
+		Bluedog_DB/Parts/Engines, bluedog_E1
+	}
+}

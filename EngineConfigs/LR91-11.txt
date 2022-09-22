@@ -1,0 +1,32 @@
+LR91-11
+{
+	propellants = Hypergolics
+	type = upper_stage
+	pressureFed = false
+
+	minThrust = 474.6
+	maxThrust = 474.6
+
+	ispSL = 200
+	ispVac = 318
+
+	ignitions = 1
+	ullage = true
+	ratedBurnTime = 250
+	gimbalRange = 4
+
+	mass = 0.589
+	cost = 2869
+	entryCost = 28690
+	upgradeCost = 14345
+
+	isUpgrade = true
+
+	siblings
+	{
+		LR91-3   = 0.8
+		LR91-5   = 0.9
+		LR91-5K  = 0.8
+		LR91-11K = 0.9
+	}
+}

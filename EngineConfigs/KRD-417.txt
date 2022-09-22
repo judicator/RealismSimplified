@@ -1,0 +1,22 @@
+KRD-417
+{
+	propellants = Hypergolics
+	type = OMS
+	pressureFed = false
+
+	minThrust = 4.73
+	maxThrust = 18.92
+
+	ispSL = 210
+	ispVac = 314
+
+	ignitions = 11
+	ullage = false
+	ratedBurnTime = 650
+	gimbalRange = 0
+
+	mass = 0.081
+	cost = 666
+	entryCost = 6660
+	upgradeCost = 0
+}

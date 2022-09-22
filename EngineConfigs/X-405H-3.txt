@@ -1,0 +1,34 @@
+X-405H-3
+{
+	propellants = KeroLOX
+	type = upper_stage
+	pressureFed = false
+
+	minThrust = 161.86
+	maxThrust = 161.86
+
+	ispSL = 200
+	ispVac = 323
+
+	ignitions = 3
+	ullage = true
+	ratedBurnTime = 245
+	gimbalRange = 5.0
+
+	mass = 0.220
+	cost = 1122
+	entryCost = 1122
+	upgradeCost = 5610
+
+	isUpgrade = true
+
+	siblings
+	{
+		X-405H = 0.8
+	}
+	upgradeIcons
+	{
+		Bluedog_DB/Parts/Vega, bluedog_Vega_GE405H
+		RS_Engine_X405H
+	}
+}

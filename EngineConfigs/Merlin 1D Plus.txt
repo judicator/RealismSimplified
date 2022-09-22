@@ -1,0 +1,37 @@
+Merlin-1D-Plus
+{
+	propellants = KeroLOX
+	type = lower_stage
+	pressureFed = false
+
+	minThrust = 322
+	maxThrust = 825
+
+	ispSL = 282
+	ispVac = 311
+
+	ignitions = 4
+	ullage = true
+	ratedBurnTime = 240
+	gimbalRange = 5
+
+	mass = 0.47
+	cost = 7404
+	entryCost = 74040
+	upgradeCost = 37020
+
+	isUpgrade = true
+
+	siblings
+	{
+		Merlin-1D             = 0.8
+		Merlin-1D-PlusPlus    = 0.8
+		Merlin-1D-Vacuum      = 0.8
+		Merlin-1D-Vacuum-Plus = 0.8
+	}
+
+	upgradeIcons
+	{
+		NearFutureLaunchVehicles/Parts/Engine, nflv-engine-m1d-1
+	}
+}

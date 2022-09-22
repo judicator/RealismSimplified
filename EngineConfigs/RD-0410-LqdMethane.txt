@@ -1,0 +1,22 @@
+RD-0410-LqdMethane
+{
+	propellants = LqdMethane
+	type = nuclear
+	pressureFed = false
+
+	minThrust = 0
+	maxThrust = 71.2
+
+	ispSL = 336
+	ispVac = 438
+
+	ignitions = 10
+	ullage = true
+	ratedBurnTime = 7200
+	gimbalRange = 4
+
+	mass = 2.0
+	cost = 38148
+	entryCost = 572220
+	upgradeCost = 0
+}

@@ -1,0 +1,45 @@
+AJ10-118K
+{
+	propellants = Hypergolics
+	type = OMS
+	pressureFed = true
+
+	minThrust = 43.7
+	maxThrust = 43.7
+
+	ispSL = 215
+	ispVac = 319.2
+
+	ignitions = -1
+	ullage = true
+	ratedBurnTime = 450
+	gimbalRange = 4.25
+
+	mass = 0.1
+	cost = 1950
+	entryCost = 19500
+	upgradeCost = 9750
+
+	isUpgrade = true
+
+	siblings
+	{
+		AJ10-37   = 0.6
+		AJ10-104  = 0.7
+		AJ10-118D = 0.7
+		AJ10-118E = 0.7
+		AJ10-118F = 0.7
+		AJ10-118X = 0.8
+		AJ10-137  = 0.8
+		AJ10-138  = 0.7
+		AJ10-190  = 0.5
+	}
+	upgradeIcons
+	{
+		Bluedog_DB/Parts/Delta/DeltaK, bluedog_AJ10_118K
+		RealScaleBoosters/Parts/Engines, RSBengineAJ10-118K
+		KWRocketry/Parts/Engines/1mVestaVR1, KW1mengineVestaVR1
+		Benjee10_sharedAssets, DIRECT_KJ10
+		RS_Engine_AJ10_Family
+	}
+}

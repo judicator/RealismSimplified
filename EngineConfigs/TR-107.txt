@@ -1,0 +1,22 @@
+TR-107
+{
+	propellants = KeroLOX
+	type = lower_stage
+	pressureFed = false
+
+	minThrust = 3460
+	maxThrust = 5323
+
+	ispSL = 301
+	ispVac = 327
+
+	ignitions = 200
+	ullage = true
+	ratedBurnTime = 480
+	gimbalRange = 6
+
+	mass = 7.754
+	cost = 46500
+	entryCost = 465000
+	upgradeCost = 0
+}

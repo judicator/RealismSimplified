@@ -1,0 +1,31 @@
+XLR-81-8096C
+{
+	propellants = Hypergolics
+	type = OMS
+	pressureFed = false
+
+	minThrust = 53.2
+	maxThrust = 53.2
+
+	ispSL = 57
+	ispVac = 336
+
+	ignitions = 200
+	ullage = false
+	ratedBurnTime = 1200
+	gimbalRange = 5
+
+	mass = 0.23
+	cost = 2881
+	entryCost = 28810
+	upgradeCost = 0
+
+	siblings
+	{
+		XLR-81-8048        = 0.6
+		XLR-81-8081        = 0.9
+		XLR-81-8096-39-HDA = 0.8
+		XLR-81-8096        = 0.7
+		XLR-81-8096B       = 0.7
+	}
+}

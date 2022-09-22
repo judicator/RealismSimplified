@@ -1,0 +1,22 @@
+KRD-442
+{
+	propellants = Hypergolics
+	type = OMS
+	pressureFed = false
+
+	minThrust = 4.38
+	maxThrust = 4.38
+
+	ispSL = 220
+	ispVac = 317
+
+	ignitions = 100
+	ullage = false
+	ratedBurnTime = 1000
+	gimbalRange = 0
+
+	mass = 0.052
+	cost = 214
+	entryCost = 2140
+	upgradeCost = 0
+}

@@ -1,0 +1,37 @@
+RS-68A
+{
+	propellants = HydroLOX
+	type = lower_stage
+	pressureFed = false
+
+	minThrust = 1820
+	maxThrust = 3570
+
+	ispSL = 362
+	ispVac = 412
+
+	ignitions = 1
+	ullage = true
+	ratedBurnTime = 330
+	gimbalRange = 6
+
+	mass = 6.597
+	cost = 64372
+	entryCost = 643720
+	upgradeCost = 321860
+
+	isUpgrade = true
+
+	siblings
+	{
+		STME   = 0.5
+		RS-68  = 0.9
+		RS-68B = 0.9
+		RS-68K = 0.7
+	}
+	upgradeIcons
+	{
+		Bluedog_DB/Parts/Delta, bluedog_DeltaIV_RS68
+		CryoEngines/Parts/HydroloxEngines/375, cryoengine-etna-1
+	}
+}

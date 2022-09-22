@@ -1,0 +1,36 @@
+A-7
+{
+	propellants = AlcoLOX
+	type = lower_stage
+	pressureFed = false
+
+	minThrust = 396
+	maxThrust = 396
+
+	ispSL = 235
+	ispVac = 265
+
+	ignitions = 1
+	ullage = true
+	ratedBurnTime = 155
+	gimbalRange = 2.0
+
+	mass = 0.67
+	cost = 1487
+	entryCost = 14870
+	upgradeCost = 7435
+
+	isUpgrade = true
+
+	siblings
+	{
+		A-4 = 0.5
+		A-6 = 0.8
+	}
+	upgradeIcons
+	{
+		Bluedog_DB/Parts/Redstone, bluedog_Redstone_A7_Bare
+		RealEnginesPack/USPack, A7
+		RS_Engine_A6_Family
+	}
+}

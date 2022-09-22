@@ -1,0 +1,24 @@
+RD-250
+{
+	propellants = Hypergolics
+	type = lower_stage
+	pressureFed = false
+
+	minThrust = 881.3
+	maxThrust = 881.3
+
+	ispSL = 269.6
+	ispVac = 301.4
+
+	ignitions = 1
+	ullage = true
+	ratedBurnTime = 120
+	gimbalRange = 10
+
+	mass = 0.576
+	cost = 4468
+	entryCost = 44680
+	upgradeCost = 22340
+
+	isUpgrade = true
+}

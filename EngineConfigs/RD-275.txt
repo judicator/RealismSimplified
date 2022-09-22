@@ -1,0 +1,36 @@
+RD-275
+{
+	propellants = Hypergolics
+	type = lower_stage
+	pressureFed = false
+
+	minThrust = 1746
+	maxThrust = 1746
+
+	ispSL = 287
+	ispVac = 316
+
+	ignitions = 1
+	ullage = true
+	ratedBurnTime = 129
+	gimbalRange = 5
+
+	mass = 1.07
+	cost = 10158
+	entryCost = 101580
+	upgradeCost = 50790
+
+	siblings
+	{
+		RD-253  = 0.8
+		RD-275M = 0.9
+	}
+
+	isUpgrade = true
+
+	upgradeIcons
+	{
+		RealEnginesPack/PostSovietPack, RD275
+		RS_Engine_RD253_Family
+	}
+}

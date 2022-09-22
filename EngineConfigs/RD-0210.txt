@@ -1,0 +1,22 @@
+RD-0210
+{
+	propellants = Hypergolics
+	type = upper_stage
+	pressureFed = false
+
+	minThrust = 585
+	maxThrust = 585
+
+	ispSL = 164
+	ispVac = 327
+
+	ignitions = 1
+	ullage = true
+	ratedBurnTime = 238
+	gimbalRange = 3.25
+
+	mass = 0.566
+	cost = 3795
+	entryCost = 37950
+	upgradeCost = 0
+}

@@ -1,0 +1,27 @@
+LE-7
+{
+	propellants = HydroLOX
+	type = sustainer
+	pressureFed = false
+
+	minThrust = 1078
+	maxThrust = 1078
+
+	ispSL = 349
+	ispVac = 446
+
+	ignitions = 1
+	ullage = true
+	ratedBurnTime = 350
+	gimbalRange = 7
+
+	mass = 1.72
+	cost = 13423
+	entryCost = 134230
+	upgradeCost = 0
+
+	siblings
+	{
+		LE-7A = 0.8
+	}
+}

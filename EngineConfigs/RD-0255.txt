@@ -1,0 +1,22 @@
+RD-0225
+{
+	propellants = Hypergolics
+	type = OMS
+	pressureFed = true
+
+	minThrust = 3.92
+	maxThrust = 3.92
+
+	ispSL = 220
+	ispVac = 287
+
+	ignitions = -1
+	ullage = false
+	ratedBurnTime = 1200
+	gimbalRange = 0
+
+	mass = 0.023
+	cost = 157
+	entryCost = 1570
+	upgradeCost = 0
+}

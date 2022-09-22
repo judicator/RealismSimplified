@@ -1,0 +1,44 @@
+LR89-7
+{
+	propellants = KeroLOX
+	type = lower_stage
+	pressureFed = false
+
+	minThrust = 950.8
+	maxThrust = 950.8
+
+	ispSL = 259
+	ispVac = 293
+
+	ignitions = 1
+	ullage = true
+	ratedBurnTime = 165
+	gimbalRange = 5
+
+	mass = 1.018
+	cost = 4360
+	entryCost = 43600
+	upgradeCost = 21800
+
+	siblings
+	{
+		S-3D      = 0.8
+		LR79-11   = 0.8
+		LR79-13   = 0.8
+		LR89-5    = 0.9
+		H-1-188K  = 0.8
+		H-1-200K  = 0.7
+		H-1-205K  = 0.6
+		RS-56-OBA = 0.8
+		RS-27     = 0.7
+		RS-27A    = 0.6
+	}
+
+	isUpgrade = true
+
+	upgradeIcons
+	{
+		Bluedog_DB/Parts/Atlas, bluedog_Atlas_LR89
+		RS_Engine_LR79Family
+	}
+}

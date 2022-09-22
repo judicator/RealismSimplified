@@ -1,0 +1,22 @@
+XASR-1
+{
+	propellants = Hypergolics
+	type = sustainer
+	pressureFed = true
+
+	minThrust = 13.77
+	maxThrust = 13.77
+
+	ispSL = 200
+	ispVac = 235.44
+
+	ignitions = 1
+	ullage = true
+	ratedBurnTime = 40
+	gimbalRange = 0
+
+	mass = 0.0208
+	cost = 227
+	entryCost = 2270
+	upgradeCost = 0
+}

@@ -1,0 +1,38 @@
+F-1B
+{
+	propellants = KeroLOX
+	type = lower_stage
+	pressureFed = false
+
+	minThrust = 6390
+	maxThrust = 8815
+
+	ispSL = 272.3
+	ispVac = 299
+
+	ignitions = 1
+	ullage = true
+	ratedBurnTime = 315
+	gimbalRange = 6
+
+	mass = 9.656
+	cost = 54722
+	entryCost = 547220
+	upgradeCost = 273610
+
+	siblings
+	{
+		F-1  = 0.8
+		F-1A = 0.8
+	}
+
+	isUpgrade = true
+
+	upgradeIcons
+	{
+		Bluedog_DB/Parts/Saturn/Engines, bluedog_Saturn_Engine_F1
+		RealScaleBoosters/Parts/Engines, RSBengineF1A
+		ReStockPlus, restock-engine-galleon-1
+		SquadExpansion/MakingHistory, LiquidEngineKE-1
+	}
+}

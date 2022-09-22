@@ -1,0 +1,30 @@
+LR91-3
+{
+	propellants = KeroLOX
+	type = upper_stage
+	pressureFed = false
+
+	minThrust = 362.87
+	maxThrust = 362.87
+
+	ispSL = 232.5
+	ispVac = 310
+
+	ignitions = 1
+	ullage = true
+	ratedBurnTime = 160
+	gimbalRange = 4
+
+	mass = 0.59
+	cost = 2076
+	entryCost = 20760
+	upgradeCost = 0
+
+	siblings
+	{
+		LR91-5   = 0.9
+		LR91-5K  = 0.8
+		LR91-11  = 0.8
+		LR91-11K = 0.7
+	}
+}

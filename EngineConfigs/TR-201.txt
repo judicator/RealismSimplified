@@ -1,0 +1,27 @@
+TR-201
+{
+	propellants = Hypergolics
+	type = OMS
+	pressureFed = true
+
+	minThrust = 43.8
+	maxThrust = 43.8
+
+	ispSL = 130
+	ispVac = 303
+
+	ignitions = 5
+	ullage = true
+	ratedBurnTime = 360
+	gimbalRange = 6
+
+	mass = 0.113
+	cost = 1280
+	entryCost = 12800
+	upgradeCost = 6400
+
+	siblings
+	{
+		LMDE = 0.8
+	}
+}

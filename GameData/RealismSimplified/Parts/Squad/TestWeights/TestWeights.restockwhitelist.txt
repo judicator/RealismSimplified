@@ -1,0 +1,2 @@
+Squad/Parts/Resources/LargeTank/
+Squad/Parts/Resources/SmallTank/ 

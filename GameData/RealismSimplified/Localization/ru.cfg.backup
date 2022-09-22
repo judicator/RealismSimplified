@@ -1,0 +1,213 @@
+Localization
+{
+	ru
+	{
+		// Generic messages
+		#LOC_RS_TankContents_DisplayName = Содержимое бака
+		#LOC_RS_ContainerContents_DisplayName = Содержимое контейнера
+		#LOC_RS_TankType_DisplayName = Тип бака
+		#LOC_RS_Battery_Tech_Level = Тех. уровень батареи
+		#LOC_RS_Structural_DisplayName = Структурный
+		#LOC_RS_NoTank_DisplayName = Без топл. бака
+		#LOC_RS_Switcher_FuelTank = Внешний вид
+		#LOC_RS_Switcher_FuelTankPlural = Варианты внешн. вида
+		#LOC_RS_RCS_Type_DisplayName = Тип РСУ
+
+		#LOC_RS_DockPortType = Тип стык. порта
+		#LOC_RS_DockPortType_Ordinary = Обычный
+		#LOC_RS_DockPortType_Weldable = Свариваемый
+		#LOC_RS_USIKonstruction = USI Konstruction
+
+		#LOC_RS_AntennaType = Тип антенны
+		#LOC_RS_AntennaTypeDirect = DIRECT
+		#LOC_RS_AntennaTypeRelay = RELAY
+
+		#LOC_RS_COM_Position = Положение центра масс
+		#LOC_RS_COM_Position_Default = По умолчанию
+		#LOC_RS_COM_Position_Low = Внизу
+
+		// Tank types names
+		#LOC_RS_BatteryI_DisplayName = Батарея I (серебряно-цинковая)
+		#LOC_RS_BatteryI_Desc = Серебряно-цинковые электрические батареи использовались на ранних космических аппаратах. Они дорогие и тяжёлые.
+		#LOC_RS_BatteryII_DisplayName = Батарея II (никель-кадмиевая)
+		#LOC_RS_BatteryII_Desc = Предназначены для использования в ситуациях, когда батареи будут проходить множество циклов заряд/разряд. Преимущества никель-кадмиевых батарей включают в себя низкую стоимость, фиксированную скорость разряда, способность выдерживать глубокий разряд без повреждения батареи и сохранять работоспособность в жестких условиях.
+		#LOC_RS_BatteryIII_DisplayName = Батарея III (никель-водородная)
+		#LOC_RS_BatteryIII_Desc = Этот тип батарей применяется 
+		#LOC_RS_BatteryIV_DisplayName = Батарея IV (литий-ионная)
+		#LOC_RS_BatteryIV_Desc = High energy density, high specific energy and long cycle life make Li-ion batteries promising power sources for satellites. It offers significant advantages in terms of mass (almost half of nickel hydrogen batteries for the same stored energy), volume and temperature range. However, this batteries are quite expensive.
+
+		#LOC_RS_TankType_Default = Обычный
+		#LOC_RS_TankType_Cryogenic = Криогенный
+		#LOC_RS_TankType_Balloon = Тонкостенный
+		#LOC_RS_TankType_Fuselage = Фюзеляж
+		#LOC_RS_TankType_HP = Под высок. давлением
+		#LOC_RS_TankType_Fuselage_HP = Фюзеляж (ВД)
+
+		#LOC_RS_TankType_Default_Desc = 
+		#LOC_RS_TankType_Cryogenic_Desc = 
+		#LOC_RS_TankType_Balloon_Desc = 
+		#LOC_RS_TankType_Fuselage_Desc = 
+		#LOC_RS_TankType_HP_Desc = 
+		#LOC_RS_TankType_Fuselage_HP_Desc = 
+
+		#LOC_RS_Tank_I_UIGroup_DisplayName = RS топлив. бак I
+		#LOC_RS_Tank_II_UIGroup_DisplayName = RS топлив. бак II
+		#LOC_RS_Tank_III_UIGroup_DisplayName = RS топлив. бак III
+		#LOC_RS_Tank_IV_UIGroup_DisplayName = RS топлив. бак IV
+		#LOC_RS_Tank_V_UIGroup_DisplayName = RS топлив. бак V
+		#LOC_RS_Tank_VI_UIGroup_DisplayName = RS топлив. бак VI
+		#LOC_RS_Gases_Tank_UIGroup_DisplayName = RS бак для газов и жидкостей
+		#LOC_RS_Supplies_Tank_UIGroup_DisplayName = RS хранилище припасов
+		#LOC_RS_Resources_Tank_UIGroup_DisplayName = RS хранилище ресурсов
+		#LOC_RS_Container_UIGroup_DisplayName = RS контейнер
+		#LOC_RS_FueledWing_UIGroup_DisplayName = RS крыло с топливом
+		#LOC_RS_HydrogenMethane_Tank_UIGroup_DisplayName = RS бак для водорода/метана
+		#LOC_RS_OxygenNitrogen_Tank_UIGroup_DisplayName = RS бак для кислорода/азота
+		#LOC_RS_CO2Ammonia_Tank_UIGroup_DisplayName = RS бак для CO2/аммиака
+		#LOC_RS_RCS_UIGroup_DisplayName = RS РСУ
+
+		#LOC_RS_AlcoLOX_DisplayName = Этил.спирт/ЖК
+		#LOC_RS_KeroLOX_DisplayName = Керосин/ЖК
+		#LOC_RS_HydroLOX_DisplayName = Ж.водород/ЖК
+		#LOC_RS_MethaLOX_DisplayName = Ж.метан/ЖК
+		#LOC_RS_UDMHNTO_DisplayName = НДМГ/АТ
+		#LOC_RS_Aerozine50NTO_DisplayName = Аэрозин/АТ
+		#LOC_RS_MMHNTO_DisplayName = ММГ/АТ
+		#LOC_RS_HydrazineNTO_DisplayName = Гидразин/АТ
+		#LOC_RS_AvGas_DisplayName = Ав.бензин
+		#LOC_RS_Kerosene_DisplayName = Керосин
+		#LOC_RS_Methanol_DisplayName = Метанол
+		#LOC_RS_Hydrazine_DisplayName = Гидразин
+		#LOC_RS_Helium_DisplayName = Гелий
+		#LOC_RS_LH2_DisplayName = Ж.водород
+		#LOC_RS_LqdMethane_DisplayName = Ж.метан
+		#LOC_RS_LqdAmmonia_DisplayName = Ж.аммиак
+		#LOC_RS_LOX_DisplayName = Ж.кислород
+		#LOC_RS_Argon_DisplayName = Аргон
+		#LOC_RS_LqdArgon_DisplayName = Ж.аргон
+		#LOC_RS_Xenon_DisplayName = Ксенон
+		#LOC_RS_LqdHe3_DisplayName = Ж.гелий-3
+		#LOC_RS_LqdDe_DisplayName = Ж.дейтерий
+		#LOC_RS_DeHe3_DisplayName = Дейтерий/гелий-3
+
+		#LOC_RS_Lithium_DisplayName = Литий
+
+		#LOC_RS_Helium_IV-HP_DisplayName = Гелий IV (ВД)
+		#LOC_RS_Helium_III-HP_DisplayName = Гелий III (ВД)
+		#LOC_RS_Oxygen_IV-HP_DisplayName = Кислород IV (ВД)
+		#LOC_RS_Oxygen_III-HP_DisplayName = Кислород III (ВД)
+		#LOC_RS_Nitrogen_IV-HP_DisplayName = Азот IV (ВД)
+		#LOC_RS_Nitrogen_III-HP_DisplayName = Азот III (ВД)
+		#LOC_RS_Hydrogen_IV-HP_DisplayName = Водород IV (ВД)
+		#LOC_RS_Hydrogen_III-HP_DisplayName = Водород III (ВД)
+		#LOC_RS_Methane_IV-HP_DisplayName = Метан IV (ВД)
+		#LOC_RS_Methane_III-HP_DisplayName = Метан III (ВД)
+		#LOC_RS_CarbonDioxide_IV-HP_DisplayName = CO2 IV (ВД)
+		#LOC_RS_CarbonDioxide_III-HP_DisplayName = CO2 III (ВД)
+		#LOC_RS_CarbonMonoxide_IV-HP_DisplayName = CO IV (ВД)
+		#LOC_RS_CarbonMonoxide_III-HP_DisplayName = CO III (ВД)
+		#LOC_RS_Ammonia_IV-HP_DisplayName = Аммиак IV (ВД)
+		#LOC_RS_Ammonia_III-HP_DisplayName = Аммиак III (ВД)
+
+		#LOC_RS_Supplies_DisplayName = Припасы
+		#LOC_RS_SuppliesWithOxygen_DisplayName = Припасы + кислород
+		#LOC_RS_SuppliesWaterRegen_DisplayName = Припасы (с учётом очист. воды)
+		#LOC_RS_SuppliesWithOxygenWaterRegen_DisplayName = Припасы + кислород (с учётом очист. воды)
+		#LOC_RS_SuppliesGreenhouse_DisplayName = Припасы (с учетом теплицы)
+		#LOC_RS_Sewage_DisplayName = Сточные воды
+
+		// Resources names
+		#LOC_RS_Teflon_DisplayName = Тефлон
+		#LOC_RS_AlPBAN_DisplayName = Алюминий/PBAN
+		#LOC_RS_LithiumHydroxide_DisplayName = Гидроксид лития
+		#LOC_RS_LithiumHydroxide_Abbreviation = LiOH
+		#LOC_RS_PotassiumSuperoxide_DisplayName = Надпероксид калия
+		#LOC_RS_PotassiumSuperoxide_Abbreviation = KO2
+		#LOC_RS_FrozenKrillEggs_DisplayName = Заморож. яйца криля
+		#LOC_RS_CameraFilm_DisplayName = Фотоплёнка
+
+
+		// Kerbalism
+		#LOC_RS_Kerbalism_low_LiOH = Lithium Hydroxide reserves are low on $VESSEL@<i>Please send a resupply mission</i>
+		#LOC_RS_Kerbalism_empty_LiOH = $VESSEL is out of Lithium Hydroxide@<i>We can no longer scrub CO2</i>
+		#LOC_RS_Kerbalism_refill_LiOH = $VESSEL Lithium Hydroxide reserves refilled@<i>Normal operations can resume</i>
+		#LOC_RS_Kerbalism_low_KO2 = Potassium Superoxide reserves are low on $VESSEL@<i>Please send a resupply mission</i>
+		#LOC_RS_Kerbalism_empty_KO2 = $VESSEL is out of Potassium Superoxide@<i>O2 can no longer be generated and CO2 is soon going to build up</i>
+		#LOC_RS_Kerbalism_refill_KO2 = $VESSEL Potassium Superoxide reserves refilled@<i>Normal operations can resume</i>
+		#LOC_RS_Kerbalism_low_KrillEggs = Frozen Krill Eggs are almost depleted on $VESSEL@<i>Krill farms will soon stop producing food</i>
+		#LOC_RS_Kerbalism_empty_KrillEggs = There are no more Frozen Krill Eggs on $VESSEL@<i>Food production in krill farms unavailable</i>
+		#LOC_RS_Kerbalism_refill_KrillEggs = $VESSEL Frozen Krill Eggs storage refilled@<i>Food production in krill farms is available</i>
+		#LOC_RS_Kerbalism_low_Minerals = Minerals are almost depleted on $VESSEL@<i>Krill farms will soon stop producing food</i>
+		#LOC_RS_Kerbalism_empty_Minerals = There are no more Minerals on $VESSEL@<i>Food production in krill farms unavailable</i>
+		#LOC_RS_Kerbalism_refill_Minerals = $VESSEL Minerals storage refilled@<i>Food production in krill farms is available</i>
+		#LOC_RS_Kerbalism_low_LH2 = LH2 is almost depleted on $VESSEL@<i>Processes requiring LH2 will soon be unavailable</i>
+		#LOC_RS_Kerbalism_empty_LH2 = There is no more LH2 on $VESSEL@<i>Processes requiring LH2 are no longer available</i>
+		#LOC_RS_Kerbalism_refill_LH2 = $VESSEL LH2 storage refilled@<i>Processes requiring LH2 are now available</i>
+		#LOC_RS_Kerbalism_low_LOX = LOX is almost depleted on $VESSEL@<i>Processes requiring LOX will soon be unavailable</i>
+		#LOC_RS_Kerbalism_empty_LOX = There is no more LOX on $VESSEL@<i>Processes requiring LOX are no longer available</i>
+		#LOC_RS_Kerbalism_refill_LOX = $VESSEL LOX storage refilled@<i>Processes requiring LOX are now available</i>
+
+		#LOC_RS_Kerbalism_Process_NonRegenScrubber = Скруббер скафандра для ВКД
+		#LOC_RS_Kerbalism_Process_Scrubber = Реген. система удаления CO2
+		#LOC_RS_Kerbalism_Process_LiOHNonRegenScrubber = Нереген. LiOH-скруббер
+		#LOC_RS_Kerbalism_Process_LiOHScrubber = LiOH-скруббер
+		#LOC_RS_Kerbalism_Process_KO2Scrubber = KO2-скруббер
+		#LOC_RS_Kerbalism_Process_MonopropFuelCell = Топл. ячейка (гидразин + O2)
+		#LOC_RS_Kerbalism_Process_MethanolFuelCell = Топл. ячейка (метанол + O2)
+		#LOC_RS_Kerbalism_Process_Po210RTG = РИТЭГ (Po-210)
+		#LOC_RS_Kerbalism_Process_Sr90RTG = РИТЭГ (Sr-90)
+		#LOC_RS_Kerbalism_Process_Pu238RTG = РИТЭГ (Pu-238)
+		#LOC_RS_Kerbalism_Process_Am241RTG = РИТЭГ (Am-241)
+
+		#LOC_RS_Kerbalism_Scrubber_title = Регенеративная система удаления CO2
+		#LOC_RS_Kerbalism_Scrubber_desc = Сложная и высокотехнологичная система, удаляющая из воздуха выдыхаемый экипажем углекислый газ. Необходима, чтобы избежать отравления углекислотой.
+		#LOC_RS_Kerbalism_LiOHNonRegenScrubber_title = Нерегенеративный LiOH-скруббер
+		#LOC_RS_Kerbalism_LiOHNonRegenScrubber_desc = Нерегенеративный скруббер, использующий гидроксид лития (как тот, что использовался в капсулах Mercury и Gemini). Имеет ограниченный срок службы - до 48 часов в расчете на одного кербонавта.
+		#LOC_RS_Kerbalism_LiOHScrubber_title = LiOH-скруббер
+		#LOC_RS_Kerbalism_LiOHScrubber_desc = Скруббер, использующий гидроксид лития (аналогичен тем, что использовались в командном модуле Apollo).
+		#LOC_RS_Kerbalism_KO2Scrubber_title = KO2-скруббер
+		#LOC_RS_Kerbalism_KO2Scrubber_desc = Скрубберы, использующий надпероксид калия (KO2), применялись на кораблях "Восток", "Восход" и "Союз". Надпероксид калия используется не только для поглощения углекислоты, но и для генерации кислорода.
+
+		#LOC_RS_Kerbalism_SabatierProcess_desc = <b>Водород</b> and <b>Углекислый газ</b> вступают в реакцию в присутствии никелевого катализатора, производя <b>Воду</b> and <b>Метан</b>.
+		#LOC_RS_Kerbalism_AnthraquinoneProcess_desc = Synthesize <b>Hydrogen Peroxide</b> using a redox of <b>Oxygen</b> and <b>Hydrogen</b>.
+		#LOC_RS_Kerbalism_HydrazineProduction_desc = <b>Hydrogen Peroxide</b> and <b>Ammonia</b> react to produce <b>Hydrazine</b>, <b>Oxygen</b> and <b>Water</b>.
+		#LOC_RS_Kerbalism_HydrazineProductionN2_desc = <b>Hydrogen Peroxide</b> and <b>Ammonia</b> with <b>Nitrogen</b> injection react to produce <b>Hydrazine</b> and <b>Oxygen</b>.
+		#LOC_RS_Kerbalism_MoltenRegolithElectrolysis_desc = Извлечение <b>Кислорода</b>, <b>Углекислого газа</b> и <b>Алюминия</b> из <b>Реголита</b>. При необходимости <b>Углекислый газ</b> и/или <b>Алюминий</b> могут будут will be vented in order to continue the <b>Oxygen</b> extraction.
+
+		#LOC_RS_Kerbalism_Po210RTG_title = РИТЭГ (Полоний-210)
+		#LOC_RS_Kerbalism_Po210RTG_desc = Ранний тип РИТЭГа. Полоний сравнительно дёшев и имеет высокое тепловыделение, т.е. такой РИТЭГ вырабатывает много энергии. Однако, у полония короткий период полураспада - всего 138 суток.
+		#LOC_RS_Kerbalism_Sr90RTG_title = РИТЭГ (Стронций-90)
+		#LOC_RS_Kerbalism_Sr90RTG_desc = Стронций дёшев, имеет достаточно большой период полураспада (29 лет) и среднее тепловыделение. Минус стронция в том, что он довольно радиоактивен.
+		#LOC_RS_Kerbalism_Pu238RTG_title = РИТЭГ (Плутоний-238)
+		#LOC_RS_Kerbalism_Pu238RTG_desc = Плутоний-238 широко используется в РИТЭГах из-за его длительного периода полураспада (88 лет) и приличного энерговыделения. Однако, этот элемент крайне дорог.
+		#LOC_RS_Kerbalism_Am241RTG_title = РИТЭГ (Америций-241)
+		#LOC_RS_Kerbalism_Am241RTG_desc = Америций - потенциальный кандидат для использования в РИТЭГах для очень продолжительных миссий благодаря огромному периоду полураспада - 433 года. Однако, из-за этого РИТЭГи на Америции имеют низкое энерговыделение.
+
+		#LOC_RS_Kerbalism_MonopropO2FuelCell_title = Топливная ячейка (гидразин + O2)
+		#LOC_RS_Kerbalism_MonopropO2FuelCell_desc = Burns <b>Hydrazine</b> and <b>Oxygen</b> gas, producing <b>Water</b> and <b>Nitrogen</b> gas as by-products.
+		#LOC_RS_Kerbalism_MethanolO2FuelCell_title = Топливная ячейка (метанол + O2)
+		#LOC_RS_Kerbalism_MethanolO2FuelCell_desc = Burns <b>Methanol</b> and <b>Oxygen</b> gas, producing <b>Water</b> and <b>CO2</b> gas as by-products.
+
+		#LOC_RS_Kerbalism_RegolithExcavation_title = Добыча реголита
+		#LOC_RS_Kerbalism_RegolithExcavation_desc = Добыча <b>Реголита</b> с помощью бура.
+		#LOC_RS_Kerbalism_MineralsExcavation_title = Добыча минералов
+		#LOC_RS_Kerbalism_MineralsExcavation_desc = Добыча <b>Минералов</b> с помощью бура.
+		#LOC_RS_Kerbalism_SpodumeneExcavation_title = Добыча сподумена
+		#LOC_RS_Kerbalism_SpodumeneExcavation_desc = Добыча <b>Сподумена</b> с помощью бура. Сподумен - это силикат <b>Лития</b> и <b>Алюминия</b>.
+
+		#LOC_RS_Kerbalism_Greenhouse_title = Теплица
+		#LOC_RS_Kerbalism_KrillFarm_title = Крилевая ферма
+		#LOC_RS_Kerbalism_KrillFarm_desc = Криль - это крошечные, похожие на креветок существа. Они богаты белком, жирными кислотами и витаминами, что делает их неплохим выбором в качестве пищи для длительных космических полётов. Данный модуль представляет собой миниатюрную и сложную искуственную экосистему, дополненную автоматизированной системой выращивания криля. Модуль производит криль-пасту, криль-крекеры и прочие вкусняшки, и способен прокормить 4 кербонавтов. Однако, производственный цикл не замкнут, и экосистема нуждается в подпитке минералами, а также свежими яйцами криля для предотвращения вырождения популяции. Также, вам понадобится отдельный переработчик воды.
+
+		// 3rd party mods
+
+		// SpaceDust
+		#LOC_RS_SpaceDust_switcher_instrument_ox = Спектрометр для поиска кислорода
+		#LOC_RS_SpaceDust_switcher_instrument_ox_summary = Обнаруживает <b>Кислород</b> вокруг небесных тел
+		#LOC_RS_SpaceDust_switcher_instrument_methane = Спектрометр для поиска метана
+		#LOC_RS_SpaceDust_switcher_instrument_methane_summary = Обнаруживает <b>Метан</b> вокруг небесных тел
+		#LOC_RS_SpaceDust_switcher_instrument_ammonia = Спектрометр для поиска аммиака
+		#LOC_RS_SpaceDust_switcher_instrument_ammonia_summary = Обнаруживает <b>Аммиак</b> вокруг небесных тел
+		#LOC_RS_SpaceDust_switcher_instrument_ammonia_detail = <b>Обнаруживает:</b> <color=#06ff00>да</color> \n<b>Идентифициурет:</b> <color=#06ff00>да</color> \n<b>Длина волны:</b> 500 нм \n<b>Чувствительность:</b> <color=#06ff00>средняя</color>
+	}
+}

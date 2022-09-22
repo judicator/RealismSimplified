@@ -1,0 +1,24 @@
+RD-858
+{
+	propellants = Hypergolics
+	type = OMS
+	pressureFed = false
+
+	minThrust = 5.469
+	maxThrust = 20.104
+
+	ispSL = 200
+	ispVac = 315
+
+	ignitions = 12
+	ullage = false
+	ratedBurnTime = 2000
+	gimbalRange = 5.0
+
+	mass = 0.11
+	cost = 718
+	entryCost = 7180
+	upgradeCost = 3590
+
+	isUpgrade = true
+}

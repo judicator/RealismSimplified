@@ -1,0 +1,22 @@
+KRD-79
+{
+	propellants = Hypergolics
+	type = OMS
+	pressureFed = true
+
+	minThrust = 2.94
+	maxThrust = 2.94
+
+	ispSL = 112
+	ispVac = 305
+
+	ignitions = -1
+	ullage = false
+	ratedBurnTime = 1200
+	gimbalRange = 0
+
+	mass = 0.0385
+	cost = 140
+	entryCost = 1400
+	upgradeCost = 0
+}

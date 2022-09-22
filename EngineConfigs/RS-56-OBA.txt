@@ -1,0 +1,44 @@
+RS-56-OBA
+{
+	propellants = KeroLOX
+	type = lower_stage
+	pressureFed = false
+
+	minThrust = 1077.6
+	maxThrust = 1077.6
+
+	ispSL = 262.1
+	ispVac = 296.4
+
+	ignitions = 1
+	ullage = true
+	ratedBurnTime = 170
+	gimbalRange = 5
+
+	mass = 1.289
+	cost = 5083
+	entryCost = 50830
+	upgradeCost = 25415
+
+	siblings
+	{
+		S-3D      = 0.7
+		LR79-11   = 0.8
+		LR79-13   = 0.8
+		LR89-5    = 0.9
+		LR89-7    = 0.9
+		H-1-188K  = 0.7
+		H-1-200K  = 0.7
+		H-1-205K  = 0.7
+		RS-27     = 0.8
+		RS-27A    = 0.7
+	}
+
+	isUpgrade = true
+
+	upgradeIcons
+	{
+		Bluedog_DB/Parts/Atlas, bluedog_Atlas_LR89
+		RS_Engine_LR79Family
+	}
+}

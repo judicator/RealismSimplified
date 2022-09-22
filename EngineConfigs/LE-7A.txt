@@ -1,0 +1,36 @@
+LE-7A
+{
+	propellants = HydroLOX
+	type = sustainer
+	pressureFed = false
+
+	minThrust = 843.5
+	maxThrust = 1074
+
+	ispSL = 326
+	ispVac = 429
+
+	ignitions = 1
+	ullage = true
+	ratedBurnTime = 400
+	gimbalRange = 7
+
+	mass = 1.715
+	cost = 13906
+	entryCost = 139060
+	upgradeCost = 69530
+
+	isUpgrade = true
+
+	siblings
+	{
+		LE-7 = 0.8
+	}
+
+	upgradeIcons
+	{
+		GemstoneLV, gemstone_engine_le7_s0_1
+		CryoEngines/Parts/HydroloxEngines/25, cryoengine-fuji-1
+		KWRocketry/Parts/Engines/2mVestaVR9D, KW2mengineVestaVR9D
+	}
+}

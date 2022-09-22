@@ -1,0 +1,22 @@
+S5_23
+{
+	propellants = Hypergolics
+	type = upper_stage
+	pressureFed = false
+
+	minThrust = 147.5  // without 4 verniers
+	maxThrust = 147.5  // without 4 verniers
+
+	ispSL = 254
+	ispVac = 303
+
+	ignitions = 2
+	ullage = true
+	ratedBurnTime = 260
+	gimbalRange = 0
+
+	mass = 0.14
+	cost = 881
+	entryCost = 8810
+	upgradeCost = 0
+}

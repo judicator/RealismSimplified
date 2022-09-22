@@ -1,0 +1,33 @@
+Juno-45K-BlockII
+{
+	propellants = Hypergolics
+	type = upper_stage
+	pressureFed = true
+
+	minThrust = 243
+	maxThrust = 243
+
+	ispSL = 179
+	ispVac = 312
+
+	ignitions = 1
+	ullage = true
+	ratedBurnTime = 135
+	gimbalRange = 4.25
+
+	mass = 0.113
+	cost = 1465
+	entryCost = 14650
+	upgradeCost = 7325
+
+	isUpgrade = true
+
+	siblings
+	{
+		Juno-45K = 0.9
+	}
+	upgradeIcons
+	{
+		Bluedog_DB/Parts/Jupiter, bluedog_Juno4_Engine_45K
+	}
+}

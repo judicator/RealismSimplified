@@ -1,0 +1,65 @@
+@TechTree:FOR[KiwiTechTree]
+{
+	RDNode
+	{
+		id = RS_Tech_BalloonFuelTanks
+		title = #LOC_RS_Tech_BalloonFuelTanks_title
+		description = #LOC_RS_Tech_BalloonFuelTanks_desc
+		cost = 45
+		hideEmpty = False
+		nodeName = RS_Tech_BalloonFuelTanks
+		anyToUnlock = True
+		icon = RealismSimplified/TechTree/Icons/RS_icon_It
+		pos = -1946,1438,0
+		scale = 0.6
+		Parent
+		{
+			parentID = generalRocketry
+			lineFrom = RIGHT
+			lineTo = LEFT
+		}
+		pos = -2170,1621,0
+		scale = 0.6
+		Parent
+		{
+			parentID = basicCryoRocketry
+			lineFrom = TOP
+			lineTo = LEFT
+		}
+		Parent
+		{
+			parentID = generalRocketry
+			lineFrom = TOP
+			lineTo = BOTTOM
+		}
+	}
+	
+	@RDNode:HAS[#id[generalRocketry]]
+	{
+		@pos = -2170,1571,0
+		@cost = 15
+
+
+
+	}
+
+	RDNode
+	{
+		id = RS_Tech_ShuttleFuelTanks
+		title = #LOC_RS_Tech_ShuttleFuelTankss_title
+		description = #LOC_RS_Tech_ShuttleFuelTanks_desc
+		cost = 550
+		hideEmpty = False
+		nodeName = RS_Tech_ShuttleFuelTanks
+		anyToUnlock = True
+		icon = RealismSimplified/TechTree/Icons/RS_icon_ShuttleExternalTank
+		pos = -1118,1412,0
+		scale = 0.6
+		Parent
+		{
+			parentID = highPerformanceFuelSystems
+			lineFrom = BOTTOM
+			lineTo = TOP
+		}
+	}
+}

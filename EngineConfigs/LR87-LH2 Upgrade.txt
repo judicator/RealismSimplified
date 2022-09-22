@@ -1,0 +1,41 @@
+LR87-LH2-Upgrade
+{
+	propellants = HydroLOX
+	type = sustainer
+	pressureFed = false
+
+	minThrust = 801
+	maxThrust = 801
+
+	ispSL = 358
+	ispVac = 409
+
+	ignitions = 2
+	ullage = true
+	ratedBurnTime = 480
+	gimbalRange = 6
+
+	mass = 0.8
+	cost = 9023
+	entryCost = 90230
+	upgradeCost = 45115
+
+	isUpgrade = true
+
+	siblings
+	{
+		LR87-3                  = 0.8
+		LR87-5                  = 0.8
+		LR87-5K                 = 0.8
+		LR87-7                  = 0.8
+		LR87-9                  = 0.8
+		LR87-11                 = 0.8
+		LR87-11A                = 0.8
+		LR87-11K                = 0.7
+		LR87-11-Vacuum          = 0.6
+		LR87-11K-Vacuum         = 0.6
+		LR87-LH2                = 0.9
+		LR87-LH2-Vacuum         = 0.8
+		LR87-LH2-Vacuum-Upgrade = 0.8
+	}
+}

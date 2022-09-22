@@ -1,0 +1,23 @@
+BabySergeant
+{
+	propellants = SolidFuel
+	type = SRB
+	solidFuelMass = 0.022
+	pressureFed = false
+
+	minThrust = 4
+	maxThrust = 8
+
+	ispSL = 214
+	ispVac = 235
+
+	ignitions = 1
+	ullage = false
+	ratedBurnTime = 6
+	gimbalRange = 0
+
+	mass = 0.00507
+	cost = 23
+	entryCost = 230
+	upgradeCost = 0
+}

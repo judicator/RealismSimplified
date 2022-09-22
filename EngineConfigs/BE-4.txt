@@ -1,0 +1,27 @@
+BE-4
+{
+	propellants = MethaLOX
+	type = lower_stage
+	pressureFed = false
+
+	minThrust = 794.25
+	maxThrust = 2647.5
+
+	ispSL = 305
+	ispVac = 341
+
+	ignitions = 4
+	ullage = true
+	ratedBurnTime = 400
+	gimbalRange = 8
+
+	mass = 2.25
+	cost = 31764
+	entryCost = 317640
+	upgradeCost = 0
+
+	siblings
+	{
+		BE-4U = 0.9
+	}
+}

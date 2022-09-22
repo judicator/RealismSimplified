@@ -1,0 +1,214 @@
+// ============================================================================
+// Define part tech level (in range from 1 to 8) by it's tech tree node
+// Kiwi Tech Tree
+// ============================================================================
+
+// 1
+@PART[*]:HAS[~RS_IgnorePart[],#TechRequired[otherParts],~RS_PartTechLevel[]]:NEEDS[KiwiTechTree]:BEFORE[zzzzRealismSimplified]
+{
+	RS_PartTechLevel = 1
+}
+
+// 2
+@PART[*]:HAS[~RS_IgnorePart[],#TechRequired[soundingRockets],~RS_PartTechLevel[]]:NEEDS[KiwiTechTree]:BEFORE[zzzzRealismSimplified]
+{
+	RS_PartTechLevel = 2
+}
+@PART[*]:HAS[~RS_IgnorePart[],#TechRequired[basicCryoRocketry],~RS_PartTechLevel[]]:NEEDS[KiwiTechTree]:BEFORE[zzzzRealismSimplified]
+{
+	RS_PartTechLevel = 2
+}
+@PART[*]:HAS[~RS_IgnorePart[],#TechRequired[earlyFlight],~RS_PartTechLevel[]]:NEEDS[KiwiTechTree]:BEFORE[zzzzRealismSimplified]
+{
+	RS_PartTechLevel = 2
+}
+@PART[*]:HAS[~RS_IgnorePart[],#TechRequired[],~RS_PartTechLevel[]]:NEEDS[KiwiTechTree]:BEFORE[zzzzRealismSimplified]
+{
+	RS_PartTechLevel = 2
+}
+
+// 3
+@PART[*]:HAS[~RS_IgnorePart[],#TechRequired[basicFlightControl],~RS_PartTechLevel[]]:NEEDS[KiwiTechTree]:BEFORE[zzzzRealismSimplified]
+{
+	RS_PartTechLevel = 3
+}
+@PART[*]:HAS[~RS_IgnorePart[],#TechRequired[tinyBoosters],~RS_PartTechLevel[]]:NEEDS[KiwiTechTree]:BEFORE[zzzzRealismSimplified]
+{
+	RS_PartTechLevel = 3
+}
+@PART[*]:HAS[~RS_IgnorePart[],#TechRequired[generalCryoRocketry],~RS_PartTechLevel[]]:NEEDS[KiwiTechTree]:BEFORE[zzzzRealismSimplified]
+{
+	RS_PartTechLevel = 3
+}
+@PART[*]:HAS[~RS_IgnorePart[],#TechRequired[earlyFuelSystems],~RS_PartTechLevel[]]:NEEDS[KiwiTechTree]:BEFORE[zzzzRealismSimplified]
+{
+	RS_PartTechLevel = 3
+}
+@PART[*]:HAS[~RS_IgnorePart[],#TechRequired[basicConstruction],~RS_PartTechLevel[]]:NEEDS[KiwiTechTree]:BEFORE[zzzzRealismSimplified]
+{
+	RS_PartTechLevel = 3
+}
+@PART[*]:HAS[~RS_IgnorePart[],#TechRequired[science201],~RS_PartTechLevel[]]:NEEDS[KiwiTechTree]:BEFORE[zzzzRealismSimplified]
+{
+	RS_PartTechLevel = 3
+}
+@PART[*]:HAS[~RS_IgnorePart[],#TechRequired[serviceModules],~RS_PartTechLevel[]]:NEEDS[KiwiTechTree]:BEFORE[zzzzRealismSimplified]
+{
+	RS_PartTechLevel = 3
+}
+
+// 4
+@PART[*]:HAS[~RS_IgnorePart[],#TechRequired[smallBoosters],~RS_PartTechLevel[]]:NEEDS[KiwiTechTree]:BEFORE[zzzzRealismSimplified]
+{
+	RS_PartTechLevel = 4
+}
+@PART[*]:HAS[~RS_IgnorePart[],#TechRequired[advancedCryoRocketry],~RS_PartTechLevel[]]:NEEDS[KiwiTechTree]:BEFORE[zzzzRealismSimplified]
+{
+	RS_PartTechLevel = 4
+}
+@PART[*]:HAS[~RS_IgnorePart[],#TechRequired[basicFuelSystems],~RS_PartTechLevel[]]:NEEDS[KiwiTechTree]:BEFORE[zzzzRealismSimplified]
+{
+	RS_PartTechLevel = 4
+}
+@PART[*]:HAS[~RS_IgnorePart[],#TechRequired[fuelLines],~RS_PartTechLevel[]]:NEEDS[KiwiTechTree]:BEFORE[zzzzRealismSimplified]
+{
+	RS_PartTechLevel = 4
+}
+@PART[*]:HAS[~RS_IgnorePart[],#TechRequired[decoupling],~RS_PartTechLevel[]]:NEEDS[KiwiTechTree]:BEFORE[zzzzRealismSimplified]
+{
+	RS_PartTechLevel = 4
+}
+@PART[*]:HAS[~RS_IgnorePart[],#TechRequired[proceduralWings],~RS_PartTechLevel[]]:NEEDS[KiwiTechTree]:BEFORE[zzzzRealismSimplified]
+{
+	RS_PartTechLevel = 4
+}
+@PART[*]:HAS[~RS_IgnorePart[],#TechRequired[basicReentryModule],~RS_PartTechLevel[]]:NEEDS[KiwiTechTree]:BEFORE[zzzzRealismSimplified]
+{
+	RS_PartTechLevel = 4
+}
+@PART[*]:HAS[~RS_IgnorePart[],#TechRequired[batteryTech],~RS_PartTechLevel[]]:NEEDS[KiwiTechTree]:BEFORE[zzzzRealismSimplified]
+{
+	RS_PartTechLevel = 4
+}
+
+// 5
+@PART[*]:HAS[~RS_IgnorePart[],#TechRequired[mediumBoosters],~RS_PartTechLevel[]]:NEEDS[KiwiTechTree]:BEFORE[zzzzRealismSimplified]
+{
+	RS_PartTechLevel = 5
+}
+@PART[*]:HAS[~RS_IgnorePart[],#TechRequired[heavyCryoRocketry],~RS_PartTechLevel[]]:NEEDS[KiwiTechTree]:BEFORE[zzzzRealismSimplified]
+{
+	RS_PartTechLevel = 5
+}
+@PART[*]:HAS[~RS_IgnorePart[],#TechRequired[flexibleFuelSolutions],~RS_PartTechLevel[]]:NEEDS[KiwiTechTree]:BEFORE[zzzzRealismSimplified]
+{
+	RS_PartTechLevel = 5
+}
+@PART[*]:HAS[~RS_IgnorePart[],#TechRequired[docking],~RS_PartTechLevel[]]:NEEDS[KiwiTechTree]:BEFORE[zzzzRealismSimplified]
+{
+	RS_PartTechLevel = 5
+}
+@PART[*]:HAS[~RS_IgnorePart[],#TechRequired[streamlinedFlight],~RS_PartTechLevel[]]:NEEDS[KiwiTechTree]:BEFORE[zzzzRealismSimplified]
+{
+	RS_PartTechLevel = 5
+}
+@PART[*]:HAS[~RS_IgnorePart[],#TechRequired[simpleCommandModulesExtensions],~RS_PartTechLevel[]]:NEEDS[KiwiTechTree]:BEFORE[zzzzRealismSimplified]
+{
+	RS_PartTechLevel = 5
+}
+@PART[*]:HAS[~RS_IgnorePart[],#TechRequired[reentryModule],~RS_PartTechLevel[]]:NEEDS[KiwiTechTree]:BEFORE[zzzzRealismSimplified]
+{
+	RS_PartTechLevel = 5
+}
+@PART[*]:HAS[~RS_IgnorePart[],#TechRequired[appliedScience],~RS_PartTechLevel[]]:NEEDS[KiwiTechTree]:BEFORE[zzzzRealismSimplified]
+{
+	RS_PartTechLevel = 5
+}
+@PART[*]:HAS[~RS_IgnorePart[],#TechRequired[earlyProbes],~RS_PartTechLevel[]]:NEEDS[KiwiTechTree]:BEFORE[zzzzRealismSimplified]
+{
+	RS_PartTechLevel = 5
+}
+
+// 6
+@PART[*]:HAS[~RS_IgnorePart[],#TechRequired[largeBoosters],~RS_PartTechLevel[]]:NEEDS[KiwiTechTree]:BEFORE[zzzzRealismSimplified]
+{
+	RS_PartTechLevel = 6
+}
+@PART[*]:HAS[~RS_IgnorePart[],#TechRequired[heavierCryoRocketry],~RS_PartTechLevel[]]:NEEDS[KiwiTechTree]:BEFORE[zzzzRealismSimplified]
+{
+	RS_PartTechLevel = 6
+}
+@PART[*]:HAS[~RS_IgnorePart[],#TechRequired[advancedFlexibleFuelSolutions],~RS_PartTechLevel[]]:NEEDS[KiwiTechTree]:BEFORE[zzzzRealismSimplified]
+{
+	RS_PartTechLevel = 6
+}
+@PART[*]:HAS[~RS_IgnorePart[],#TechRequired[advancedDecoupling],~RS_PartTechLevel[]]:NEEDS[KiwiTechTree]:BEFORE[zzzzRealismSimplified]
+{
+	RS_PartTechLevel = 6
+}
+@PART[*]:HAS[~RS_IgnorePart[],#TechRequired[commandModulesExtensions],~RS_PartTechLevel[]]:NEEDS[KiwiTechTree]:BEFORE[zzzzRealismSimplified]
+{
+	RS_PartTechLevel = 6
+}
+@PART[*]:HAS[~RS_IgnorePart[],#TechRequired[advancedReentryModule],~RS_PartTechLevel[]]:NEEDS[KiwiTechTree]:BEFORE[zzzzRealismSimplified]
+{
+	RS_PartTechLevel = 6
+}
+@PART[*]:HAS[~RS_IgnorePart[],#TechRequired[exactScience],~RS_PartTechLevel[]]:NEEDS[KiwiTechTree]:BEFORE[zzzzRealismSimplified]
+{
+	RS_PartTechLevel = 6
+}
+@PART[*]:HAS[~RS_IgnorePart[],#TechRequired[communicationSatellites],~RS_PartTechLevel[]]:NEEDS[KiwiTechTree]:BEFORE[zzzzRealismSimplified]
+{
+	RS_PartTechLevel = 6
+}
+@PART[*]:HAS[~RS_IgnorePart[],#TechRequired[earlyLogistics],~RS_PartTechLevel[]]:NEEDS[KiwiTechTree]:BEFORE[zzzzRealismSimplified]
+{
+	RS_PartTechLevel = 6
+}
+
+// 7
+@PART[*]:HAS[~RS_IgnorePart[],#TechRequired[experimentalControl],~RS_PartTechLevel[]]:NEEDS[KiwiTechTree]:BEFORE[zzzzRealismSimplified]
+{
+	RS_PartTechLevel = 7
+}
+@PART[*]:HAS[~RS_IgnorePart[],#TechRequired[experimentalPropulsion],~RS_PartTechLevel[]]:NEEDS[KiwiTechTree]:BEFORE[zzzzRealismSimplified]
+{
+	RS_PartTechLevel = 7
+}
+@PART[*]:HAS[~RS_IgnorePart[],#TechRequired[largerBoosters],~RS_PartTechLevel[]]:NEEDS[KiwiTechTree]:BEFORE[zzzzRealismSimplified]
+{
+	RS_PartTechLevel = 7
+}
+@PART[*]:HAS[~RS_IgnorePart[],#TechRequired[evenHeavierCryoRocketry],~RS_PartTechLevel[]]:NEEDS[KiwiTechTree]:BEFORE[zzzzRealismSimplified]
+{
+	RS_PartTechLevel = 7
+}
+@PART[*]:HAS[~RS_IgnorePart[],#TechRequired[evenHeavierRocketry],~RS_PartTechLevel[]]:NEEDS[KiwiTechTree]:BEFORE[zzzzRealismSimplified]
+{
+	RS_PartTechLevel = 7
+}
+@PART[*]:HAS[~RS_IgnorePart[],#TechRequired[enginePlates],~RS_PartTechLevel[]]:NEEDS[KiwiTechTree]:BEFORE[zzzzRealismSimplified]
+{
+	RS_PartTechLevel = 7
+}
+@PART[*]:HAS[~RS_IgnorePart[],#TechRequired[advancedFlightSystems],~RS_PartTechLevel[]]:NEEDS[KiwiTechTree]:BEFORE[zzzzRealismSimplified]
+{
+	RS_PartTechLevel = 7
+}
+@PART[*]:HAS[~RS_IgnorePart[],#TechRequired[heavyCommandModulesExtensions],~RS_PartTechLevel[]]:NEEDS[KiwiTechTree]:BEFORE[zzzzRealismSimplified]
+{
+	RS_PartTechLevel = 7
+}
+@PART[*]:HAS[~RS_IgnorePart[],#TechRequired[highGainCommunications],~RS_PartTechLevel[]]:NEEDS[KiwiTechTree]:BEFORE[zzzzRealismSimplified]
+{
+	RS_PartTechLevel = 7
+}
+@PART[*]:HAS[~RS_IgnorePart[],#TechRequired[intermediateHeatManagement],~RS_PartTechLevel[]]:NEEDS[KiwiTechTree]:BEFORE[zzzzRealismSimplified]
+{
+	RS_PartTechLevel = 7
+}
+@PART[*]:HAS[~RS_IgnorePart[],#TechRequired[earlyStations],~RS_PartTechLevel[]]:NEEDS[KiwiTechTree]:BEFORE[zzzzRealismSimplified]
+{
+	RS_PartTechLevel = 7
+}

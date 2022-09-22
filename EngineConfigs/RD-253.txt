@@ -1,0 +1,28 @@
+RD-253
+{
+	propellants = Hypergolics
+	type = lower_stage
+	pressureFed = false
+
+	minThrust = 1698
+	maxThrust = 1698
+
+	ispSL = 285
+	ispVac = 316
+
+	ignitions = 1
+	ullage = true
+	ratedBurnTime = 148
+	gimbalRange = 5
+
+	mass = 1.08
+	cost = 9789
+	entryCost = 97890
+	upgradeCost = 0
+
+	siblings
+	{
+		RD-275  = 0.8
+		RD-275M = 0.7
+	}
+}

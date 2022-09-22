@@ -1,0 +1,22 @@
+HM-7B
+{
+	propellants = HydroLOX
+	type = upper_stage
+	pressureFed = false
+
+	minThrust = 64.8
+	maxThrust = 64.8
+
+	ispSL = 310
+	ispVac = 445.6
+
+	ignitions = 1
+	ullage = true
+	ratedBurnTime = 570
+	gimbalRange = 3
+
+	mass = 0.165
+	cost = 1171
+	entryCost = 11710
+	upgradeCost = 0
+}

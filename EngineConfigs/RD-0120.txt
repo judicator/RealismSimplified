@@ -1,0 +1,27 @@
+RD-0120
+{
+	propellants = HydroLOX
+	type = sustainer
+	pressureFed = false
+
+	minThrust = 882.45 // 45%
+	maxThrust = 1961
+
+	ispSL = 336
+	ispVac = 454.5
+
+	ignitions = 1
+	ullage = true
+	ratedBurnTime = 600
+	gimbalRange = 11
+
+	mass = 3.45
+	cost = 36856
+	entryCost = 368560
+	upgradeCost = 0
+
+	siblings
+	{
+		RD-0120M = 0.9
+	}
+}

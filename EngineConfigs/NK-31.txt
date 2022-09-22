@@ -1,0 +1,37 @@
+NK-31
+{
+	propellants = KeroLOX
+	type = upper_stage
+	pressureFed = false
+
+	minThrust = 240
+	maxThrust = 402
+
+	ispSL = 220
+	ispVac = 353
+
+	ignitions = 3
+	ullage = true
+	ratedBurnTime = 600
+	gimbalRange = 5
+
+	mass = 0.722
+	cost = 4571
+	entryCost = 45710
+	upgradeCost = 22855
+
+	siblings
+	{
+		NK-9  = 0.7
+		NK-9V = 0.8
+		NK-19 = 0.8
+	}
+
+	isUpgrade = true
+
+	upgradeIcons
+	{
+		RealEnginesPack/PostSovietPack, NK43engine
+		RS_Engine_NK9V_Family
+	}
+}

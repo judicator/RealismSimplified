@@ -1,0 +1,22 @@
+S5_5
+{
+	propellants = Hypergolics
+	type = OMS
+	pressureFed = false
+
+	minThrust = 4.55
+	maxThrust = 4.55
+
+	ispSL = 117
+	ispVac = 287
+
+	ignitions = 11
+	ullage = false
+	ratedBurnTime = 500
+	gimbalRange = 5.0
+
+	mass = 0.1382
+	cost = 148
+	entryCost = 1480
+	upgradeCost = 0
+}

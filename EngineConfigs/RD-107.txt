@@ -1,0 +1,28 @@
+RD-107
+{
+	propellants = KeroLOX
+	type = lower_stage
+	pressureFed = false
+
+	minThrust = 972.8
+	maxThrust = 972.8
+
+	ispSL = 253
+	ispVac = 310
+
+	ignitions = 1
+	ullage = true
+	ratedBurnTime = 140
+	gimbalRange = 0
+
+	mass = 1.19
+	cost = 4716
+	entryCost = 47160
+	upgradeCost = 0
+
+	siblings
+	{
+		RD-108 = 0.95
+		RD-111 = 0.5
+	}
+}

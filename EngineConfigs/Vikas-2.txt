@@ -1,0 +1,22 @@
+Vikas-2
+{
+	propellants = Hypergolics
+	type = upper_stage
+	pressureFed = false
+
+	minThrust = 725
+	maxThrust = 725
+
+	ispSL = 261
+	ispVac = 296
+
+	ignitions = 1
+	ullage = true
+	ratedBurnTime = 133
+	gimbalRange = 4.0
+
+	mass = 0.9
+	cost = 3500
+	entryCost = 35000
+	upgradeCost = 0
+}

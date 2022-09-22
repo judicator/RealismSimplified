@@ -1,0 +1,96 @@
+// ============================================================================
+// Define part tech level (in range from 1 to 8) by it's tech tree node
+// CSI TechTree
+// ============================================================================
+
+// 2
+@PART[*]:HAS[~RS_IgnorePart[],#TechRequired[fabrication],~RS_PartTechLevel[]]:AFTER[zzzCSITechTree]
+{
+	RS_PartTechLevel = 2
+}
+@PART[*]:HAS[~RS_IgnorePart[],#TechRequired[aeronautics],~RS_PartTechLevel[]]:AFTER[zzzCSITechTree]
+{
+	RS_PartTechLevel = 2
+}
+
+// 3
+@PART[*]:HAS[~RS_IgnorePart[],#TechRequired[basicConstruction],~RS_PartTechLevel[]]:AFTER[zzzCSITechTree]
+{
+	RS_PartTechLevel = 3
+}
+@PART[*]:HAS[~RS_IgnorePart[],#TechRequired[earlyAviation],~RS_PartTechLevel[]]:AFTER[zzzCSITechTree]
+{
+	RS_PartTechLevel = 3
+}
+@PART[*]:HAS[~RS_IgnorePart[],#TechRequired[gadgets],~RS_PartTechLevel[]]:AFTER[zzzCSITechTree]
+{
+	RS_PartTechLevel = 3
+}
+
+// 4
+@PART[*]:HAS[~RS_IgnorePart[],#TechRequired[basicFuelSystems],~RS_PartTechLevel[]]:AFTER[zzzCSITechTree]
+{
+	RS_PartTechLevel = 4
+}
+@PART[*]:HAS[~RS_IgnorePart[],#TechRequired[structures1],~RS_PartTechLevel[]]:AFTER[zzzCSITechTree]
+{
+	RS_PartTechLevel = 4
+}
+@PART[*]:HAS[~RS_IgnorePart[],#TechRequired[groundScience],~RS_PartTechLevel[]]:AFTER[zzzCSITechTree]
+{
+	RS_PartTechLevel = 4
+}
+@PART[*]:HAS[~RS_IgnorePart[],#TechRequired[batteryTech],~RS_PartTechLevel[]]:AFTER[zzzCSITechTree]
+{
+	RS_PartTechLevel = 4
+}
+
+// 5
+@PART[*]:HAS[~RS_IgnorePart[],#TechRequired[structures2],~RS_PartTechLevel[]]:AFTER[zzzCSITechTree]
+{
+	RS_PartTechLevel = 5
+}
+@PART[*]:HAS[~RS_IgnorePart[],#TechRequired[comms1],~RS_PartTechLevel[]]:AFTER[zzzCSITechTree]
+{
+	RS_PartTechLevel = 5
+}
+@PART[*]:HAS[~RS_IgnorePart[],#TechRequired[solarTech],~RS_PartTechLevel[]]:AFTER[zzzCSITechTree]
+{
+	RS_PartTechLevel = 5
+}
+@PART[*]:HAS[~RS_IgnorePart[],#TechRequired[earlyHeatManagement],~RS_PartTechLevel[]]:AFTER[zzzCSITechTree]
+{
+	RS_PartTechLevel = 5
+}
+
+// 6
+@PART[*]:HAS[~RS_IgnorePart[],#TechRequired[structures3],~RS_PartTechLevel[]]:AFTER[zzzCSITechTree]
+{
+	RS_PartTechLevel = 6
+}
+@PART[*]:HAS[~RS_IgnorePart[],#TechRequired[basicLogistics],~RS_PartTechLevel[]]:AFTER[zzzCSITechTree]
+{
+	RS_PartTechLevel = 6
+}
+@PART[*]:HAS[~RS_IgnorePart[],#TechRequired[comms2],~RS_PartTechLevel[]]:AFTER[zzzCSITechTree]
+{
+	RS_PartTechLevel = 6
+}
+
+// 7
+@PART[*]:HAS[~RS_IgnorePart[],#TechRequired[efficientPropulsion],~RS_PartTechLevel[]]:AFTER[zzzCSITechTree]
+{
+	RS_PartTechLevel = 7
+}
+@PART[*]:HAS[~RS_IgnorePart[],#TechRequired[rocketry7],~RS_PartTechLevel[]]:AFTER[zzzCSITechTree]
+{
+	RS_PartTechLevel = 7
+}
+@PART[*]:HAS[~RS_IgnorePart[],#TechRequired[stations],~RS_PartTechLevel[]]:AFTER[zzzCSITechTree]
+{
+	RS_PartTechLevel = 7
+}
+@PART[*]:HAS[~RS_IgnorePart[],#TechRequired[comms3],~RS_PartTechLevel[]]:AFTER[zzzCSITechTree]
+{
+	RS_PartTechLevel = 7
+}

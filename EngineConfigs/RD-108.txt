@@ -1,0 +1,28 @@
+RD-108
+{
+	propellants = KeroLOX
+	type = sustainer
+	pressureFed = false
+
+	minThrust = 945.4
+	maxThrust = 945.4
+
+	ispSL = 246
+	ispVac = 315
+
+	ignitions = 1
+	ullage = true
+	ratedBurnTime = 340
+	gimbalRange = 0
+
+	mass = 1.25
+	cost = 4275
+	entryCost = 42750
+	upgradeCost = 0
+
+	siblings
+	{
+		RD-107 = 0.95
+		RD-111 = 0.5
+	}
+}

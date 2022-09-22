@@ -1,0 +1,44 @@
+LR79-13
+{
+	propellants = KeroLOX
+	type = lower_stage
+	pressureFed = false
+
+	minThrust = 873
+	maxThrust = 873
+
+	ispSL = 252.4
+	ispVac = 291
+
+	ignitions = 1
+	ullage = true
+	ratedBurnTime = 165
+	gimbalRange = 8
+
+	mass = 0.912
+	cost = 3844
+	entryCost = 38440
+	upgradeCost = 19220
+
+	siblings
+	{
+		S-3D      = 0.9
+		LR79-11   = 0.9
+		LR89-5    = 0.8
+		LR89-7    = 0.8
+		H-1-188K  = 0.9
+		H-1-200K  = 0.8
+		H-1-205K  = 0.7
+		RS-56-OBA = 0.8
+		RS-27     = 0.8
+		RS-27A    = 0.7
+	}
+
+	isUpgrade = true
+
+	upgradeIcons
+	{
+		Bluedog_DB/Parts/Thor, bluedog_Thor_LR79
+		RS_Engine_LR79Family
+	}
+}

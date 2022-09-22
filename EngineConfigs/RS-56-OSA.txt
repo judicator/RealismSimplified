@@ -1,0 +1,37 @@
+RS-56-OSA
+{
+	propellants = KeroLOX
+	type = sustainer
+	pressureFed = false
+
+	minThrust = 386.4
+	maxThrust = 386.4
+
+	ispSL = 220.4
+	ispVac = 316
+
+	ignitions = 1
+	ullage = true
+	ratedBurnTime = 350
+	gimbalRange = 3
+
+	mass = 0.46
+	cost = 1655
+	entryCost = 16550
+	upgradeCost = 8275
+
+	isUpgrade = true
+
+	siblings
+	{
+		LR105-3 = 0.7
+		LR105-5 = 0.8
+		LR105-7 = 0.8
+	}
+
+	upgradeIcons
+	{
+		Bluedog_DB/Parts/Atlas, bluedog_Atlas_LR105
+		RS_Engine_LR105Family
+	}
+}

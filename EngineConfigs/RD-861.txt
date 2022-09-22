@@ -1,0 +1,22 @@
+RD-861
+{
+	propellants = Hypergolics
+	type = upper_stage
+	pressureFed = false
+
+	minThrust = 68.11 // without verniers
+	maxThrust = 68.11 // without verniers
+
+	ispSL = 200
+	ispVac = 317
+
+	ignitions = 2
+	ullage = true
+	ratedBurnTime = 130
+	gimbalRange = 0
+
+	mass = 0.123
+	cost = 536
+	entryCost = 5360
+	upgradeCost = 0
+}

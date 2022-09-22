@@ -1,0 +1,22 @@
+KTDU-80
+{
+	propellants = Hypergolics
+	type = OMS
+	pressureFed = true
+
+	minThrust = 2.95
+	maxThrust = 2.95
+
+	ispSL = 100
+	ispVac = 302
+
+	ignitions = 30
+	ullage = false
+	ratedBurnTime = 890
+	gimbalRange = 5.0
+
+	mass = 0.05
+	cost = 125
+	entryCost = 1250
+	upgradeCost = 0
+}

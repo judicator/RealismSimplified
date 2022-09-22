@@ -1,0 +1,22 @@
+RS-84
+{
+	propellants = KeroLOX
+	type = lower_stage
+	pressureFed = false
+
+	minThrust = 2513
+	maxThrust = 5026
+
+	ispSL = 305
+	ispVac = 324
+
+	ignitions = 3
+	ullage = true
+	ratedBurnTime = 300
+	gimbalRange = 6
+
+	mass = 8.128
+	cost = 49007
+	entryCost = 490070
+	upgradeCost = 0
+}
